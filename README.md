@@ -1,5 +1,7 @@
 # Sổ Nghiên Cứu AI
 
+Hướng dẫn học sinh nghiên cứu khoa học với các dự án liên quan đến trí tuệ nhân tạo AI
+
 **Trang web:** https://vantupham.github.io/nghien-cuu-khkt-ai/
 
 Website mở giúp học sinh trung học (lớp 8–12) luyện làm nghiên cứu khoa học kỹ thuật về trí tuệ nhân tạo, chuẩn bị cho cuộc thi KHKT cấp trường, cấp tỉnh/thành phố, cấp quốc gia và quốc tế (Regeneron ISEF). Dùng được cho học sinh toàn quốc và qua nhiều năm học.
