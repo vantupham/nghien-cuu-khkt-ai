@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dự báo nguy cơ ngập theo tuyến đường ở đô thị | Đề tài KHKT AI</title>
+<meta name="description" content="Đề tài KHKT mẫu: Kết hợp lượng mưa, đỉnh triều và lịch sử ngập để cảnh báo trước vài giờ. Có giả thuyết, lộ trình 12 tuần, notebook Colab.">
+<link rel="canonical" href="https://vantupham.github.io/nghien-cuu-khkt-ai/du-an/ngap-duong/">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta name="theme-color" content="#1E3A9E">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Sổ Nghiên Cứu AI">
+<meta property="og:locale" content="vi_VN">
+<meta property="og:title" content="Dự báo nguy cơ ngập theo tuyến đường ở đô thị | Đề tài KHKT AI">
+<meta property="og:description" content="Đề tài KHKT mẫu: Kết hợp lượng mưa, đỉnh triều và lịch sử ngập để cảnh báo trước vài giờ. Có giả thuyết, lộ trình 12 tuần, notebook Colab.">
+<meta property="og:url" content="https://vantupham.github.io/nghien-cuu-khkt-ai/du-an/ngap-duong/">
+<meta property="og:image" content="https://vantupham.github.io/nghien-cuu-khkt-ai/assets/og/du-an-ngap-duong.png">
+<meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Dự báo nguy cơ ngập theo tuyến đường ở đô thị | Đề tài KHKT AI">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Dự báo nguy cơ ngập theo tuyến đường ở đô thị | Đề tài KHKT AI">
+<meta name="twitter:description" content="Đề tài KHKT mẫu: Kết hợp lượng mưa, đỉnh triều và lịch sử ngập để cảnh báo trước vài giờ. Có giả thuyết, lộ trình 12 tuần, notebook Colab.">
+<meta name="twitter:image" content="https://vantupham.github.io/nghien-cuu-khkt-ai/assets/og/du-an-ngap-duong.png">
+<link rel="icon" href="../../favicon.svg" type="image/svg+xml">
+<link rel="icon" href="../../assets/icon-192.png" sizes="192x192" type="image/png">
+<link rel="apple-touch-icon" href="../../assets/apple-touch-icon.png">
+<link rel="manifest" href="../../manifest.webmanifest">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;600;700;800&family=Patrick+Hand&display=swap&subset=vietnamese" rel="stylesheet">
+<style>
+:root{--paper:#F2F5F9;--grid:#DDE5F0;--ink:#1E3A9E;--ink-soft:#4A63B8;--text:#0F1B33;--muted:#52607A;--hl:#F7E14B;--red:#C8303B;--line:#C9D4E5;
+--hand:'Patrick Hand','Segoe Print','Bradley Hand','Chalkboard SE','Comic Sans MS',cursive;--sans:'Be Vietnam Pro',system-ui,sans-serif}
+*{box-sizing:border-box}body{margin:0;font-family:var(--sans);color:var(--text);font-size:17px;line-height:1.65;background-color:var(--paper);
+background-image:linear-gradient(var(--grid) 1px,transparent 1px),linear-gradient(90deg,var(--grid) 1px,transparent 1px);background-size:24px 24px}
+a{color:var(--ink)}:focus-visible{outline:3px solid var(--ink);outline-offset:2px}
+.wrap{max-width:1040px;margin:0 auto;padding:0 20px}
+header{background:rgba(242,245,249,.95);border-bottom:1px solid var(--line);position:sticky;top:0;z-index:5}
+header .wrap{display:flex;align-items:center;gap:16px;min-height:60px;flex-wrap:wrap}
+.brand{display:flex;gap:10px;align-items:center;font-weight:800;text-decoration:none;color:var(--text)}
+header nav{display:flex;gap:2px;flex-wrap:wrap;margin-left:auto}
+header nav a{text-decoration:none;color:var(--muted);font-weight:600;font-size:14.5px;padding:6px 9px;border-radius:8px}
+header nav a:hover,header nav a[aria-current]{color:var(--ink);background:#E3E9F7}
+@media(max-width:700px){header{position:static}header nav{flex-wrap:nowrap;overflow-x:auto;width:100%;margin-left:0;padding-bottom:6px}header nav a{white-space:nowrap}}
+main{padding:28px 0 64px}
+.crumb{font-size:14px;color:var(--muted);margin-bottom:14px}.crumb a{color:var(--muted)}
+h1{font-size:clamp(30px,4.6vw,48px);line-height:1.15;letter-spacing:-.02em;margin:0 0 .4em;font-weight:800}
+h2{font-size:clamp(23px,3vw,30px);line-height:1.25;letter-spacing:-.01em;margin:1.8em 0 .5em;font-weight:800}
+h3{font-size:19px;margin:1.2em 0 .3em}
+.lead{font-size:19px;color:var(--muted);max-width:66ch}
+.sheet{background:#fff;border:1px solid var(--line);border-radius:6px;padding:22px 24px;margin:16px 0}
+.page{position:relative;background:#fff;border:1px solid var(--line);border-radius:4px;padding:20px 22px 20px 58px;background-image:linear-gradient(transparent 31px,#E4EAF4 32px);background-size:100% 32px;background-position:0 14px}
+.page::before{content:"";position:absolute;left:40px;top:0;bottom:0;width:2px;background:var(--ink-soft);opacity:.35}
+.q{font-family:var(--hand);color:var(--ink);font-size:25px;line-height:32px}
+.meta{font-family:var(--hand);color:var(--muted);font-size:19px;line-height:32px}
+.note{font-family:var(--hand);color:var(--ink);font-size:20px;line-height:1.35}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 14px}
+.chip{font-size:13.5px;font-weight:600;padding:2px 11px;border-radius:999px;border:1px solid var(--line);background:#F7F9FC;color:var(--muted)}
+.chip.code{border-color:var(--ink-soft);color:var(--ink);background:#EEF2FC}
+dl.kv{display:grid;grid-template-columns:180px 1fr;margin:0;border-top:1px solid var(--line)}
+dl.kv dt,dl.kv dd{margin:0;padding:12px 0;border-bottom:1px solid var(--line)}dl.kv dt{font-weight:700;padding-right:16px}
+@media(max-width:640px){dl.kv{grid-template-columns:1fr}dl.kv dt{border-bottom:0;padding-bottom:0}}
+ol.steps{padding-left:0;list-style:none;counter-reset:s}ol.steps li{counter-increment:s;display:grid;grid-template-columns:44px 1fr;padding:10px 0;border-bottom:1px dashed var(--line)}
+ol.steps li::before{content:counter(s);font-size:24px;font-weight:800;color:var(--ink)}
+.btn{display:inline-flex;align-items:center;border:2px solid var(--ink);background:var(--ink);color:#fff;font-weight:700;padding:9px 18px;border-radius:999px;text-decoration:none;font-size:15px}
+.btn.ghost{background:transparent;color:var(--ink)}.row{display:flex;flex-wrap:wrap;gap:10px;align-items:center}
+.cta{border:2px solid var(--ink);background:#F6F8FD;border-radius:6px;padding:18px 20px;margin:24px 0;display:flex;flex-wrap:wrap;gap:14px;justify-content:space-between;align-items:center}
+.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(290px,1fr));gap:14px;margin-top:14px}
+.card{display:block;background:#fff;border:1px solid var(--line);border-left:4px solid var(--ink);border-radius:4px;padding:16px 18px;text-decoration:none;color:var(--text)}
+.card:hover{border-color:var(--ink)}.card strong{display:block;font-size:17px;margin-bottom:4px}.card span{color:var(--muted);font-size:15px}
+.faq details{background:#fff;border:1px solid var(--line);border-radius:6px;padding:14px 18px;margin:10px 0}.faq summary{font-weight:700;cursor:pointer}
+.mark{background:linear-gradient(transparent 55%,var(--hl) 55%,var(--hl) 92%,transparent 92%)}
+table{border-collapse:collapse;width:100%;font-size:15px;background:#fff}th,td{border:1px solid var(--line);padding:8px 10px;text-align:left;vertical-align:top}th{background:#F1F4FA}
+footer{border-top:1px solid var(--line);padding:28px 0 40px;color:var(--muted);font-size:14.5px;background:var(--paper)}
+footer .cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:18px}footer h2{font-size:15px;margin:0 0 6px;color:var(--text)}
+footer ul{list-style:none;padding:0;margin:0}footer li{margin:3px 0}footer a{color:var(--muted)}
+</style>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "LearningResource", "name": "Dự báo nguy cơ ngập theo tuyến đường ở đô thị", "description": "Đề tài KHKT mẫu: Kết hợp lượng mưa, đỉnh triều và lịch sử ngập để cảnh báo trước vài giờ. Có giả thuyết, lộ trình 12 tuần, notebook Colab.", "url": "https://vantupham.github.io/nghien-cuu-khkt-ai/du-an/ngap-duong/", "image": "https://vantupham.github.io/nghien-cuu-khkt-ai/assets/og/du-an-ngap-duong.png", "inLanguage": "vi", "isAccessibleForFree": true, "learningResourceType": "Dự án nghiên cứu mẫu", "educationalLevel": "Trung học cơ sở, Trung học phổ thông", "timeRequired": "P12W", "teaches": ["Machine Learning", "Thiết kế thí nghiệm", "Đánh giá mô hình học máy"], "audience": {"@type": "EducationalAudience", "educationalRole": "student"}, "about": "Rô bốt và máy thông minh", "dateModified": "2026-11-12", "isPartOf": {"@type": "WebSite", "name": "Sổ Nghiên Cứu AI", "url": "https://vantupham.github.io/nghien-cuu-khkt-ai/"}}</script><script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Trang chủ", "item": "https://vantupham.github.io/nghien-cuu-khkt-ai/"}, {"@type": "ListItem", "position": 2, "name": "10 dự án", "item": "https://vantupham.github.io/nghien-cuu-khkt-ai/du-an/"}, {"@type": "ListItem", "position": 3, "name": "Dự báo nguy cơ ngập theo tuyến đường ở đô thị", "item": "https://vantupham.github.io/nghien-cuu-khkt-ai/du-an/ngap-duong/"}]}</script>
+</head>
+<body>
+<header><div class="wrap"><a class="brand" href="../../"><svg width="28" height="28" viewBox="0 0 30 30" aria-hidden="true"><rect x="4" y="3" width="21" height="24" rx="2" fill="#fff" stroke="#1E3A9E" stroke-width="2"/><path d="M9 3v24" stroke="#1E3A9E" stroke-width="1.5" opacity=".5"/><circle cx="17" cy="12" r="2.2" fill="#1E3A9E"/><circle cx="13" cy="19" r="2.2" fill="#1E3A9E"/><circle cx="21" cy="19" r="2.2" fill="#F7E14B" stroke="#1E3A9E" stroke-width="1.2"/><path d="M17 12l-4 7M17 12l4 7M13 19h8" stroke="#1E3A9E" stroke-width="1.3"/></svg>Sổ Nghiên Cứu AI</a><nav aria-label="Mục chính"><a href="../../du-an/" aria-current="page">10 dự án</a><a href="../../ky-nang/">Kỹ năng</a><a href="../../viet-bao-cao/">Viết báo cáo</a><a href="../../dung-ai-dung-cach/">Dùng AI đúng cách</a><a href="../../phuong-phap/">Phương pháp</a><a href="../../lich-thi/">Lịch thi</a><a href="../../hoi-dap/">Hỏi đáp</a></nav></div></header>
+<main class="wrap">
+<nav class="crumb" aria-label="Đường dẫn"><a href="../../">Trang chủ</a> › <a href="../../du-an/">10 dự án</a> › <span>Dự báo nguy cơ ngập theo tuyến đường ở đô thị</span></nav>
+
+<div class="chips"><span class="chip code">ROBO, Machine Learning</span><span class="chip">Rô bốt và máy thông minh</span><span class="chip">Độ khó 2/3, trung bình</span><span class="chip">Khoảng 12 tuần</span><span class="chip">Chỉ cần máy tính</span></div>
+<h1>Dự báo nguy cơ ngập theo tuyến đường ở đô thị</h1>
+<p class="lead">Kết hợp lượng mưa, đỉnh triều và lịch sử ngập để cảnh báo trước vài giờ.</p>
+<div class="page"><div class="meta">Câu hỏi nghiên cứu:</div><p class="q" style="margin:0">Thêm dữ liệu mực triều vào mô hình chỉ dùng lượng mưa có cải thiện khả năng dự báo ngập trên các tuyến đường trũng không?</p><div class="meta">Giả thuyết: Mô hình mưa cộng triều đạt recall cao hơn mô hình chỉ dùng mưa ít nhất 10 điểm phần trăm với cùng mức báo động giả.</div></div>
+<h2>Thiết kế nghiên cứu</h2>
+<dl class="kv"><dt>Dữ liệu</dt><dd>Lượng mưa lịch sử theo giờ (Open-Meteo hoặc NASA POWER), dữ liệu mực nước, triều do đài khí tượng thủy văn khu vực công bố, danh sách điểm ngập em tự thu thập từ báo chí và khảo sát.</dd><dt>Phương pháp</dt><dd>Xây bảng dữ liệu theo (tuyến đường, giờ); hồi quy logistic làm đối chứng; rừng ngẫu nhiên và gradient boosting; kiểm định theo thời gian, không trộn ngẫu nhiên.</dd><dt>Cách đo kết quả</dt><dd>Recall, precision, AUC, số giờ cảnh báo sớm trung bình.</dd><dt>Công cụ</dt><dd>Python, pandas, scikit-learn, XGBoost, folium để vẽ bản đồ.</dd><dt>Đạo đức và an toàn</dt><dd>Ghi rõ nguồn từng bài báo dùng để gán nhãn. Không công bố cảnh báo như thông tin chính thức.</dd></dl>
+<div class="cta"><div style="flex:1 1 320px"><h2 style="margin:0 0 4px;font-size:22px">Notebook Colab chạy được</h2><p style="margin:0;color:var(--muted)">Lượng mưa thật từ Open-Meteo; mực triều và nhãn ngập là giả lập, em thay bằng số liệu tự thu thập. Có mô hình đối chứng, cách chia dữ liệu đúng, phần đánh giá và bài tập tự làm.</p></div>
+<div class="row"><a class="btn" href="https://colab.research.google.com/github/vantupham/nghien-cuu-khkt-ai/blob/main/notebooks/02-ngap-duong.ipynb" rel="noopener">Mở trên Google Colab</a><a class="btn ghost" href="../../notebooks/02-ngap-duong.ipynb" download>Tải notebook</a></div></div>
+<h2>Lộ trình thực hiện</h2>
+<ol class="steps"><li><span>Xác định 20 đến 40 tuyến đường hay ngập, thu thập lịch sử ngập</span></li><li><span>Tải và ghép dữ liệu mưa, triều theo giờ</span></li><li><span>Huấn luyện đối chứng hồi quy logistic</span></li><li><span>Huấn luyện mô hình cây và so sánh</span></li><li><span>Kiểm định theo mùa mưa năm khác, giải thích bằng SHAP</span></li><li><span>Làm bản đồ minh họa, hoàn thiện hồ sơ</span></li></ol>
+<h2>Hướng tạo tính mới</h2>
+<p class="note">Tự xây bộ dữ liệu điểm ngập có nhãn thời gian, chưa ai công bố.</p><p class="note">Giải thích mô hình bằng SHAP để thấy yếu tố nào quyết định.</p><p class="note">Bản đồ cảnh báo đơn giản cho học sinh đi học.</p>
+<p>Đây là dự án mẫu để luyện tập. Dự án dự thi phải là kết quả nghiên cứu của chính em, chưa công bố ở cuộc thi nào, và điểm mới phải là của em.</p>
+<div class="cta"><p style="margin:0;flex:1 1 300px">Theo dõi tiến độ từng tuần, tự chấm theo tiêu chí giám khảo và luyện phỏng vấn cho dự án này bằng công cụ tương tác.</p><a class="btn" href="../../#da-ngap-duong">Mở công cụ cho dự án này</a></div>
+<h2>Dự án cùng lĩnh vực</h2>
+<div class="cards"><a class="card" href="../../du-an/benh-la-lua/"><strong>Chẩn đoán bệnh lá lúa từ ảnh chụp điện thoại</strong><span>Mạng nơ-ron tích chập nhận diện bệnh đạo ôn, bạc lá, đốm nâu và chạy được không cần mạng.</span></a><a class="card" href="../../du-an/ngon-ngu-ky-hieu/"><strong>Nhận diện ngôn ngữ ký hiệu Việt Nam qua webcam</strong><span>Trích điểm mốc bàn tay rồi phân loại cử chỉ để chuyển thành chữ cho người nghe.</span></a><a class="card" href="../../du-an/canh-bao-ngu-gat/"><strong>Cảnh báo ngủ gật cho người lái xe</strong><span>Camera theo dõi mắt và ngáp, phát cảnh báo trước khi người lái mất tập trung.</span></a></div>
+
+</main>
+<footer><div class="wrap">
+<div class="cols"><div><h2>Sổ Nghiên Cứu AI</h2><p>Tài nguyên học tập mở giúp học sinh THCS, THPT trên cả nước luyện làm nghiên cứu khoa học kỹ thuật về trí tuệ nhân tạo.</p><p><a href="../../">Mở công cụ tương tác</a></p></div>
+<div><h2>Hướng dẫn</h2><ul><li><a href="../../du-an/">10 dự án</a></li><li><a href="../../ky-nang/">Kỹ năng</a></li><li><a href="../../viet-bao-cao/">Viết báo cáo</a></li><li><a href="../../dung-ai-dung-cach/">Dùng AI đúng cách</a></li><li><a href="../../phuong-phap/">Phương pháp</a></li><li><a href="../../lich-thi/">Lịch thi</a></li><li><a href="../../hoi-dap/">Hỏi đáp</a></li></ul></div><div><h2>Dự án mẫu</h2><ul><li><a href="../../du-an/benh-la-lua/">Chẩn đoán bệnh lá lúa từ ảnh chụp điện thoại</a></li><li><a href="../../du-an/ngap-duong/">Dự báo nguy cơ ngập theo tuyến đường ở đô thị</a></li><li><a href="../../du-an/tin-lua-dao/">Phát hiện tin nhắn lừa đảo tiếng Việt</a></li><li><a href="../../du-an/ngon-ngu-ky-hieu/">Nhận diện ngôn ngữ ký hiệu Việt Nam qua webcam</a></li><li><a href="../../du-an/canh-bao-ngu-gat/">Cảnh báo ngủ gật cho người lái xe</a></li><li><a href="../../du-an/thung-rac-thong-minh/">Thùng rác tự phân loại bằng camera</a></li><li><a href="../../du-an/du-bao-pm25/">Dự báo bụi mịn PM2.5 ngắn hạn cho một đô thị</a></li><li><a href="../../du-an/tu-the-ngoi-hoc/">Nhắc tư thế ngồi học đúng bằng webcam</a></li><li><a href="../../du-an/tro-ly-on-tap/">Trợ lý ôn tập có trích dẫn nguồn</a></li><li><a href="../../du-an/bai-tap-thich-ung/">Gợi ý bài tập toán thích ứng theo năng lực</a></li></ul></div></div>
+<p style="margin-top:18px">Nội dung về cuộc thi được tổng hợp theo thông lệ chung; quy định cụ thể thay đổi theo từng năm và địa phương, hãy đối chiếu văn bản mới nhất của trường, Sở GD&amp;ĐT và Bộ GD&amp;ĐT. Dự án mẫu chỉ để luyện tập.</p>
+</div></footer>
+</body>
+</html>

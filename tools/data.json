@@ -1,0 +1,1215 @@
+{
+ "PROJECTS": [
+  {
+   "id": "benh-la-lua",
+   "nbData": "Bộ beans (bệnh lá đậu) trên Hugging Face để luyện quy trình; em thay bằng ảnh lá lúa của mình.",
+   "title": "Chẩn đoán bệnh lá lúa từ ảnh chụp điện thoại",
+   "code": "ROBO",
+   "sub": "Machine Learning",
+   "level": 1,
+   "hw": false,
+   "weeks": 10,
+   "short": "Mạng nơ-ron tích chập nhận diện bệnh đạo ôn, bạc lá, đốm nâu và chạy được không cần mạng.",
+   "q": "Một mô hình học chuyển giao nhỏ có giữ được độ chính xác khi chuyển từ ảnh phòng lab sang ảnh chụp ngoài ruộng ở địa phương không?",
+   "hyp": "Huấn luyện thêm với 300 ảnh thực địa tự chụp sẽ tăng F1 trên ảnh thực địa ít nhất 15 điểm phần trăm so với mô hình chỉ học ảnh công khai.",
+   "data": "Bộ ảnh bệnh lá lúa công khai trên Kaggle hoặc kho UCI, cộng ảnh tự chụp tại ruộng (ghi rõ ngày, giờ, địa điểm, loại điện thoại).",
+   "method": "Học chuyển giao với MobileNetV3 hoặc EfficientNet-B0; tăng cường dữ liệu; so sánh với mô hình đối chứng không học chuyển giao; xuất mô hình ONNX để chạy trên điện thoại.",
+   "metric": "Độ chính xác, F1 trung bình theo lớp, ma trận nhầm lẫn, thời gian suy luận trên điện thoại tầm trung.",
+   "novelty": [
+    "Đo mức sụt giảm khi đổi miền ảnh (phòng lab sang ruộng) và đề xuất cách khắc phục.",
+    "Thêm lớp “không chắc chắn” để mô hình biết từ chối trả lời.",
+    "Kiểm tra với nông dân thật: họ có làm theo gợi ý không?"
+   ],
+   "ethics": "Xin phép chủ ruộng khi chụp. Không đưa ra khuyến nghị thuốc bảo vệ thực vật thay chuyên gia.",
+   "tools": "Google Colab, PyTorch, Teachable Machine để thử nhanh.",
+   "ms": [
+    "Đọc 5 bài báo về nhận diện bệnh cây bằng CNN, ghi tóm tắt tay",
+    "Gom và làm sạch dữ liệu công khai, chia tập huấn luyện, kiểm định, kiểm tra",
+    "Huấn luyện mô hình đối chứng và mô hình học chuyển giao",
+    "Đi thực địa chụp ảnh, gán nhãn cùng người có chuyên môn",
+    "Đánh giá trên ảnh thực địa, phân tích lỗi bằng ma trận nhầm lẫn",
+    "Đóng gói ứng dụng, viết báo cáo, poster và video"
+   ]
+  },
+  {
+   "id": "ngap-duong",
+   "nbData": "Lượng mưa thật từ Open-Meteo; mực triều và nhãn ngập là giả lập, em thay bằng số liệu tự thu thập.",
+   "title": "Dự báo nguy cơ ngập theo tuyến đường ở đô thị",
+   "code": "ROBO",
+   "sub": "Machine Learning",
+   "level": 2,
+   "hw": false,
+   "weeks": 12,
+   "short": "Kết hợp lượng mưa, đỉnh triều và lịch sử ngập để cảnh báo trước vài giờ.",
+   "q": "Thêm dữ liệu mực triều vào mô hình chỉ dùng lượng mưa có cải thiện khả năng dự báo ngập trên các tuyến đường trũng không?",
+   "hyp": "Mô hình mưa cộng triều đạt recall cao hơn mô hình chỉ dùng mưa ít nhất 10 điểm phần trăm với cùng mức báo động giả.",
+   "data": "Lượng mưa lịch sử theo giờ (Open-Meteo hoặc NASA POWER), dữ liệu mực nước, triều do đài khí tượng thủy văn khu vực công bố, danh sách điểm ngập em tự thu thập từ báo chí và khảo sát.",
+   "method": "Xây bảng dữ liệu theo (tuyến đường, giờ); hồi quy logistic làm đối chứng; rừng ngẫu nhiên và gradient boosting; kiểm định theo thời gian, không trộn ngẫu nhiên.",
+   "metric": "Recall, precision, AUC, số giờ cảnh báo sớm trung bình.",
+   "novelty": [
+    "Tự xây bộ dữ liệu điểm ngập có nhãn thời gian, chưa ai công bố.",
+    "Giải thích mô hình bằng SHAP để thấy yếu tố nào quyết định.",
+    "Bản đồ cảnh báo đơn giản cho học sinh đi học."
+   ],
+   "ethics": "Ghi rõ nguồn từng bài báo dùng để gán nhãn. Không công bố cảnh báo như thông tin chính thức.",
+   "tools": "Python, pandas, scikit-learn, XGBoost, folium để vẽ bản đồ.",
+   "ms": [
+    "Xác định 20 đến 40 tuyến đường hay ngập, thu thập lịch sử ngập",
+    "Tải và ghép dữ liệu mưa, triều theo giờ",
+    "Huấn luyện đối chứng hồi quy logistic",
+    "Huấn luyện mô hình cây và so sánh",
+    "Kiểm định theo mùa mưa năm khác, giải thích bằng SHAP",
+    "Làm bản đồ minh họa, hoàn thiện hồ sơ"
+   ]
+  },
+  {
+   "id": "tin-lua-dao",
+   "nbData": "Bộ SMS Spam Collection (UCI) để luyện; khung xử lý tiếng Việt và tinh chỉnh PhoBERT cho dữ liệu của em.",
+   "title": "Phát hiện tin nhắn lừa đảo tiếng Việt",
+   "code": "SFTD",
+   "sub": "Cybersecurity",
+   "level": 2,
+   "hw": false,
+   "weeks": 10,
+   "short": "Mô hình ngôn ngữ phân loại tin nhắn giả danh ngân hàng, trúng thưởng, việc nhẹ lương cao.",
+   "q": "Mô hình PhoBERT tinh chỉnh có chống chịu tốt hơn mô hình TF-IDF khi kẻ gian viết không dấu, teencode hoặc chèn ký tự lạ không?",
+   "hyp": "Khi tin nhắn bị biến đổi, F1 của PhoBERT giảm ít hơn F1 của TF-IDF cộng hồi quy logistic.",
+   "data": "Tin nhắn lừa đảo thu thập từ người thân và cộng đồng (đã xóa số điện thoại, tên, số tài khoản), tin nhắn bình thường làm lớp đối chứng; bộ tin nhắn biến đổi do em tự tạo theo quy tắc.",
+   "method": "Đối chứng TF-IDF cộng hồi quy logistic; tinh chỉnh PhoBERT (VinAI); tạo tập kiểm tra đối kháng bằng bộ biến đổi tự viết.",
+   "metric": "Precision, recall, F1; mức giảm F1 trên tập đối kháng; tỷ lệ báo nhầm tin thật.",
+   "novelty": [
+    "Bộ quy tắc biến đổi tin nhắn tiếng Việt để kiểm tra độ bền.",
+    "Phân loại theo kịch bản lừa đảo, không chỉ có hay không.",
+    "Tiện ích cảnh báo kèm giải thích dấu hiệu đáng ngờ."
+   ],
+   "ethics": "Ẩn danh hóa toàn bộ dữ liệu, có sự đồng ý của người cung cấp. Không lưu thông tin tài khoản.",
+   "tools": "Python, Hugging Face Transformers, scikit-learn, Google Colab.",
+   "ms": [
+    "Tìm hiểu các kịch bản lừa đảo phổ biến, đọc tài liệu",
+    "Thu thập, ẩn danh hóa và gán nhãn tin nhắn",
+    "Huấn luyện đối chứng TF-IDF",
+    "Tinh chỉnh PhoBERT",
+    "Xây tập đối kháng và đo độ bền",
+    "Làm bản demo, viết báo cáo"
+   ]
+  },
+  {
+   "id": "ngon-ngu-ky-hieu",
+   "nbData": "Trích điểm mốc bàn tay từ video của em bằng MediaPipe; dữ liệu giả lập cho thấy vì sao cần mô hình chuỗi.",
+   "title": "Nhận diện ngôn ngữ ký hiệu Việt Nam qua webcam",
+   "code": "ROBO",
+   "sub": "Cognitive Systems",
+   "level": 3,
+   "hw": false,
+   "weeks": 14,
+   "short": "Trích điểm mốc bàn tay rồi phân loại cử chỉ để chuyển thành chữ cho người nghe.",
+   "q": "Mô hình học chuỗi trên điểm mốc bàn tay có nhận diện được các từ ký hiệu động tốt hơn mô hình chỉ nhìn một khung hình không?",
+   "hyp": "LSTM trên chuỗi 30 khung điểm mốc đạt độ chính xác cao hơn MLP một khung với các ký hiệu có chuyển động.",
+   "data": "Video tự quay một bộ từ vựng ký hiệu cơ bản, có sự hướng dẫn và đồng ý của người dùng ngôn ngữ ký hiệu từ trường hoặc trung tâm hỗ trợ người khiếm thính.",
+   "method": "MediaPipe Hands trích 21 điểm mốc mỗi bàn tay; chuẩn hóa vị trí; so sánh MLP một khung và LSTM hoặc GRU trên chuỗi.",
+   "metric": "Độ chính xác từng từ, độ chính xác với người chưa có trong tập huấn luyện, độ trễ.",
+   "novelty": [
+    "Kiểm tra trên người ký mới, không trùng người trong tập huấn luyện.",
+    "Phát hiện ranh giới giữa hai ký hiệu liên tiếp.",
+    "Đánh giá cùng chính cộng đồng người khiếm thính."
+   ],
+   "ethics": "Dự án có người tham gia: cần giấy đồng ý, giải thích mục đích, cho phép rút dữ liệu. Khuôn mặt nên được làm mờ khi lưu.",
+   "tools": "Python, MediaPipe, OpenCV, TensorFlow hoặc PyTorch.",
+   "ms": [
+    "Liên hệ đối tác cộng đồng, chọn 15 đến 30 từ",
+    "Quay dữ liệu có giấy đồng ý, gán nhãn",
+    "Trích điểm mốc và chuẩn hóa",
+    "Huấn luyện MLP đối chứng và mô hình chuỗi",
+    "Kiểm tra với người ký mới, phân tích lỗi",
+    "Thử nghiệm cùng người dùng, hoàn thiện hồ sơ"
+   ]
+  },
+  {
+   "id": "canh-bao-ngu-gat",
+   "nbData": "Tính tỉ lệ khung mắt từ video của em; mô phỏng 12 người lái để so sánh ba cách cảnh báo.",
+   "title": "Cảnh báo ngủ gật cho người lái xe",
+   "code": "ROBO",
+   "sub": "Cognitive Systems",
+   "level": 2,
+   "hw": true,
+   "weeks": 10,
+   "short": "Camera theo dõi mắt và ngáp, phát cảnh báo trước khi người lái mất tập trung.",
+   "q": "Kết hợp tỉ lệ khép mắt với tần suất ngáp có giảm báo động giả so với chỉ dùng tỉ lệ khép mắt trong điều kiện thiếu sáng không?",
+   "hyp": "Mô hình kết hợp giảm số báo động giả mỗi giờ ít nhất 30% mà không bỏ sót thêm sự kiện buồn ngủ.",
+   "data": "Bộ ảnh mắt mở và nhắm công khai (ví dụ MRL Eye), video tự quay mô phỏng có người lớn giám sát, ở nhiều điều kiện ánh sáng.",
+   "method": "MediaPipe Face Mesh tính tỉ lệ khung mắt (EAR) và miệng (MAR); so sánh ngưỡng cố định, ngưỡng cá nhân hóa và CNN nhỏ; chạy trên Raspberry Pi hoặc điện thoại cũ.",
+   "metric": "Recall sự kiện buồn ngủ, báo động giả mỗi giờ, độ trễ cảnh báo.",
+   "novelty": [
+    "Ngưỡng tự hiệu chỉnh theo từng người trong 1 phút đầu.",
+    "Thử với kính râm, ánh sáng đèn đường ban đêm.",
+    "Thiết bị gắn mũ bảo hiểm cho người đi xe máy."
+   ],
+   "ethics": "Tuyệt đối không thử nghiệm khi đang lái thật. Chỉ mô phỏng khi ngồi yên.",
+   "tools": "Python, OpenCV, MediaPipe; Raspberry Pi 4 hoặc 5 và camera (tùy chọn).",
+   "ms": [
+    "Đọc tài liệu về dấu hiệu buồn ngủ và chỉ số EAR",
+    "Viết bản đầu dùng ngưỡng cố định",
+    "Quay video mô phỏng có kịch bản và nhãn thời gian",
+    "Thêm ngáp và ngưỡng cá nhân hóa, so sánh",
+    "Đưa lên thiết bị nhúng, đo độ trễ",
+    "Tổng hợp kết quả, làm hồ sơ"
+   ]
+  },
+  {
+   "id": "thung-rac-thong-minh",
+   "nbData": "Bộ TrashNet trên Hugging Face; kèm mã mẫu Raspberry Pi điều khiển servo.",
+   "title": "Thùng rác tự phân loại bằng camera",
+   "code": "ROBO",
+   "sub": "Machine Learning",
+   "level": 3,
+   "hw": true,
+   "weeks": 14,
+   "short": "Nhận diện hộp sữa giấy, chai nhựa, lon, túi nilon rồi điều khiển nắp mở đúng ngăn.",
+   "q": "Mô hình phát hiện vật thể huấn luyện thêm bằng rác thải đặc thù ở Việt Nam có phân loại đúng hơn mô hình chỉ học dữ liệu nước ngoài không?",
+   "hyp": "Thêm 500 ảnh rác tự chụp ở căng tin trường giúp độ chính xác phân loại tăng ít nhất 20 điểm phần trăm trên rác thật.",
+   "data": "Bộ TrashNet công khai cộng ảnh rác tự chụp tại căng tin trường (hộp sữa, ly trà sữa, ống hút, túi nilon).",
+   "method": "YOLO (Ultralytics) bản nhỏ; ESP32-CAM hoặc Raspberry Pi; động cơ servo mở ngăn; so sánh với mô hình không tinh chỉnh.",
+   "metric": "Độ chính xác phân loại, mAP, thời gian từ lúc bỏ rác đến lúc mở nắp, tỷ lệ phân loại đúng trong một tuần dùng thử.",
+   "novelty": [
+    "Bộ dữ liệu rác học đường Việt Nam.",
+    "Đo thay đổi hành vi bỏ rác của học sinh trước và sau.",
+    "Tự học tiếp từ những lần bị người dùng sửa."
+   ],
+   "ethics": "Không quay mặt người bỏ rác. Kiểm tra an toàn điện cho thiết bị đặt nơi công cộng.",
+   "tools": "Python, Ultralytics YOLO, Arduino IDE, Raspberry Pi, servo, khung in 3D hoặc thùng nhựa.",
+   "ms": [
+    "Khảo sát loại rác ở căng tin, chọn 4 đến 5 lớp",
+    "Chụp và gán nhãn khung ảnh",
+    "Huấn luyện và so sánh với mô hình gốc",
+    "Lắp mạch, servo và khung thùng",
+    "Thử nghiệm một tuần tại trường, ghi số liệu",
+    "Phân tích, viết báo cáo, quay video"
+   ]
+  },
+  {
+   "id": "du-bao-pm25",
+   "nbData": "PM2.5 và thời tiết từ Open-Meteo; so sánh mô hình lặp lại, hồi quy Ridge và LSTM.",
+   "title": "Dự báo bụi mịn PM2.5 ngắn hạn cho một đô thị",
+   "code": "ROBO",
+   "sub": "Machine Learning",
+   "level": 2,
+   "hw": false,
+   "weeks": 10,
+   "short": "Mô hình chuỗi thời gian dự báo chất lượng không khí 24 giờ tới cho từng quận.",
+   "q": "Mạng LSTM có dự báo PM2.5 trước 24 giờ tốt hơn mô hình “ngày mai giống hôm nay” và ARIMA không?",
+   "hyp": "LSTM dùng thêm gió và độ ẩm cho MAE thấp hơn mô hình lặp lại ít nhất 20%.",
+   "data": "Dữ liệu trạm quan trắc trên OpenAQ, thời tiết theo giờ từ Open-Meteo; có thể tự lắp cảm biến bụi giá rẻ để đối chiếu.",
+   "method": "Mô hình lặp lại làm đối chứng; ARIMA hoặc SARIMA; LSTM; kiểm định cuộn theo thời gian.",
+   "metric": "MAE, RMSE, độ đúng khi phân mức cảnh báo AQI.",
+   "novelty": [
+    "Hiệu chỉnh cảm biến giá rẻ bằng ML theo trạm chuẩn.",
+    "Dự báo cho giờ tan trường để nhắc học sinh đeo khẩu trang.",
+    "So sánh mùa khô và mùa mưa."
+   ],
+   "ethics": "Nêu rõ giới hạn của dự báo, không thay thông báo chính thức.",
+   "tools": "Python, pandas, statsmodels, TensorFlow hoặc PyTorch; cảm biến PMS5003 và ESP32 (tùy chọn).",
+   "ms": [
+    "Tải và làm sạch dữ liệu trạm, xử lý giá trị thiếu",
+    "Phân tích khám phá theo giờ, mùa",
+    "Xây đối chứng lặp lại và ARIMA",
+    "Huấn luyện LSTM, chỉnh siêu tham số",
+    "Kiểm định cuộn và so sánh",
+    "Làm biểu đồ, hoàn thiện hồ sơ"
+   ]
+  },
+  {
+   "id": "tu-the-ngoi-hoc",
+   "nbData": "Đo góc cổ bằng MediaPipe Pose, chọn ngưỡng theo nhãn người quan sát, phân tích thí nghiệm hai nhóm.",
+   "title": "Nhắc tư thế ngồi học đúng bằng webcam",
+   "code": "SFTD",
+   "sub": "Human/Machine Interface",
+   "level": 1,
+   "hw": false,
+   "weeks": 8,
+   "short": "Ước lượng tư thế cơ thể, nhắc khi cúi quá thấp hoặc gù lưng lâu.",
+   "q": "Nhắc nhở theo thời gian thực trong hai tuần có làm giảm thời gian ngồi sai tư thế của học sinh không?",
+   "hyp": "Nhóm dùng ứng dụng có tỷ lệ thời gian ngồi sai giảm nhiều hơn nhóm đối chứng.",
+   "data": "Ảnh tư thế tự thu thập có đồng ý; nhật ký sử dụng của 20 đến 40 học sinh tình nguyện.",
+   "method": "MediaPipe Pose lấy góc cổ và lưng; ngưỡng hoặc bộ phân loại nhỏ; thí nghiệm hai nhóm trong hai tuần.",
+   "metric": "Độ chính xác nhận diện tư thế so với nhãn của người quan sát; tỷ lệ thời gian ngồi sai trước và sau.",
+   "novelty": [
+    "Thí nghiệm có nhóm đối chứng, điều nhiều dự án bỏ qua.",
+    "Kiểu nhắc nào hiệu quả: âm thanh, rung, hay hình nền đổi màu.",
+    "Chạy hoàn toàn trên máy, không gửi hình đi."
+   ],
+   "ethics": "Nghiên cứu trên người: cần giấy đồng ý của học sinh và phụ huynh. Không lưu hình ảnh, chỉ lưu góc đo.",
+   "tools": "JavaScript với MediaPipe hoặc Python, OpenCV.",
+   "ms": [
+    "Tìm hiểu tư thế ngồi đúng theo tài liệu y khoa phổ thông",
+    "Làm bản nhận diện tư thế đầu tiên",
+    "Gán nhãn 300 khung hình, đo độ chính xác",
+    "Tuyển tình nguyện viên, chia nhóm, lấy đồng ý",
+    "Chạy thí nghiệm hai tuần, thu số liệu",
+    "Phân tích thống kê, viết báo cáo"
+   ]
+  },
+  {
+   "id": "tro-ly-on-tap",
+   "nbData": "12 đoạn tài liệu Sinh học mẫu; so sánh TF-IDF với tìm kiếm vector, tạo phiếu chấm mù cho giáo viên.",
+   "title": "Trợ lý ôn tập có trích dẫn nguồn",
+   "code": "SFTD",
+   "sub": "Online Learning",
+   "level": 2,
+   "hw": false,
+   "weeks": 10,
+   "short": "Mô hình ngôn ngữ chỉ trả lời dựa trên tài liệu của lớp và chỉ ra đoạn đã dùng.",
+   "q": "Truy xuất tăng cường (RAG) có giảm tỷ lệ trả lời sai sự thật của mô hình ngôn ngữ trên câu hỏi môn Sinh học lớp 11 không?",
+   "hyp": "Hệ thống RAG có tỷ lệ câu trả lời sai thấp hơn mô hình không truy xuất và trích đúng đoạn nguồn trong phần lớn câu trả lời.",
+   "data": "Tài liệu ôn tập do giáo viên soạn và cho phép dùng; bộ 150 câu hỏi kèm đáp án do em và giáo viên viết.",
+   "method": "Chia đoạn tài liệu; mô hình nhúng mã nguồn mở; tìm kiếm vector; so sánh có và không có truy xuất; giáo viên chấm mù.",
+   "metric": "Tỷ lệ đúng, tỷ lệ bịa thông tin, độ chính xác trích dẫn, điểm hữu ích do học sinh đánh giá.",
+   "novelty": [
+    "Bộ câu hỏi đánh giá bằng tiếng Việt cho một môn học.",
+    "Cho mô hình nói “không có trong tài liệu” khi cần.",
+    "So sánh các cách chia đoạn văn bản."
+   ],
+   "ethics": "Chỉ dùng tài liệu được phép. Ghi rõ đây là công cụ ôn tập, không thay giáo viên.",
+   "tools": "Python, LangChain hoặc LlamaIndex, FAISS hoặc Chroma, một mô hình ngôn ngữ mở hoặc API.",
+   "ms": [
+    "Chọn môn và chương, xin phép dùng tài liệu",
+    "Viết bộ câu hỏi đánh giá cùng giáo viên",
+    "Dựng hệ thống không truy xuất làm đối chứng",
+    "Dựng hệ thống RAG",
+    "Chấm mù, so sánh, phân tích lỗi",
+    "Thử với học sinh, hoàn thiện hồ sơ"
+   ]
+  },
+  {
+   "id": "bai-tap-thich-ung",
+   "nbData": "Mô phỏng học sinh làm bài; BKT tự cài đặt so với DKT khi thay đổi lượng dữ liệu.",
+   "title": "Gợi ý bài tập toán thích ứng theo năng lực",
+   "code": "SFTD",
+   "sub": "Online Learning",
+   "level": 3,
+   "hw": false,
+   "weeks": 14,
+   "short": "Mô hình truy vết kiến thức đoán em đã nắm kỹ năng nào để chọn bài kế tiếp.",
+   "q": "Mô hình truy vết kiến thức Bayes có dự đoán câu trả lời kế tiếp của học sinh tốt bằng mô hình học sâu trên dữ liệu nhỏ của một trường không?",
+   "hyp": "Với dưới 5.000 lượt trả lời, BKT đạt AUC tương đương DKT và dễ giải thích hơn.",
+   "data": "Bộ dữ liệu công khai ASSISTments để học phương pháp; dữ liệu làm bài ẩn danh từ một lớp thí điểm có đồng ý.",
+   "method": "BKT làm mô hình dễ giải thích; DKT với LSTM; so sánh; thử nghiệm gợi ý bài trong 3 tuần.",
+   "metric": "AUC dự đoán câu trả lời kế tiếp, mức tiến bộ giữa bài kiểm tra đầu và cuối.",
+   "novelty": [
+    "So sánh mô hình trên dữ liệu nhỏ như ở trường Việt Nam.",
+    "Bản đồ kỹ năng cho chương trình Toán hiện hành.",
+    "Bảng điều khiển cho giáo viên."
+   ],
+   "ethics": "Ẩn danh hóa mã học sinh. Phụ huynh và học sinh đồng ý. Không dùng kết quả để xếp loại.",
+   "tools": "Python, pyBKT, PyTorch, một trang web đơn giản để làm bài.",
+   "ms": [
+    "Đọc tài liệu về BKT và DKT, chạy thử trên ASSISTments",
+    "Xây bản đồ kỹ năng cho một chương Toán",
+    "Làm trang làm bài và ghi dữ liệu",
+    "Thu dữ liệu thí điểm có đồng ý",
+    "Huấn luyện, so sánh hai mô hình",
+    "Thử gợi ý bài, đo tiến bộ, viết báo cáo"
+   ]
+  }
+ ],
+ "SKILLS": [
+  {
+   "n": "Quan sát và đặt câu hỏi",
+   "short": "Quan sát",
+   "sum": "Nhìn ra điều chưa ổn trong đời sống và biến nó thành một câu hỏi đo được, đủ hẹp để trả lời trong vài tháng.",
+   "habits": [
+    "Ghi lại mọi điều khiến mình thắc mắc, kể cả điều nhỏ",
+    "Hỏi “vì sao” và “bao nhiêu” thay vì chỉ “có hay không”",
+    "Thu hẹp câu hỏi đến khi biết cần đo cái gì"
+   ],
+   "drill": "Viết 5 câu hỏi về một vấn đề quanh trường em. Gạch bỏ câu nào không đo được, viết lại câu còn lại sao cho có con số.",
+   "lv": [
+    "Có ý tưởng chung chung",
+    "Đặt được câu hỏi nhưng còn rộng",
+    "Câu hỏi đo được, vừa sức",
+    "Giúp bạn khác thu hẹp câu hỏi"
+   ]
+  },
+  {
+   "n": "Đọc và tổng hợp tài liệu",
+   "short": "Đọc tài liệu",
+   "sum": "Tìm, đọc và so sánh các nghiên cứu đã có để biết thế giới đã làm đến đâu và khoảng trống nằm ở đâu.",
+   "habits": [
+    "Đọc tóm tắt và hình trước, đọc toàn bài sau",
+    "Ghi cho mỗi bài: họ làm gì, đạt bao nhiêu, còn thiếu gì",
+    "Dùng Google Scholar, arXiv, tạp chí trong nước"
+   ],
+   "drill": "Chọn 3 bài báo về đề tài của em, kẻ bảng so sánh: dữ liệu, phương pháp, kết quả, hạn chế.",
+   "lv": [
+    "Chỉ đọc bài phổ biến khoa học",
+    "Đọc được tóm tắt bài báo",
+    "So sánh được nhiều bài, thấy khoảng trống",
+    "Hướng dẫn bạn cách đọc bài báo"
+   ]
+  },
+  {
+   "n": "Tư duy phản biện",
+   "short": "Phản biện",
+   "sum": "Nghi ngờ đúng chỗ, kể cả với kết quả của chính mình: dữ liệu có thiên lệch không, có giải thích nào khác không.",
+   "habits": [
+    "Luôn hỏi “còn cách giải thích nào khác?”",
+    "Phân biệt tương quan với nhân quả",
+    "Tìm ca mô hình đoán sai trước khi khoe ca đoán đúng"
+   ],
+   "drill": "Làm phần Thử thách tư duy khoa học bên dưới, rồi tìm một điểm yếu trong dự án của chính em.",
+   "lv": [
+    "Tin ngay kết quả đầu tiên",
+    "Biết vài lỗi phổ biến",
+    "Tự tìm được lỗi trong dự án mình",
+    "Phản biện có xây dựng cho dự án khác"
+   ]
+  },
+  {
+   "n": "Thiết kế thí nghiệm",
+   "short": "Thiết kế",
+   "sum": "Lên kế hoạch so sánh công bằng: một thứ thay đổi, mọi thứ khác giữ nguyên, có đối chứng và chỉ số đo đặt ra từ trước.",
+   "habits": [
+    "Xác định biến độc lập, phụ thuộc, kiểm soát",
+    "Luôn có mô hình đối chứng",
+    "Quyết định cách đo trước khi nhìn kết quả"
+   ],
+   "drill": "Viết thiết kế thí nghiệm một trang cho dự án của em: giả thuyết, biến, đối chứng, cách chia dữ liệu, chỉ số.",
+   "lv": [
+    "Thử đại xem có chạy không",
+    "Có so sánh nhưng chưa công bằng",
+    "Thiết kế có đối chứng, kiểm soát biến",
+    "Phát hiện lỗi thiết kế của người khác"
+   ]
+  },
+  {
+   "n": "Xử lý dữ liệu và thống kê",
+   "short": "Dữ liệu",
+   "sum": "Làm sạch dữ liệu, mô tả bằng biểu đồ, và biết khi nào khác biệt là thật, khi nào chỉ là may rủi.",
+   "habits": [
+    "Vẽ dữ liệu trước khi chạy mô hình",
+    "Báo cáo trung bình kèm độ lệch hoặc khoảng tin cậy",
+    "Chạy lại nhiều lần với hạt giống ngẫu nhiên khác nhau"
+   ],
+   "drill": "Chạy mô hình của em 5 lần, ghi lại độ chính xác mỗi lần, tính trung bình và độ lệch chuẩn.",
+   "lv": [
+    "Chỉ báo một con số",
+    "Vẽ được biểu đồ mô tả",
+    "Dùng được kiểm định, khoảng tin cậy",
+    "Chọn đúng phép thống kê cho bài toán mới"
+   ]
+  },
+  {
+   "n": "Lập trình và công cụ",
+   "short": "Lập trình",
+   "sum": "Dùng Python, thư viện học máy và các công cụ như Colab, Git để biến ý tưởng thành thí nghiệm chạy được và chạy lại được.",
+   "habits": [
+    "Viết mã sao cho người khác chạy lại được",
+    "Lưu phiên bản bằng Git",
+    "Ghi rõ đoạn mã nào do AI gợi ý"
+   ],
+   "drill": "Đưa mã dự án lên GitHub kèm README hướng dẫn chạy lại từ đầu.",
+   "lv": [
+    "Chạy mã có sẵn",
+    "Sửa được mã mẫu",
+    "Tự viết quy trình huấn luyện, đánh giá",
+    "Đóng gói để người khác chạy lại"
+   ]
+  },
+  {
+   "n": "Ghi chép khoa học",
+   "short": "Ghi chép",
+   "sum": "Giữ sổ nghiên cứu trung thực theo thời gian: ngày, mục tiêu, cách làm, kết quả thô, cả lần thất bại.",
+   "habits": [
+    "Ghi ngay trong ngày, không chép lại cho đẹp",
+    "Dán hoặc chép số liệu thô",
+    "Ghi lý do mỗi lần thay đổi cách làm"
+   ],
+   "drill": "Từ hôm nay, mỗi buổi làm dự án viết ít nhất 5 dòng vào sổ: hôm nay làm gì, kết quả, việc tiếp theo.",
+   "lv": [
+    "Ghi khi nhớ ra",
+    "Ghi đều nhưng thiếu số liệu",
+    "Sổ đủ để người khác lặp lại",
+    "Sổ là tài liệu mẫu cho bạn khác"
+   ]
+  },
+  {
+   "n": "Giao tiếp khoa học",
+   "short": "Trình bày",
+   "sum": "Viết báo cáo rõ ràng, làm poster dễ đọc, nói về nghiên cứu cho cả giám khảo lẫn người không chuyên.",
+   "habits": [
+    "Một hình nói một ý",
+    "Mở đầu bằng vấn đề, không bằng công nghệ",
+    "Tập giải thích cho người thân nghe"
+   ],
+   "drill": "Giải thích dự án của em trong 60 giây cho một người không học công nghệ, rồi hỏi họ nhắc lại.",
+   "lv": [
+    "Đọc theo giấy",
+    "Trình bày rõ nhưng dài",
+    "Gọn trong 3 phút, trả lời tốt",
+    "Điều chỉnh theo từng người nghe"
+   ]
+  },
+  {
+   "n": "Đạo đức và liêm chính",
+   "short": "Liêm chính",
+   "sum": "Trung thực với dữ liệu, ghi nguồn đầy đủ, bảo vệ người tham gia và minh bạch khi dùng AI.",
+   "habits": [
+    "Không bỏ dữ liệu xấu cho đẹp kết quả",
+    "Xin đồng ý trước khi thu dữ liệu về người",
+    "Khai báo rõ mọi lần dùng AI tạo sinh"
+   ],
+   "drill": "Viết một đoạn ngắn: dự án của em có thể gây hại cho ai, và em đã làm gì để giảm rủi ro đó.",
+   "lv": [
+    "Chưa nghĩ tới",
+    "Biết các quy tắc cơ bản",
+    "Áp dụng đầy đủ trong dự án",
+    "Nhắc nhở và giúp nhóm khác"
+   ]
+  },
+  {
+   "n": "Hợp tác và đón nhận góp ý",
+   "short": "Hợp tác",
+   "sum": "Làm việc nhóm có phân công rõ, nhờ chuyên gia góp ý và coi phản biện là quà, không phải đòn tấn công.",
+   "habits": [
+    "Ghi rõ ai làm phần nào",
+    "Chủ động hỏi giáo viên, chuyên gia",
+    "Cảm ơn, ghi lại và xử lý từng góp ý"
+   ],
+   "drill": "Nhờ một người đọc báo cáo của em và ghi 3 góp ý. Viết em sẽ xử lý từng góp ý thế nào.",
+   "lv": [
+    "Ngại hỏi",
+    "Hỏi khi bí",
+    "Chủ động xin góp ý định kỳ",
+    "Tổ chức buổi góp ý cho nhóm"
+   ]
+  }
+ ],
+ "METHOD": [
+  [
+   "Quan sát và đặt vấn đề",
+   "Tìm một vấn đề có người thật chịu ảnh hưởng. Viết ra ai, ở đâu, thiệt hại gì."
+  ],
+  [
+   "Đọc tài liệu",
+   "Đọc kỹ các tài liệu chính, thường từ 5 trở lên. Ghi tay tóm tắt từng bài: họ làm gì, đạt bao nhiêu, còn thiếu gì."
+  ],
+  [
+   "Câu hỏi và giả thuyết",
+   "Một câu hỏi đo được, một giả thuyết có con số. Xác định biến độc lập, biến phụ thuộc, biến kiểm soát."
+  ],
+  [
+   "Thiết kế thí nghiệm",
+   "Chọn mô hình đối chứng, cách chia dữ liệu, chỉ số đo. Giáo viên hướng dẫn duyệt kế hoạch trước khi làm."
+  ],
+  [
+   "Thu thập và làm sạch dữ liệu",
+   "Ghi rõ nguồn, ngày thu, cách gán nhãn. Giữ nguyên dữ liệu thô."
+  ],
+  [
+   "Xây và huấn luyện mô hình",
+   "Bắt đầu từ thứ đơn giản nhất chạy được. Ghi mọi thay đổi siêu tham số vào sổ."
+  ],
+  [
+   "Đánh giá và phân tích lỗi",
+   "So với đối chứng trên tập kiểm tra chưa từng thấy. Xem các ca sai cụ thể."
+  ],
+  [
+   "Kết luận và trình bày",
+   "Trả lời câu hỏi ban đầu, nêu giới hạn, viết báo cáo, poster và video."
+  ]
+ ],
+ "DOSSIER": [
+  "Sổ nghiên cứu ghi chép từ ý tưởng đến sản phẩm, theo thứ tự thời gian, mực xanh hoặc đen",
+  "Báo cáo dự án đúng giới hạn số trang trong quy định",
+  "Danh mục tài liệu tham khảo đủ số lượng yêu cầu (nhiều nơi đòi tối thiểu 5 tài liệu chính)",
+  "Poster theo mẫu của ban tổ chức",
+  "Video giới thiệu ngắn nếu cuộc thi yêu cầu",
+  "Nhật ký câu lệnh AI đính kèm nếu có dùng AI",
+  "Kế hoạch nghiên cứu được giáo viên hướng dẫn duyệt trước khi bắt đầu",
+  "Ghi rõ đóng góp riêng của từng thành viên nếu làm nhóm 2 người"
+ ],
+ "STAGES": [
+  {
+   "m": [
+    8,
+    9,
+    10
+   ],
+   "t": "Cấp trường",
+   "s": "Quan sát vấn đề, đọc tài liệu, viết kế hoạch nghiên cứu và được giáo viên hướng dẫn duyệt. Nhà trường chọn dự án dự thi cấp tỉnh, thành phố."
+  },
+  {
+   "m": [
+    10,
+    11,
+    12,
+    1
+   ],
+   "t": "Cấp tỉnh, thành phố",
+   "s": "Sở GD&ĐT tổ chức, thường gồm xét hồ sơ, trưng bày sản phẩm và phỏng vấn. Mỗi địa phương có lịch riêng, có nơi tổ chức vào tháng 1 hoặc 2."
+  },
+  {
+   "m": [
+    12,
+    1
+   ],
+   "t": "Tuyển chọn và hoàn thiện dự án dự thi quốc gia",
+   "s": "Các dự án tốt nhất được phản biện thêm, hoàn thiện hồ sơ và đăng ký với Bộ GD&ĐT."
+  },
+  {
+   "m": [
+    2,
+    3
+   ],
+   "t": "Cấp quốc gia",
+   "s": "Bộ GD&ĐT tổ chức cho học sinh THCS và THPT theo quy chế hiện hành. Một số dự án xuất sắc được chọn tham dự quốc tế."
+  },
+  {
+   "m": [
+    5
+   ],
+   "t": "Quốc tế: Regeneron ISEF",
+   "s": "Diễn ra tại Hoa Kỳ vào tháng 5. Hồ sơ, poster, tóm tắt và phỏng vấn đều bằng tiếng Anh, kèm các biểu mẫu theo quy định ISEF."
+  },
+  {
+   "m": [
+    6,
+    7
+   ],
+   "t": "Nghỉ hè: chuẩn bị mùa mới",
+   "s": "Lúc tốt nhất để luyện kỹ năng nền: lập trình, thống kê, đọc bài báo, và bắt đầu ghi lại những vấn đề em quan sát được."
+  }
+ ],
+ "SECTIONS": [
+  {
+   "id": "tt",
+   "n": "Tóm tắt",
+   "f": 0.05,
+   "w": [
+    150,
+    250
+   ],
+   "purpose": "Cả dự án trong một đoạn: vì sao, làm gì, kết quả bao nhiêu, nghĩa là gì. Viết sau cùng.",
+   "starter": "Bắt đầu: “Ở [địa phương], [vấn đề] gây ra [hậu quả có số liệu]. Dự án này…”",
+   "pit": "Lỗi hay gặp: chỉ kể đã làm gì mà không có kết quả bằng số.",
+   "checks": [
+    [
+     "Nêu vấn đề hoặc bối cảnh",
+     null
+    ],
+    [
+     "Nêu phương pháp hoặc mô hình",
+     null
+    ],
+    [
+     "Có kết quả bằng số",
+     null
+    ],
+    [
+     "Nêu ý nghĩa hoặc kết luận",
+     null
+    ]
+   ]
+  },
+  {
+   "id": "dvd",
+   "n": "Đặt vấn đề",
+   "f": 0.1,
+   "w": [
+    200,
+    450
+   ],
+   "purpose": "Thuyết phục người đọc rằng vấn đề có thật, quan trọng, và chưa được giải quyết tốt.",
+   "starter": "Bắt đầu bằng một con số về mức độ nghiêm trọng của vấn đề, kèm nguồn.",
+   "pit": "Lỗi hay gặp: mở đầu bằng công nghệ (“AI đang phát triển mạnh…”) thay vì bằng vấn đề.",
+   "checks": [
+    [
+     "Có số liệu về mức độ vấn đề",
+     null
+    ],
+    [
+     "Nói rõ ai chịu ảnh hưởng",
+     null
+    ],
+    [
+     "Có trích dẫn nguồn",
+     null
+    ],
+    [
+     "Nêu điều còn thiếu ở giải pháp hiện tại",
+     null
+    ]
+   ]
+  },
+  {
+   "id": "tq",
+   "n": "Tổng quan tài liệu",
+   "f": 0.15,
+   "w": [
+    300,
+    700
+   ],
+   "purpose": "Tóm lược các nghiên cứu đã có, so sánh chúng, và chỉ ra khoảng trống mà dự án của em lấp vào.",
+   "starter": "Nhóm các nghiên cứu theo hướng tiếp cận, không liệt kê từng bài một.",
+   "pit": "Lỗi hay gặp: liệt kê bài này làm A, bài kia làm B mà không so sánh, không chỉ ra khoảng trống.",
+   "checks": [
+    [
+     "Có từ 3 trích dẫn trở lên",
+     null
+    ],
+    [
+     "Có so sánh giữa các nghiên cứu",
+     null
+    ],
+    [
+     "Chỉ ra khoảng trống",
+     null
+    ]
+   ]
+  },
+  {
+   "id": "ch",
+   "n": "Câu hỏi, mục tiêu, giả thuyết",
+   "f": 0.05,
+   "w": [
+    60,
+    200
+   ],
+   "purpose": "Nói chính xác dự án trả lời câu hỏi gì và em dự đoán điều gì sẽ xảy ra.",
+   "starter": "“Câu hỏi nghiên cứu: … ? Giả thuyết: … sẽ … ít nhất …%.”",
+   "pit": "Lỗi hay gặp: mục tiêu kiểu “xây dựng ứng dụng X” mà không có câu hỏi kiểm chứng được.",
+   "checks": [
+    [
+     "Có câu hỏi (dấu chấm hỏi)",
+     null
+    ],
+    [
+     "Có giả thuyết",
+     null
+    ],
+    [
+     "Giả thuyết có con số kiểm chứng",
+     null
+    ],
+    [
+     "Nêu biến số",
+     null
+    ]
+   ]
+  },
+  {
+   "id": "pp",
+   "n": "Phương pháp",
+   "f": 0.2,
+   "w": [
+    350,
+    900
+   ],
+   "purpose": "Mô tả đủ chi tiết để người khác làm lại được: dữ liệu, cách chia, mô hình, đối chứng, chỉ số.",
+   "starter": "Đi theo thứ tự: dữ liệu → tiền xử lý → mô hình → đối chứng → cách đánh giá.",
+   "pit": "Lỗi hay gặp: không nói cách chia tập huấn luyện và kiểm tra, không có mô hình đối chứng.",
+   "checks": [
+    [
+     "Mô tả dữ liệu và nguồn",
+     null
+    ],
+    [
+     "Có cách chia tập huấn luyện, kiểm tra",
+     null
+    ],
+    [
+     "Có mô hình đối chứng",
+     null
+    ],
+    [
+     "Nêu chỉ số đánh giá",
+     null
+    ],
+    [
+     "Có số lượng cụ thể",
+     null
+    ]
+   ]
+  },
+  {
+   "id": "kq",
+   "n": "Kết quả",
+   "f": 0.2,
+   "w": [
+    250,
+    700
+   ],
+   "purpose": "Trình bày những gì đo được, bằng bảng và hình, chưa vội giải thích.",
+   "starter": "“Bảng 1 cho thấy…”, “Hình 2 trình bày…”",
+   "pit": "Lỗi hay gặp: chỉ báo kết quả tốt nhất, giấu các lần chạy kém.",
+   "checks": [
+    [
+     "Có từ 3 con số trở lên",
+     null
+    ],
+    [
+     "Nhắc tới bảng hoặc hình",
+     null
+    ],
+    [
+     "So sánh với đối chứng",
+     null
+    ]
+   ]
+  },
+  {
+   "id": "tl",
+   "n": "Thảo luận",
+   "f": 0.12,
+   "w": [
+    200,
+    600
+   ],
+   "purpose": "Giải thích kết quả, so với nghiên cứu khác, nói thẳng các giới hạn.",
+   "starter": "“Kết quả này có thể được giải thích bởi…”, “Hạn chế của nghiên cứu là…”",
+   "pit": "Lỗi hay gặp: không có phần hạn chế, hoặc khẳng định quá mức so với dữ liệu.",
+   "checks": [
+    [
+     "Giải thích nguyên nhân",
+     null
+    ],
+    [
+     "Nêu hạn chế",
+     null
+    ],
+    [
+     "Liên hệ nghiên cứu khác",
+     null
+    ]
+   ]
+  },
+  {
+   "id": "kl",
+   "n": "Kết luận và hướng phát triển",
+   "f": 0.05,
+   "w": [
+    80,
+    250
+   ],
+   "purpose": "Trả lời thẳng câu hỏi ban đầu, giả thuyết đúng hay sai, và bước tiếp theo.",
+   "starter": "“Giả thuyết ban đầu được (hoặc không được) ủng hộ vì…”",
+   "pit": "Lỗi hay gặp: viết kết luận chung chung không gắn với câu hỏi nghiên cứu.",
+   "checks": [
+    [
+     "Nhắc lại câu hỏi hoặc giả thuyết",
+     null
+    ],
+    [
+     "Có hướng phát triển",
+     null
+    ]
+   ]
+  },
+  {
+   "id": "tlk",
+   "n": "Tài liệu tham khảo",
+   "f": 0.08,
+   "w": [
+    30,
+    600
+   ],
+   "purpose": "Danh mục mọi nguồn đã trích dẫn, đúng một định dạng thống nhất.",
+   "starter": "Dán danh mục, mỗi tài liệu một dòng. Có thể tạo nhanh ở mục Trích dẫn tài liệu bên dưới.",
+   "pit": "Lỗi hay gặp: chỉ dán đường dẫn web, thiếu tác giả và năm.",
+   "checks": [
+    [
+     "Có từ 5 tài liệu trở lên",
+     null
+    ],
+    [
+     "Mỗi tài liệu có năm",
+     null
+    ],
+    [
+     "Không chỉ là đường dẫn trơn",
+     null
+    ]
+   ]
+  }
+ ],
+ "THINK": [
+  {
+   "q": "Nhóm A đạt độ chính xác 99% khi phân loại ảnh. Sau đó họ phát hiện ảnh của cùng một chiếc lá xuất hiện ở cả tập huấn luyện lẫn tập kiểm tra. Vấn đề là gì?",
+   "o": [
+    "Mô hình quá đơn giản",
+    "Rò rỉ dữ liệu: tập kiểm tra không còn là dữ liệu mới",
+    "Cần thêm ảnh",
+    "Không có vấn đề, 99% là tốt"
+   ],
+   "a": 1,
+   "e": "Khi ảnh gần giống nhau nằm ở cả hai tập, mô hình chỉ cần nhớ là đạt điểm cao. Phải chia theo chiếc lá, theo người hoặc theo thời gian."
+  },
+  {
+   "q": "Dữ liệu có 95 tin nhắn bình thường và 5 tin lừa đảo. Mô hình đạt độ chính xác 95%. Nhận xét nào đúng nhất?",
+   "o": [
+    "Mô hình rất tốt",
+    "Có thể mô hình đoán mọi tin là bình thường; cần xem recall của lớp lừa đảo",
+    "Cần tăng số lớp",
+    "Nên bỏ 5 tin lừa đảo"
+   ],
+   "a": 1,
+   "e": "Với dữ liệu mất cân bằng, độ chính xác dễ đánh lừa. Hãy báo precision, recall, F1 cho lớp quan trọng và ma trận nhầm lẫn."
+  },
+  {
+   "q": "Học sinh dùng ứng dụng học thích ứng có điểm cao hơn. Nhưng những em tự nguyện dùng ứng dụng vốn đã chăm hơn. Kết luận “ứng dụng làm tăng điểm” gặp vấn đề gì?",
+   "o": [
+    "Tương quan chưa chắc là nhân quả; cần chia nhóm ngẫu nhiên",
+    "Cỡ mẫu quá lớn",
+    "Ứng dụng chạy chậm",
+    "Không có vấn đề gì"
+   ],
+   "a": 0,
+   "e": "Biến gây nhiễu (sự chăm chỉ) có thể giải thích cả hai. Thí nghiệm có nhóm đối chứng chia ngẫu nhiên mới cho phép kết luận nhân quả."
+  },
+  {
+   "q": "Em thử 30 cấu hình mô hình trên tập kiểm tra rồi báo cáo cấu hình đạt cao nhất. Điều gì không ổn?",
+   "o": [
+    "Nên thử 100 cấu hình",
+    "Tập kiểm tra đã bị dùng để chọn mô hình, nên kết quả bị thổi phồng",
+    "Không có vấn đề",
+    "Phải dùng mô hình lớn hơn"
+   ],
+   "a": 1,
+   "e": "Chọn cấu hình phải dùng tập kiểm định riêng. Tập kiểm tra chỉ được dùng một lần ở cuối để báo kết quả."
+  },
+  {
+   "q": "Mô hình mới hơn mô hình cũ 0,8 điểm phần trăm, mỗi mô hình chỉ chạy một lần. Em nên làm gì trước khi kết luận?",
+   "o": [
+    "Kết luận ngay mô hình mới tốt hơn",
+    "Chạy lại nhiều lần với hạt giống khác nhau và xem khác biệt có vượt độ dao động không",
+    "Làm tròn thành 1%",
+    "Bỏ mô hình cũ khỏi báo cáo"
+   ],
+   "a": 1,
+   "e": "Kết quả học máy dao động giữa các lần chạy. Khác biệt nhỏ hơn độ dao động thì chưa đủ để nói bên nào tốt hơn."
+  },
+  {
+   "q": "Bộ ảnh nhận diện khuôn mặt buồn ngủ chủ yếu là người trẻ, da sáng, đủ ánh sáng. Rủi ro lớn nhất khi dùng thật là gì?",
+   "o": [
+    "Mô hình chạy chậm",
+    "Mô hình có thể kém với người lớn tuổi, da tối màu hoặc ban đêm: thiên lệch dữ liệu",
+    "Tốn bộ nhớ",
+    "Không có rủi ro"
+   ],
+   "a": 1,
+   "e": "Mô hình chỉ giỏi trên kiểu dữ liệu nó đã thấy. Hãy đo kết quả riêng theo từng nhóm và nói rõ giới hạn."
+  },
+  {
+   "q": "Một dự án không so sánh với cách làm nào khác, chỉ báo “mô hình đạt 87%”. Giám khảo sẽ hỏi gì đầu tiên?",
+   "o": [
+    "Em dùng máy tính nào?",
+    "87% so với cái gì? Mô hình đối chứng hoặc cách làm hiện tại đạt bao nhiêu?",
+    "Sao không đạt 100%?",
+    "Em làm mất bao lâu?"
+   ],
+   "a": 1,
+   "e": "Một con số đứng riêng không có ý nghĩa. Cần mô hình đối chứng, thậm chí đối chứng đơn giản như luôn đoán lớp phổ biến nhất."
+  },
+  {
+   "q": "Em chép một đoạn định nghĩa từ bài báo vào phần tổng quan, có ghi nguồn ở cuối báo cáo nhưng không đặt trong ngoặc kép. Như vậy có ổn không?",
+   "o": [
+    "Ổn vì đã ghi nguồn",
+    "Chưa ổn: chép nguyên văn phải đặt trong ngoặc kép và ghi nguồn ngay tại chỗ, tốt nhất là viết lại bằng lời của em",
+    "Ổn nếu đoạn ngắn",
+    "Chỉ cần đổi vài từ"
+   ],
+   "a": 1,
+   "e": "Ghi nguồn ở cuối không đủ. Hãy diễn đạt lại bằng lời của mình và trích dẫn ngay trong câu, hoặc đặt nguyên văn trong ngoặc kép."
+  }
+ ],
+ "AI_RULES": [
+  {
+   "s": "Nhờ AI tóm ý chính một bài báo để quyết định có nên đọc kỹ không",
+   "v": "y",
+   "why": "Được phép có điều kiện: em vẫn phải tự đọc bài báo sau đó, và ghi câu lệnh vào sổ."
+  },
+  {
+   "s": "Nhờ AI tóm tắt các nguồn để viết phần tổng quan tài liệu, không tự đọc",
+   "v": "r",
+   "why": "Thường bị cấm: tổng quan tài liệu phải dựa trên việc em tự đọc nguồn."
+  },
+  {
+   "s": "Hỏi AI gợi ý thêm hướng phát triển ý tưởng ban đầu",
+   "v": "y",
+   "why": "Được phép có điều kiện: ghi câu lệnh vào sổ. Ý tưởng cuối cùng phải do em lựa chọn và lập luận."
+  },
+  {
+   "s": "Nhờ AI sửa lỗi ngữ pháp, câu chữ trong báo cáo em đã viết",
+   "v": "y",
+   "why": "Được phép có điều kiện: chỉ sửa ngữ pháp, cú pháp; ghi câu lệnh vào sổ."
+  },
+  {
+   "s": "Nhờ AI viết một đoạn trong kế hoạch, báo cáo, poster hoặc bài báo",
+   "v": "r",
+   "why": "Thường bị cấm: không phần nào của tài liệu nộp dưới tên em được để AI viết."
+  },
+  {
+   "s": "Hỏi AI nên dùng phép kiểm định thống kê nào",
+   "v": "y",
+   "why": "Được phép có điều kiện: AI chỉ gợi ý công cụ; em phải hiểu và giải thích được lựa chọn."
+  },
+  {
+   "s": "Nhờ AI viết mã nguồn ban đầu cho chương trình",
+   "v": "y",
+   "why": "Được phép có điều kiện: đánh dấu rõ đoạn mã do AI tạo và đính kèm nhật ký câu lệnh."
+  },
+  {
+   "s": "Dùng AI tạo hình minh họa hoặc sơ đồ cho poster",
+   "v": "y",
+   "why": "Được phép có điều kiện: ghi nhãn “hình do AI tạo” và mô tả cách tạo."
+  },
+  {
+   "s": "Nhờ AI viết phần kết luận hoặc hướng phát triển",
+   "v": "r",
+   "why": "Thường bị cấm: lập luận, kết luận và hướng phát triển phải là của em."
+  },
+  {
+   "s": "Dùng AI để thu thập dữ liệu cho nghiên cứu",
+   "v": "r",
+   "why": "Thường bị cấm: dữ liệu phải do em thu thập."
+  },
+  {
+   "s": "Nhờ AI tìm trích dẫn ủng hộ một nhận định của em",
+   "v": "r",
+   "why": "Thường bị cấm: AI hay bịa nguồn, và việc tìm tài liệu là một phần nghiên cứu."
+  },
+  {
+   "s": "Nhờ AI lập danh mục tài liệu tham khảo ban đầu",
+   "v": "r",
+   "why": "Thường bị cấm: danh mục tài liệu phải do em tự tìm và đọc."
+  },
+  {
+   "s": "Nhờ AI đóng vai giám khảo để luyện phỏng vấn",
+   "v": "y",
+   "why": "Thường chấp nhận được vì AI không tạo nội dung nộp dưới tên em. Vẫn ghi câu lệnh vào sổ. Dùng công cụ Giám khảo AI để có câu lệnh đúng cách."
+  },
+  {
+   "s": "Huấn luyện mô hình AI của chính em làm đối tượng nghiên cứu",
+   "v": "g",
+   "why": "Đây là nội dung nghiên cứu, không phải nhờ AI làm hộ. Vẫn cần mô tả đầy đủ trong phần phương pháp. Nếu có dùng AI để viết mã thì xem mục “viết mã nguồn”."
+  }
+ ],
+ "GLOSS": [
+  [
+   "Câu hỏi nghiên cứu",
+   "research question"
+  ],
+  [
+   "Giả thuyết",
+   "hypothesis"
+  ],
+  [
+   "Biến độc lập",
+   "independent variable"
+  ],
+  [
+   "Biến phụ thuộc",
+   "dependent variable"
+  ],
+  [
+   "Biến kiểm soát",
+   "controlled variable"
+  ],
+  [
+   "Mô hình đối chứng",
+   "baseline model"
+  ],
+  [
+   "Nhóm đối chứng",
+   "control group"
+  ],
+  [
+   "Tập huấn luyện",
+   "training set"
+  ],
+  [
+   "Tập kiểm định",
+   "validation set"
+  ],
+  [
+   "Tập kiểm tra",
+   "test set"
+  ],
+  [
+   "Rò rỉ dữ liệu",
+   "data leakage"
+  ],
+  [
+   "Quá khớp",
+   "overfitting"
+  ],
+  [
+   "Chưa khớp",
+   "underfitting"
+  ],
+  [
+   "Kiểm định chéo",
+   "cross-validation"
+  ],
+  [
+   "Tăng cường dữ liệu",
+   "data augmentation"
+  ],
+  [
+   "Học chuyển giao",
+   "transfer learning"
+  ],
+  [
+   "Tinh chỉnh",
+   "fine-tuning"
+  ],
+  [
+   "Siêu tham số",
+   "hyperparameter"
+  ],
+  [
+   "Gán nhãn dữ liệu",
+   "data labeling / annotation"
+  ],
+  [
+   "Ma trận nhầm lẫn",
+   "confusion matrix"
+  ],
+  [
+   "Độ chính xác",
+   "accuracy"
+  ],
+  [
+   "Độ phủ",
+   "recall (sensitivity)"
+  ],
+  [
+   "Dữ liệu mất cân bằng",
+   "imbalanced dataset"
+  ],
+  [
+   "Thiên lệch dữ liệu",
+   "dataset bias"
+  ],
+  [
+   "Khoảng tin cậy",
+   "confidence interval"
+  ],
+  [
+   "Ý nghĩa thống kê",
+   "statistical significance"
+  ],
+  [
+   "Độ lệch chuẩn",
+   "standard deviation"
+  ],
+  [
+   "Phân tích lỗi",
+   "error analysis"
+  ],
+  [
+   "Tính mới",
+   "novelty"
+  ],
+  [
+   "Hạn chế",
+   "limitation"
+  ],
+  [
+   "Hướng phát triển",
+   "future work"
+  ],
+  [
+   "Tổng quan tài liệu",
+   "literature review"
+  ],
+  [
+   "Sổ nghiên cứu",
+   "research notebook / logbook"
+  ],
+  [
+   "Người tham gia nghiên cứu",
+   "human participants"
+  ],
+  [
+   "Giấy đồng ý",
+   "informed consent form"
+  ],
+  [
+   "Ẩn danh hóa",
+   "anonymization"
+  ],
+  [
+   "Suy luận trên thiết bị",
+   "on-device inference"
+  ],
+  [
+   "Độ trễ",
+   "latency"
+  ],
+  [
+   "Triển khai",
+   "deployment"
+  ],
+  [
+   "Thử nghiệm người dùng",
+   "user study"
+  ]
+ ],
+ "LV_NAMES": [
+  "Mới bắt đầu",
+  "Đang luyện",
+  "Làm được",
+  "Dạy lại được"
+ ],
+ "CRITS": [
+  {
+   "n": "Câu hỏi nghiên cứu",
+   "max": 10,
+   "items": [
+    "Câu hỏi rõ ràng, giới hạn được trong thời gian làm",
+    "Gắn với một vấn đề thực tế có người chịu ảnh hưởng",
+    "Đọc và trích dẫn ít nhất 5 tài liệu chính"
+   ]
+  },
+  {
+   "n": "Thiết kế và phương pháp",
+   "max": 15,
+   "items": [
+    "Có mô hình đối chứng để so sánh",
+    "Chia tập dữ liệu đúng, không rò rỉ dữ liệu kiểm tra",
+    "Xác định trước biến số và chỉ số đo",
+    "Xử lý vấn đề đạo đức, giấy đồng ý nếu có người tham gia"
+   ]
+  },
+  {
+   "n": "Thực hiện và kiểm thử",
+   "max": 20,
+   "items": [
+    "Thu thập đủ dữ liệu và mô tả cách thu",
+    "Chạy lặp lại nhiều lần hoặc có khoảng tin cậy",
+    "Phân tích lỗi, không chỉ báo một con số",
+    "Sổ nghiên cứu ghi đủ, kể cả lần thất bại"
+   ]
+  },
+  {
+   "n": "Tính sáng tạo",
+   "max": 20,
+   "items": [
+    "Có điểm mới so với các nghiên cứu đã đọc",
+    "Em giải thích được điểm mới đó trong một câu",
+    "Giải pháp phù hợp bối cảnh Việt Nam"
+   ]
+  },
+  {
+   "n": "Trình bày và phỏng vấn",
+   "max": 35,
+   "items": [
+    "Thuyết trình gọn trong 3 phút",
+    "Poster đọc được từ xa 2 mét, ít chữ",
+    "Trả lời được vì sao chọn mô hình và chỉ số này",
+    "Nói rõ giới hạn của nghiên cứu",
+    "Mỗi thành viên nói được phần việc của mình"
+   ]
+  }
+ ]
+}

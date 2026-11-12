@@ -1,0 +1,1904 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sổ Nghiên Cứu AI: luyện làm dự án KHKT về AI cho học sinh</title>
+<meta name="description" content="10 đề tài KHKT về AI có notebook Colab, công cụ viết báo cáo, dùng AI đúng quy định, tự chấm theo tiêu chí giám khảo. Miễn phí cho học sinh THCS, THPT.">
+<link rel="canonical" href="https://vantupham.github.io/nghien-cuu-khkt-ai/">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta name="theme-color" content="#1E3A9E">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Sổ Nghiên Cứu AI">
+<meta property="og:locale" content="vi_VN">
+<meta property="og:title" content="Sổ Nghiên Cứu AI: luyện làm dự án KHKT về AI cho học sinh">
+<meta property="og:description" content="10 đề tài KHKT về AI có notebook Colab, công cụ viết báo cáo, dùng AI đúng quy định, tự chấm theo tiêu chí giám khảo. Miễn phí cho học sinh THCS, THPT.">
+<meta property="og:url" content="https://vantupham.github.io/nghien-cuu-khkt-ai/">
+<meta property="og:image" content="https://vantupham.github.io/nghien-cuu-khkt-ai/assets/og/trang-chu.png">
+<meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Sổ Nghiên Cứu AI: học làm nghiên cứu AI như một nhà khoa học thật">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Sổ Nghiên Cứu AI: luyện làm dự án KHKT về AI cho học sinh">
+<meta name="twitter:description" content="10 đề tài KHKT về AI có notebook Colab, công cụ viết báo cáo, dùng AI đúng quy định, tự chấm theo tiêu chí giám khảo. Miễn phí cho học sinh THCS, THPT.">
+<meta name="twitter:image" content="https://vantupham.github.io/nghien-cuu-khkt-ai/assets/og/trang-chu.png">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="icon" href="assets/icon-192.png" sizes="192x192" type="image/png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="sitemap" type="application/xml" href="sitemap.xml">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebSite", "name": "Sổ Nghiên Cứu AI", "alternateName": "So Nghien Cuu AI", "url": "https://vantupham.github.io/nghien-cuu-khkt-ai/", "inLanguage": "vi", "description": "10 đề tài KHKT về AI có notebook Colab, công cụ viết báo cáo, dùng AI đúng quy định, tự chấm theo tiêu chí giám khảo. Miễn phí cho học sinh THCS, THPT."}</script><script type="application/ld+json">{"@context": "https://schema.org", "@type": "ItemList", "name": "10 đề tài KHKT về AI cho học sinh", "itemListElement": [{"@type": "ListItem", "position": 1, "url": "https://vantupham.github.io/nghien-cuu-khkt-ai/du-an/benh-la-lua/", "name": "Chẩn đoán bệnh lá lúa từ ảnh chụp điện thoại"}, {"@type": "ListItem", "position": 2, "url": "https://vantupham.github.io/nghien-cuu-khkt-ai/du-an/ngap-duong/", "name": "Dự báo nguy cơ ngập theo tuyến đường ở đô thị"}, {"@type": "ListItem", "position": 3, "url": "https://vantupham.github.io/nghien-cuu-khkt-ai/du-an/tin-lua-dao/", "name": "Phát hiện tin nhắn lừa đảo tiếng Việt"}, {"@type": "ListItem", "position": 4, "url": "https://vantupham.github.io/nghien-cuu-khkt-ai/du-an/ngon-ngu-ky-hieu/", "name": "Nhận diện ngôn ngữ ký hiệu Việt Nam qua webcam"}, {"@type": "ListItem", "position": 5, "url": "https://vantupham.github.io/nghien-cuu-khkt-ai/du-an/canh-bao-ngu-gat/", "name": "Cảnh báo ngủ gật cho người lái xe"}, {"@type": "ListItem", "position": 6, "url": "https://vantupham.github.io/nghien-cuu-khkt-ai/du-an/thung-rac-thong-minh/", "name": "Thùng rác tự phân loại bằng camera"}, {"@type": "ListItem", "position": 7, "url": "https://vantupham.github.io/nghien-cuu-khkt-ai/du-an/du-bao-pm25/", "name": "Dự báo bụi mịn PM2.5 ngắn hạn cho một đô thị"}, {"@type": "ListItem", "position": 8, "url": "https://vantupham.github.io/nghien-cuu-khkt-ai/du-an/tu-the-ngoi-hoc/", "name": "Nhắc tư thế ngồi học đúng bằng webcam"}, {"@type": "ListItem", "position": 9, "url": "https://vantupham.github.io/nghien-cuu-khkt-ai/du-an/tro-ly-on-tap/", "name": "Trợ lý ôn tập có trích dẫn nguồn"}, {"@type": "ListItem", "position": 10, "url": "https://vantupham.github.io/nghien-cuu-khkt-ai/du-an/bai-tap-thich-ung/", "name": "Gợi ý bài tập toán thích ứng theo năng lực"}]}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&family=Patrick+Hand&display=swap&subset=vietnamese" rel="stylesheet">
+<style>
+:root{
+  --paper:#F2F5F9;      /* giấy kẻ ô */
+  --grid:#DDE5F0;       /* đường lưới */
+  --sheet:#FFFFFF;
+  --ink:#1E3A9E;        /* mực bút bi xanh */
+  --ink-soft:#4A63B8;
+  --text:#0F1B33;
+  --muted:#52607A;
+  --hl:#F7E14B;         /* bút dạ quang */
+  --red:#C8303B;        /* bút đỏ giám khảo */
+  --green:#1F8A5B;
+  --amber:#B7791F;
+  --line:#C9D4E5;
+  --hand:'Patrick Hand','Segoe Print','Bradley Hand','Chalkboard SE','Comic Sans MS',cursive;
+  --sans:'Be Vietnam Pro', system-ui, sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;font-family:var(--sans);color:var(--text);font-size:16px;line-height:1.6;
+  background-color:var(--paper);
+  background-image:
+    linear-gradient(var(--grid) 1px, transparent 1px),
+    linear-gradient(90deg, var(--grid) 1px, transparent 1px);
+  background-size:24px 24px;
+}
+a{color:var(--ink)}
+:focus-visible{outline:3px solid var(--ink);outline-offset:2px;border-radius:4px}
+button,input,select,textarea{font:inherit;color:inherit}
+.wrap{max-width:1120px;margin:0 auto;padding:0 20px}
+
+/* thanh trên */
+.bar{position:sticky;top:0;z-index:20;background:rgba(242,245,249,.94);backdrop-filter:blur(6px);border-bottom:1px solid var(--line)}
+.bar .wrap{display:flex;align-items:center;gap:20px;height:60px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--text);font-weight:800;letter-spacing:-.01em;font-size:17px}
+.brand svg{flex:none}
+.nav{display:flex;gap:4px;margin-left:auto;flex-wrap:wrap}
+.nav a{text-decoration:none;color:var(--muted);font-weight:600;font-size:14.5px;padding:8px 9px;border-radius:8px}
+.nav a:hover{color:var(--text);background:#E6ECF5}
+.nav a[aria-current="page"]{color:var(--ink);background:#E3E9F7}
+.menu-btn{display:none;margin-left:auto;background:none;border:1px solid var(--line);border-radius:8px;padding:6px 10px}
+@media (max-width:760px){
+  .menu-btn{display:block}
+  .nav{display:none;position:absolute;top:60px;left:0;right:0;background:var(--paper);border-bottom:1px solid var(--line);padding:8px 20px 14px;flex-direction:column}
+  .nav.open{display:flex}
+}
+
+/* chung */
+main{padding:40px 0 80px;min-height:70vh}
+.view{display:none}
+.view.active{display:block}
+h1,h2,h3{line-height:1.2;letter-spacing:-.02em;margin:0 0 .5em}
+h1{font-size:clamp(34px,5.4vw,58px);font-weight:800}
+h2{font-size:clamp(26px,3.4vw,36px);font-weight:800}
+h3{font-size:20px;font-weight:700}
+p{margin:0 0 1em}
+.lead{font-size:19px;color:var(--muted);max-width:62ch}
+.sheet{background:var(--sheet);border:1px solid var(--line);border-radius:6px;padding:28px}
+.note{font-family:var(--hand);color:var(--ink);font-size:21px;line-height:1.3}
+.note.red{color:var(--red)}
+.btn{display:inline-flex;align-items:center;gap:8px;border:2px solid var(--ink);background:var(--ink);color:#fff;font-weight:700;padding:10px 18px;border-radius:999px;cursor:pointer;text-decoration:none;font-size:15px}
+.btn.ghost{background:transparent;color:var(--ink)}
+.btn.small{padding:6px 12px;font-size:14px;border-width:1.5px}
+.btn:hover{filter:brightness(1.08)}
+.chip{display:inline-block;font-size:13px;font-weight:600;padding:2px 10px;border-radius:999px;border:1px solid var(--line);background:#F7F9FC;color:var(--muted);white-space:nowrap}
+.chip.code{border-color:var(--ink-soft);color:var(--ink);background:#EEF2FC}
+.mark{background:linear-gradient(transparent 50%, var(--hl) 50%, var(--hl) 92%, transparent 92%);padding:0 2px}
+.section{margin-top:64px}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+@media (max-width:860px){.grid2,.grid3{grid-template-columns:1fr}}
+label{font-weight:600;font-size:14px;display:block;margin-bottom:4px}
+input[type=text],input[type=date],select,textarea{width:100%;border:1px solid var(--line);border-radius:6px;padding:9px 11px;background:#fff}
+textarea{min-height:80px;resize:vertical}
+.field{margin-bottom:14px}
+.toast{position:fixed;bottom:24px;left:50%;transform:translateX(-50%);background:var(--text);color:#fff;padding:10px 18px;border-radius:999px;font-weight:600;opacity:0;pointer-events:none;transition:opacity .2s;z-index:50}
+.toast.show{opacity:1}
+
+/* hero */
+.hero{display:grid;grid-template-columns:1.25fr 1fr;gap:40px;align-items:start}
+@media (max-width:900px){.hero{grid-template-columns:1fr}}
+.page{position:relative;background:var(--sheet);border:1px solid var(--line);border-radius:4px;padding:26px 26px 26px 64px;
+  background-image:linear-gradient(transparent 31px, #E4EAF4 32px);background-size:100% 32px;background-position:0 18px;min-height:250px}
+.page::before{content:"";position:absolute;left:44px;top:0;bottom:0;width:2px;background:var(--ink-soft);opacity:.35}
+.page .pg-head{font-size:13px;color:var(--muted);font-weight:600;margin-bottom:8px;display:flex;justify-content:space-between}
+.page .q{font-family:var(--hand);color:var(--ink);font-size:27px;line-height:32px;min-height:128px}
+.page .q .caret{display:inline-block;width:2px;height:24px;background:var(--ink);vertical-align:-3px;animation:blink 1s steps(1) infinite}
+@keyframes blink{50%{opacity:0}}
+.page .meta{font-family:var(--hand);font-size:19px;color:var(--muted);line-height:32px}
+.count{margin-top:20px;display:flex;gap:16px;align-items:center}
+.count .num{white-space:nowrap;font-size:44px;font-weight:800;color:var(--ink);line-height:1}
+.paths{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:36px}
+@media (max-width:760px){.paths{grid-template-columns:1fr}}
+.path{display:block;text-decoration:none;color:var(--text);background:var(--sheet);border:1px solid var(--line);border-left:4px solid var(--ink);padding:18px 18px 16px;border-radius:4px}
+.path:hover{border-color:var(--ink)}
+.path strong{display:block;font-size:17px;margin-bottom:4px}
+.path span{color:var(--muted);font-size:15px}
+.feat{display:grid;grid-template-columns:200px 1fr;gap:6px 28px;border-top:1px solid var(--line);padding:18px 0}
+.feat:last-child{border-bottom:1px solid var(--line)}
+.feat h3{margin:0;font-size:18px}
+.feat p{margin:0;color:var(--muted)}
+@media (max-width:700px){.feat{grid-template-columns:1fr}}
+
+/* danh mục dự án – kiểu mục lục sổ */
+.filters{display:flex;flex-wrap:wrap;gap:10px;margin:22px 0 10px}
+.filters button{border:1.5px solid var(--line);background:#fff;padding:6px 14px;border-radius:999px;cursor:pointer;font-weight:600;font-size:14px;color:var(--muted)}
+.filters button[aria-pressed="true"]{border-color:var(--ink);background:var(--ink);color:#fff}
+.toc{background:var(--sheet);border:1px solid var(--line);border-radius:6px;margin-top:14px}
+.toc a{display:grid;grid-template-columns:110px 1fr auto;gap:18px;align-items:center;padding:18px 22px;border-bottom:1px dashed var(--line);text-decoration:none;color:var(--text)}
+.toc a:last-child{border-bottom:0}
+.toc a:hover{background:#F6F8FD}
+.toc .t{font-weight:700;font-size:18px;display:block}
+.toc .d{color:var(--muted);font-size:15px}
+.toc .right{display:flex;gap:8px;align-items:center}
+.dots{display:inline-flex;gap:3px}
+.dots i{width:9px;height:9px;border-radius:50%;border:1.5px solid var(--ink);display:inline-block}
+.dots i.on{background:var(--ink)}
+.prog{font-family:var(--hand);color:var(--ink);font-size:18px;min-width:52px;text-align:right}
+@media (max-width:700px){.toc a{grid-template-columns:1fr}.toc .right{justify-content:flex-start}}
+
+/* chi tiết dự án */
+.detail{display:grid;grid-template-columns:1fr 280px;gap:36px}
+@media (max-width:900px){.detail{grid-template-columns:1fr}}
+.detail aside .note{margin-bottom:18px;padding-left:12px;border-left:2px solid var(--ink-soft)}
+.kv{display:grid;grid-template-columns:170px 1fr;gap:0;border-top:1px solid var(--line)}
+.kv > div{padding:12px 0;border-bottom:1px solid var(--line)}
+.kv > div:nth-child(odd){font-weight:700;padding-right:16px}
+@media (max-width:640px){.kv{grid-template-columns:1fr}.kv > div:nth-child(odd){border-bottom:0;padding-bottom:0}}
+.steps{list-style:none;padding:0;margin:0;counter-reset:s}
+.steps li{display:grid;grid-template-columns:34px 1fr;gap:12px;padding:12px 0;border-bottom:1px dashed var(--line);counter-increment:s}
+.steps input{width:22px;height:22px;accent-color:var(--ink);margin-top:3px}
+.steps li.done span.txt{background:linear-gradient(transparent 55%, var(--hl) 55%, var(--hl) 92%, transparent 92%)}
+.steps .wk{font-size:13px;color:var(--muted);font-weight:600}
+.nbbox{display:flex;flex-wrap:wrap;gap:14px 24px;align-items:center;justify-content:space-between;border:2px solid var(--ink);border-radius:6px;padding:18px 20px;margin-top:28px;background:#F6F8FD}
+.nbbox > div:first-child{flex:1 1 320px}
+.nbhint{flex-basis:100%;margin:0;font-size:13.5px;color:var(--muted)}
+.back{display:inline-block;margin-bottom:18px;font-weight:600;text-decoration:none}
+
+/* công cụ */
+.tabs{display:flex;gap:2px;flex-wrap:wrap;border-bottom:2px solid var(--line);margin:24px 0 26px}
+.tabs button{background:none;border:0;border-bottom:3px solid transparent;margin-bottom:-2px;padding:10px 9px;font-weight:700;cursor:pointer;color:var(--muted);font-size:14px}
+.tabs button[aria-selected="true"]{color:var(--ink);border-bottom-color:var(--ink)}
+.tool{display:none}
+.tool.active{display:block}
+.scen{display:flex;flex-direction:column;gap:8px}
+.scen button{text-align:left;background:#fff;border:1px solid var(--line);border-radius:6px;padding:11px 14px;cursor:pointer;font-size:15px}
+.scen button[aria-pressed="true"]{border-color:var(--ink);box-shadow:inset 3px 0 0 var(--ink)}
+.light{display:flex;gap:18px;align-items:flex-start}
+.lamp{flex:none;width:58px;background:#1B2335;border-radius:30px;padding:8px;display:flex;flex-direction:column;gap:7px}
+.lamp i{width:42px;height:42px;border-radius:50%;background:#3A4357;display:block}
+.lamp i.r.on{background:#E5484D;box-shadow:0 0 18px #E5484D}
+.lamp i.y.on{background:#F5B83D;box-shadow:0 0 18px #F5B83D}
+.lamp i.g.on{background:#3CB371;box-shadow:0 0 18px #3CB371}
+.verdict h3{margin-bottom:6px}
+table{border-collapse:collapse;width:100%;font-size:14px}
+th,td{border:1px solid var(--line);padding:8px 10px;text-align:left;vertical-align:top}
+th{background:#F1F4FA}
+.tbl-wrap{overflow-x:auto}
+.out{background:#FBFCFE;border:1px dashed var(--ink-soft);border-radius:6px;padding:18px 20px}
+.out p{margin:0 0 .6em}
+.out .note{font-size:19px}
+.crit{border-top:1px solid var(--line);padding:14px 0}
+.crit h3{display:flex;justify-content:space-between;font-size:17px;margin-bottom:8px}
+.crit label{font-weight:500;font-size:15px;display:flex;gap:10px;align-items:flex-start;margin:6px 0;cursor:pointer}
+.crit input{accent-color:var(--ink);width:18px;height:18px;margin-top:3px;flex:none}
+.total{font-size:48px;font-weight:800;color:var(--ink);line-height:1}
+.flash{min-height:120px;display:flex;align-items:center;font-size:22px;font-weight:600}
+.timer{font-size:44px;font-weight:800;font-variant-numeric:tabular-nums;color:var(--ink)}
+.timer.over{color:var(--red)}
+canvas{width:100%;height:auto;border:1px solid var(--line);border-radius:6px;background:#fff;touch-action:none;cursor:crosshair;display:block}
+.seg{display:inline-flex;border:1.5px solid var(--ink);border-radius:999px;overflow:hidden}
+.seg button{border:0;background:#fff;padding:6px 14px;font-weight:700;cursor:pointer;color:var(--ink)}
+.seg button[aria-pressed="true"]{background:var(--ink);color:#fff}
+.row{display:flex;gap:12px;flex-wrap:wrap;align-items:center}
+
+/* lộ trình */
+.tl{list-style:none;padding:0;margin:0;position:relative}
+.tl::before{content:"";position:absolute;left:11px;top:6px;bottom:6px;width:2px;background:var(--ink-soft);opacity:.4}
+.tl li{position:relative;padding:0 0 26px 40px}
+.tl li::before{content:"";position:absolute;left:4px;top:6px;width:16px;height:16px;border-radius:50%;background:var(--paper);border:2px solid var(--ink)}
+.tl li.past::before{background:var(--ink)}
+.tl li.now::before{background:var(--hl);border-color:var(--ink)}
+.tl .when{font-weight:700;color:var(--ink)}
+.tl .tag{font-family:var(--hand);font-size:19px;color:var(--red);margin-left:8px}
+.plan td:first-child{white-space:nowrap;font-weight:600}
+
+.foot-cols{display:grid;grid-template-columns:1fr 2fr;gap:20px;margin-bottom:18px}
+.foot-cols h2{font-size:15px;margin:0 0 6px;color:var(--text)}
+.foot-cols ul{list-style:none;padding:0;margin:0;columns:2;column-gap:20px}
+.foot-cols li{margin:3px 0;break-inside:avoid}
+.foot-cols a{color:var(--muted)}
+@media (max-width:700px){.foot-cols{grid-template-columns:1fr}.foot-cols ul{columns:1}}
+footer{border-top:1px solid var(--line);padding:28px 0 40px;color:var(--muted);font-size:14px;background:var(--paper)}
+
+/* ===== bổ sung: kỹ năng, báo cáo, vòng tròn ===== */
+.cycle-wrap{display:grid;grid-template-columns:minmax(280px,520px) 1fr;gap:36px;align-items:center}
+@media (max-width:860px){.cycle-wrap{grid-template-columns:1fr}}
+.cycle svg{width:100%;height:auto;display:block}
+.cycle .node{cursor:pointer}
+.cycle .node circle{fill:#fff;stroke:var(--ink);stroke-width:2;transition:fill .2s}
+.cycle .node text{font-family:var(--sans);font-weight:800;fill:var(--ink);font-size:17px;pointer-events:none}
+.cycle .node.on circle{fill:var(--hl)}
+.cycle .node:focus-visible circle{stroke-width:4}
+.cycle .lbl{font-family:var(--sans);font-size:15px;fill:var(--muted);pointer-events:none}
+.cycle .node.on + .lbl{fill:var(--text);font-weight:700}
+.stepcard{min-height:170px}
+.stepcard .num{font-family:var(--hand);color:var(--ink);font-size:22px}
+
+.wheel svg{width:100%;max-width:470px;height:auto;display:block;margin:0 auto}
+.wheel .wedge{cursor:pointer}
+.wheel .wedge:focus-visible .bg{stroke:var(--ink);stroke-width:3}
+.wheel .wedge.sel .bg{fill:#E7EDFA}
+.lvbtns{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-top:10px}
+@media (max-width:560px){.lvbtns{grid-template-columns:1fr 1fr}}
+.lvbtns button{border:1.5px solid var(--line);background:#fff;border-radius:6px;padding:9px 8px;cursor:pointer;text-align:left;font-size:13px;line-height:1.35;color:var(--muted)}
+.lvbtns button b{display:block;color:var(--text);font-size:14px;margin-bottom:2px}
+.lvbtns button[aria-pressed="true"]{border-color:var(--ink);background:#EEF2FC;color:var(--text)}
+.skill-list{display:flex;flex-wrap:wrap;gap:6px;margin-top:16px;justify-content:center}
+.skill-list button{border:1px solid var(--line);background:#fff;border-radius:999px;padding:4px 12px;font-size:13px;cursor:pointer;color:var(--muted)}
+.skill-list button[aria-pressed="true"]{border-color:var(--ink);color:var(--ink);font-weight:700}
+.habits{padding-left:20px;margin:6px 0 14px}
+.habits li{margin-bottom:4px}
+
+.quiz .qtext{font-size:19px;font-weight:600;margin-bottom:14px}
+.quiz .opts{display:flex;flex-direction:column;gap:8px}
+.quiz .opts button{text-align:left;background:#fff;border:1.5px solid var(--line);border-radius:6px;padding:11px 14px;cursor:pointer;font-size:15px}
+.quiz .opts button.ok{border-color:var(--green);background:#E9F6EF}
+.quiz .opts button.no{border-color:var(--red);background:#FBECEC}
+.quiz .opts button:disabled{cursor:default;color:var(--text)}
+.qprog{display:flex;gap:4px;margin-bottom:16px}
+.qprog i{flex:1;height:6px;border-radius:3px;background:var(--line)}
+.qprog i.ok{background:var(--green)}
+.qprog i.no{background:var(--red)}
+.qprog i.cur{background:var(--ink)}
+
+.rbar{display:flex;height:64px;border:1px solid var(--line);border-radius:6px;overflow:hidden;background:#fff}
+.rbar button{border:0;white-space:normal;border-right:1px solid #fff;cursor:pointer;padding:4px;font-size:11.5px;font-weight:700;color:#fff;overflow:hidden;line-height:1.2;min-width:0}
+.rbar button[aria-pressed="true"]{outline:3px solid var(--hl);outline-offset:-3px}
+.rbar-legend{display:flex;justify-content:space-between;font-size:13px;color:var(--muted);margin-top:6px}
+.sec-list{display:flex;flex-direction:column;gap:6px}
+.sec-list button{display:flex;justify-content:space-between;gap:10px;text-align:left;background:#fff;border:1px solid var(--line);border-radius:6px;padding:9px 12px;cursor:pointer;font-size:14.5px}
+.sec-list button[aria-pressed="true"]{border-color:var(--ink);box-shadow:inset 3px 0 0 var(--ink);font-weight:700}
+.sec-list .pc{font-family:var(--hand);color:var(--ink);font-size:17px}
+.writer{display:grid;grid-template-columns:240px 1fr 260px;gap:22px;align-items:start}
+@media (max-width:1000px){.writer{grid-template-columns:1fr}}
+.writer textarea{min-height:260px;font-size:15.5px;line-height:1.65;background:#fff;
+  background-image:linear-gradient(transparent 25px,#E4EAF4 26px);background-size:100% 26px;background-attachment:local}
+.checks{list-style:none;padding:0;margin:10px 0 0;font-size:14px}
+.checks li{display:grid;grid-template-columns:22px 1fr;gap:6px;padding:5px 0;border-bottom:1px dashed var(--line)}
+.checks li::before{content:"○";color:var(--muted);font-weight:800}
+.checks li.ok::before{content:"✓";color:var(--green)}
+.checks li.ok{color:var(--text)}
+.checks li.no{color:var(--muted)}
+.meter{height:12px;border-radius:6px;background:var(--line);overflow:hidden;margin-top:6px}
+.meter i{display:block;height:100%;background:var(--ink);width:0;transition:width .3s}
+.meter.warn i{background:var(--red)}
+.pair{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+@media (max-width:700px){.pair{grid-template-columns:1fr}}
+.pair button{text-align:left;background:#fff;border:1.5px solid var(--line);border-radius:6px;padding:14px;cursor:pointer;font-size:15px;line-height:1.5}
+.pair button.ok{border-color:var(--green);background:#E9F6EF}
+.pair button.no{border-color:var(--red);background:#FBECEC}
+.abs-grid .field textarea{min-height:64px}
+.wc{font-variant-numeric:tabular-nums;font-weight:700}
+.refs{list-style:none;padding:0;margin:12px 0 0}
+.refs li{padding:8px 0 8px 28px;text-indent:-28px;border-bottom:1px dashed var(--line);font-size:15px}
+.sub-nav{display:flex;gap:8px;flex-wrap:wrap;margin:18px 0 6px}
+.sub-nav button{cursor:pointer;color:var(--ink);font-size:14px;font-weight:600;text-decoration:none;border:1px solid var(--line);background:#fff;padding:5px 12px;border-radius:999px}
+
+
+/* ===== đợt 3: công cụ mới, hồ sơ, mẫu ===== */
+.cm{display:grid;grid-template-columns:110px 1fr 1fr;gap:6px;margin-top:10px}
+.cmh{font-size:13px;font-weight:700;color:var(--muted);display:flex;align-items:flex-end;justify-content:center;text-align:center;padding:4px}
+.cmv{justify-content:flex-start;align-items:center;text-align:left}
+.cell{display:flex;flex-direction:column;gap:6px;border-radius:6px;padding:12px;font-size:13px;font-weight:700;margin:0}
+.cell input{width:100%;border:1px solid var(--line);border-radius:6px;padding:8px;font-size:20px;font-weight:800;background:#fff}
+.cell.tp,.cell.tn{background:#E9F6EF;color:#14593B}
+.cell.fp,.cell.fn{background:#FBECEC;color:#8E1F28}
+.stats3{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.stats4{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:20px}
+@media (max-width:700px){.stats3,.stats4{grid-template-columns:1fr 1fr}}
+.stat{background:var(--sheet);border:1px solid var(--line);border-radius:6px;padding:14px 16px}
+.stats3 .stat{border:0;padding:0;background:none}
+.stat b{display:block;font-size:30px;font-weight:800;color:var(--ink);line-height:1.1}
+.stat span{font-size:13.5px;color:var(--muted)}
+.bars{display:flex;flex-direction:column;gap:10px;margin-top:4px}
+.bars .lab{display:flex;justify-content:space-between;font-size:14px;font-weight:600}
+.bars .tr{height:10px;background:var(--line);border-radius:5px;overflow:hidden}
+.bars .tr i{display:block;height:100%;background:var(--ink)}
+.bars .tr i.base{background:var(--muted)}
+.verd{border-left:4px solid var(--ink);padding:8px 12px;background:#F6F8FD;margin-top:12px;font-size:15px}
+.verd.bad{border-color:var(--red);background:#FBF1F1}
+.verd.good{border-color:var(--green);background:#EEF8F2}
+.frames{list-style:none;padding:0;margin:0}
+.frames li button{width:100%;text-align:left;background:#fff;border:0;border-bottom:1px dashed var(--line);padding:10px 4px;cursor:pointer;font-size:15px;line-height:1.5}
+.frames li button:hover{background:#F6F8FD}
+.frames small{display:block;color:var(--muted);font-size:13px}
+#journey .st{cursor:pointer}
+#journey .st circle{fill:#fff;stroke:#9AA9CC;stroke-width:2;stroke-dasharray:5 4}
+#journey .st.won circle{fill:var(--hl);stroke:var(--ink);stroke-dasharray:none;stroke-width:3}
+#journey .st.sel circle{stroke-width:4}
+#journey .st:focus-visible circle{stroke:var(--ink);stroke-width:4}
+#journey .st text{font-family:var(--sans);pointer-events:none}
+.tpl-paper{font-size:15px;line-height:1.7;min-height:420px}
+.tpl-paper h3{text-align:center;font-size:19px;margin-bottom:4px}
+.tpl-paper .sub{text-align:center;color:var(--muted);font-size:13px;margin-bottom:16px}
+.tpl-paper .ln{border-bottom:1px dotted #8C9BD2;min-height:26px;margin:2px 0 8px}
+.tpl-paper .sig{display:grid;grid-template-columns:1fr 1fr;gap:20px;text-align:center;margin-top:24px;font-weight:600}
+.tpl-paper .sig div{min-height:90px}
+.tpl-paper table td,.tpl-paper table th{height:30px}
+@media print{
+  .bar,footer,.tabs,.btn,.sub-nav,.toast,.menu-btn{display:none!important}
+  body{background:#fff}
+  main{padding:0}
+  .sheet,.page{border-color:#bbb}
+  body.print-tpl main > *:not(#v-phuong-phap){display:none!important}
+  body.print-tpl #v-phuong-phap > *:not(.detail){display:none!important}
+  body.print-tpl #v-phuong-phap .detail > aside{display:none!important}
+  body.print-tpl #v-phuong-phap .detail > div > *:not(#mau-giay-to){display:none!important}
+  body.print-tpl #mau-giay-to > h2, body.print-tpl #mau-giay-to > .lead, body.print-tpl #mau-giay-to .grid2 > div:first-child, body.print-tpl #tplHint{display:none!important}
+  body.print-tpl #mau-giay-to .grid2{display:block}
+  body.print-tpl .tpl-paper{border:0;padding:0}
+}
+
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+<header class="bar">
+  <div class="wrap">
+    <a class="brand" href="#trang-chu" aria-label="Sổ Nghiên Cứu AI, về trang chủ">
+      <svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true"><rect x="4" y="3" width="21" height="24" rx="2" fill="#fff" stroke="#1E3A9E" stroke-width="2"/><path d="M9 3v24" stroke="#1E3A9E" stroke-width="1.5" opacity=".5"/><circle cx="17" cy="12" r="2.2" fill="#1E3A9E"/><circle cx="13" cy="19" r="2.2" fill="#1E3A9E"/><circle cx="21" cy="19" r="2.2" fill="#F7E14B" stroke="#1E3A9E" stroke-width="1.2"/><path d="M17 12l-4 7M17 12l4 7M13 19h8" stroke="#1E3A9E" stroke-width="1.3"/></svg>
+      Sổ Nghiên Cứu AI
+    </a>
+    <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="nav">Menu</button>
+    <nav class="nav" id="nav">
+      <a href="#du-an">10 dự án</a>
+      <a href="#ky-nang">Kỹ năng</a>
+      <a href="#bao-cao">Viết báo cáo</a>
+      <a href="#cong-cu">Công cụ</a>
+      <a href="#lo-trinh">Lịch thi</a>
+      <a href="#phuong-phap">Phương pháp</a>
+      <a href="#ho-so">Hồ sơ của em</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+<noscript><div class="sheet" style="margin-bottom:24px"><strong>Công cụ tương tác cần bật JavaScript.</strong> Em vẫn đọc được toàn bộ nội dung hướng dẫn: <a href="du-an/">10 đề tài AI</a>, <a href="ky-nang/">kỹ năng nghiên cứu</a>, <a href="viet-bao-cao/">viết báo cáo</a>, <a href="dung-ai-dung-cach/">dùng AI đúng cách</a>, <a href="phuong-phap/">phương pháp</a>, <a href="lich-thi/">lịch thi</a>, <a href="hoi-dap/">hỏi đáp</a>.</div></noscript>
+
+<!-- ============ TRANG CHỦ ============ -->
+<section class="view" id="v-trang-chu">
+  <div class="hero">
+    <div>
+      <h1>Học làm nghiên cứu AI như một nhà khoa học thật</h1>
+      <p class="lead">10 dự án mẫu về trí tuệ nhân tạo và phần mềm, kèm công cụ để đặt câu hỏi nghiên cứu, ghi nhật ký dùng AI đúng quy định và tự chấm theo tiêu chí giám khảo. Dành cho học sinh lớp 8 đến 12 chuẩn bị thi KHKT cấp trường, cấp tỉnh, thành phố, cấp quốc gia và quốc tế.</p>
+      <div class="row" style="margin-top:22px">
+        <a class="btn" href="#du-an">Xem 10 dự án</a>
+        <a class="btn ghost" href="#cong-cu">Mở hộp công cụ</a>
+      </div>
+    </div>
+    <div>
+      <div class="page" aria-live="off">
+        <div class="pg-head"><span>Sổ nghiên cứu, trang 1</span><span id="heroDate"></span></div>
+        <div class="meta">Câu hỏi nghiên cứu:</div>
+        <div class="q" id="heroQ"></div>
+        <div class="meta" id="heroMeta">&nbsp;</div>
+      </div>
+      <div class="count">
+        <div class="num" id="cdNum">–</div>
+        <div><strong id="cdLabel">ngày</strong><br><span style="color:var(--muted);font-size:15px" id="cdSub"></span></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="paths">
+    <a class="path" href="#cong-cu" data-tool="xuong"><strong>Em chưa có ý tưởng</strong><span>Ghép một vấn đề thật ở địa phương em với một kỹ thuật AI để ra câu hỏi nghiên cứu.</span></a>
+    <a class="path" href="#du-an"><strong>Em đã có hướng đi</strong><span>Chọn dự án gần nhất, theo lộ trình từng tuần và đánh dấu tiến độ.</span></a>
+    <a class="path" href="#cong-cu" data-tool="lab"><strong>Em muốn hiểu ML trước</strong><span>Tự tay đặt điểm dữ liệu và xem một mô hình học ra ranh giới phân loại.</span></a>
+  </div>
+
+  <div class="section">
+    <h2>Một vòng nghiên cứu</h2>
+    <p class="lead">Nghiên cứu không đi theo đường thẳng mà quay vòng: kết quả của vòng này mở ra câu hỏi cho vòng sau. Bấm vào từng bước hoặc xem cả vòng.</p>
+    <div class="cycle-wrap cycle" style="margin-top:20px">
+      <svg id="cycle" viewBox="-80 -10 600 470" role="group" aria-label="Tám bước của một vòng nghiên cứu"></svg>
+      <div class="sheet stepcard" id="stepCard" aria-live="polite"></div>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>Những gì trang này làm được</h2>
+    <p class="lead">Không chỉ là danh sách đề tài. Mỗi công cụ bám vào một yêu cầu cụ thể mà giám khảo sẽ hỏi.</p>
+    <div class="feat"><h3>Notebook Colab</h3><p>Mỗi dự án có một notebook chạy được ngay trên Google Colab: tải dữ liệu, mô hình đối chứng, chia dữ liệu đúng cách, đánh giá và các bài em tự làm tiếp.</p></div>
+    <div class="feat"><h3>Bánh xe kỹ năng</h3><p>Mười kỹ năng của nhà khoa học thực thụ. Em tự đánh giá từng kỹ năng, bánh xe tô màu theo mức của em, kèm bài luyện ngay và thử thách phát hiện lỗi nghiên cứu.</p></div>
+    <div class="feat"><h3>Xưởng viết báo cáo</h3><p>Bố cục báo cáo theo số trang, viết nháp từng phần và được kiểm tra ngay những gì còn thiếu, luyện văn phong khoa học, viết tóm tắt 250 từ và tạo trích dẫn APA.</p></div>
+    <div class="feat"><h3>Đèn giao thông AI</h3><p>Chọn việc em định nhờ AI làm, trang cho biết được phép, được phép có điều kiện hay thường bị cấm, theo các nguyên tắc dùng AI mà nhiều Sở GD&amp;ĐT đã đưa vào cuộc thi KHKT.</p></div>
+    <div class="feat"><h3>Nhật ký prompt</h3><p>Ghi lại từng lần dùng AI (công cụ, câu lệnh, em đã kiểm chứng gì) rồi sao chép thành bảng để chép vào sổ nghiên cứu hoặc đính kèm báo cáo.</p></div>
+    <div class="feat"><h3>Xưởng đề tài</h3><p>Ghép vấn đề, loại dữ liệu và kỹ thuật thành câu hỏi nghiên cứu, giả thuyết, biến số và mô hình đối chứng.</p></div>
+    <div class="feat"><h3>Giám khảo thử</h3><p>Tự chấm theo khung 100 điểm, xem biểu đồ điểm mạnh yếu, luyện câu hỏi phỏng vấn và bấm giờ thuyết trình.</p></div>
+    <div class="feat"><h3>Kế hoạch ngược</h3><p>Nhập ngày nộp hồ sơ, trang chia sẵn các giai đoạn nghiên cứu theo tuần tính ngược từ hạn chót.</p></div>
+    <div class="feat"><h3>Phòng thí nghiệm mini</h3><p>Một mô hình k láng giềng gần nhất chạy ngay trên trình duyệt để hiểu quá khớp, nhiễu và cách đo độ chính xác.</p></div>
+  </div>
+</section>
+
+<!-- ============ DANH SÁCH DỰ ÁN ============ -->
+<section class="view" id="v-du-an">
+  <h2>10 dự án mẫu</h2>
+  <p class="lead">Mỗi dự án là một khung luyện tập: câu hỏi, dữ liệu, phương pháp, cách đo và lộ trình. Để đi thi, em cần tự tìm điểm mới của riêng mình. Gợi ý nằm ở mục “Hướng tạo tính mới” trong từng dự án.</p>
+  <div class="filters" role="group" aria-label="Lọc dự án">
+    <button data-f="all" aria-pressed="true">Tất cả</button>
+    <button data-f="ROBO" aria-pressed="false">Rô bốt và máy thông minh</button>
+    <button data-f="SFTD" aria-pressed="false">Phần mềm</button>
+    <button data-f="lv1" aria-pressed="false">Dễ bắt đầu</button>
+    <button data-f="nohw" aria-pressed="false">Không cần phần cứng</button>
+  </div>
+  <div class="toc" id="toc"></div>
+  <p style="margin-top:14px;color:var(--muted);font-size:14px">Chấm tròn là độ khó (1 đến 3). Con số bên phải là tiến độ em đã đánh dấu, lưu trên trình duyệt này.</p>
+</section>
+
+<!-- ============ CHI TIẾT DỰ ÁN ============ -->
+<section class="view" id="v-chi-tiet">
+  <a class="back" href="#du-an">Quay lại danh sách dự án</a>
+  <div id="detail"></div>
+</section>
+
+<!-- ============ CÔNG CỤ ============ -->
+<section class="view" id="v-cong-cu">
+  <h2>Hộp công cụ nghiên cứu</h2>
+  <p class="lead">Dữ liệu em nhập chỉ lưu trên trình duyệt của em, không gửi đi đâu.</p>
+  <div class="tabs" role="tablist">
+    <button role="tab" data-t="den" aria-selected="true">Đèn giao thông AI</button>
+    <button role="tab" data-t="nhatky" aria-selected="false">Nhật ký prompt</button>
+    <button role="tab" data-t="xuong" aria-selected="false">Xưởng đề tài</button>
+    <button role="tab" data-t="giamkhao" aria-selected="false">Giám khảo thử</button>
+    <button role="tab" data-t="ketqua" aria-selected="false">Kiểm tra kết quả</button>
+    <button role="tab" data-t="aigk" aria-selected="false">Giám khảo AI</button>
+    <button role="tab" data-t="timtl" aria-selected="false">Tìm tài liệu</button>
+    <button role="tab" data-t="lab" aria-selected="false">Phòng thí nghiệm mini</button>
+  </div>
+
+  <!-- Đèn AI -->
+  <div class="tool active" id="t-den">
+    <div class="grid2">
+      <div>
+        <h3>Em định nhờ AI làm gì?</h3>
+        <div class="scen" id="scen"></div>
+      </div>
+      <div>
+        <div class="sheet light">
+          <div class="lamp" aria-hidden="true"><i class="r"></i><i class="y"></i><i class="g"></i></div>
+          <div class="verdict" id="verdict"><h3>Chọn một tình huống bên trái</h3><p style="color:var(--muted)">Tổng hợp các nguyên tắc dùng AI phổ biến trong cuộc thi KHKT học sinh. Mỗi địa phương có thể quy định chặt hơn, hãy đối chiếu văn bản của Sở GD&amp;ĐT nơi em dự thi.</p></div>
+        </div>
+        <p class="note" style="margin-top:18px">Nguyên tắc chung: AI là công cụ hỗ trợ có kiểm soát, không làm thay em. Mọi câu lệnh đã dùng phải ghi vào sổ.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Nhật ký prompt -->
+  <div class="tool" id="t-nhatky">
+    <div class="grid2">
+      <form class="sheet" id="logForm">
+        <h3>Thêm một lần dùng AI</h3>
+        <div class="grid2" style="gap:12px">
+          <div class="field"><label for="lgDate">Ngày</label><input type="date" id="lgDate" required></div>
+          <div class="field"><label for="lgTool">Công cụ</label><input type="text" id="lgTool" placeholder="Ví dụ: ChatGPT, Gemini, Claude, Copilot" required></div>
+        </div>
+        <div class="field"><label for="lgPurpose">Mục đích</label>
+          <select id="lgPurpose">
+            <option>Tóm ý chính bài báo trước khi tự đọc</option>
+            <option>Phát triển ý tưởng</option>
+            <option>Sửa ngữ pháp, câu chữ</option>
+            <option>Gợi ý công cụ thống kê</option>
+            <option>Viết mã nguồn ban đầu</option>
+            <option>Tạo hình minh họa, sơ đồ</option>
+            <option>Luyện phỏng vấn với AI đóng vai giám khảo</option>
+          </select>
+        </div>
+        <div class="field"><label for="lgPrompt">Câu lệnh (prompt) nguyên văn</label><textarea id="lgPrompt" required></textarea></div>
+        <div class="field"><label for="lgUse">Em dùng kết quả vào đâu</label><input type="text" id="lgUse" placeholder="Ví dụ: hàm đọc dữ liệu trong file train.py, dòng 10–42"></div>
+        <div class="field"><label for="lgCheck">Em đã kiểm chứng hoặc sửa gì</label><input type="text" id="lgCheck" placeholder="Ví dụ: chạy thử với 20 ảnh, sửa lỗi chuẩn hóa kích thước"></div>
+        <button class="btn" type="submit">Lưu vào nhật ký</button>
+      </form>
+      <div>
+        <div class="row" style="justify-content:space-between;margin-bottom:10px">
+          <h3 style="margin:0">Nhật ký của em (<span id="lgCount">0</span>)</h3>
+          <div class="row">
+            <button class="btn small ghost" id="lgCopy" type="button">Sao chép dạng bảng</button>
+            <button class="btn small ghost" id="lgDl" type="button">Tải file .csv</button>
+          </div>
+        </div>
+        <div class="tbl-wrap"><table id="lgTable"><thead><tr><th>Ngày</th><th>Công cụ</th><th>Mục đích</th><th>Prompt</th><th></th></tr></thead><tbody></tbody></table></div>
+        <p class="note red" style="margin-top:16px">Sổ nghiên cứu phải viết tay theo thứ tự thời gian. Trang này giúp em không quên prompt nào, còn việc chép vào sổ là của em.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Xưởng đề tài -->
+  <div class="tool" id="t-xuong">
+    <div class="grid2" style="align-items:start">
+      <div class="sheet">
+        <h3>Ghép ba mảnh</h3>
+        <div class="field"><label for="xProb">Vấn đề thực tế</label><select id="xProb"></select></div>
+        <div class="field"><label for="xData">Dữ liệu em có thể thu được</label><select id="xData"></select></div>
+        <div class="field"><label for="xTech">Kỹ thuật AI</label><select id="xTech"></select></div>
+        <div class="field"><label for="xWho">Ai được lợi</label><input type="text" id="xWho" value="học sinh THPT ở địa phương em"></div>
+        <button class="btn" id="xGo" type="button">Tạo khung đề tài</button>
+      </div>
+      <div>
+        <div class="out" id="xOut"><p class="note">Chọn ba mảnh bên trái rồi bấm “Tạo khung đề tài”.</p></div>
+        <div class="row" style="margin-top:12px"><button class="btn small ghost" id="xCopy" type="button">Sao chép khung đề tài</button></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Giám khảo thử -->
+  <div class="tool" id="t-giamkhao">
+    <div class="grid2">
+      <div id="crits"></div>
+      <div>
+        <div class="sheet" style="text-align:center">
+          <div class="total"><span id="score">0</span><span style="font-size:22px;color:var(--muted)"> / 100</span></div>
+          <svg id="radar" viewBox="-50 0 420 300" width="100%" style="max-width:420px" role="img" aria-label="Biểu đồ điểm theo tiêu chí"></svg>
+          <p class="note" id="advice" style="text-align:left"></p>
+        </div>
+        <div class="sheet" style="margin-top:20px">
+          <h3>Luyện phỏng vấn</h3>
+          <div class="flash" id="flash">Bấm “Câu hỏi khác” để bắt đầu.</div>
+          <div class="row"><button class="btn small" id="qNext" type="button">Câu hỏi khác</button></div>
+          <hr style="border:0;border-top:1px dashed var(--line);margin:20px 0">
+          <h3>Bấm giờ thuyết trình</h3>
+          <div class="row" style="justify-content:space-between">
+            <div class="timer" id="timer">3:00</div>
+            <div class="row"><button class="btn small" id="tStart" type="button">Bắt đầu</button><button class="btn small ghost" id="tReset" type="button">Đặt lại</button></div>
+          </div>
+          <p style="color:var(--muted);font-size:14px;margin:8px 0 0">Nhiều cuộc thi giới hạn phần thuyết trình hoặc video giới thiệu khoảng 3 phút.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Kiểm tra kết quả -->
+  <div class="tool" id="t-ketqua">
+    <div class="sub-nav" style="margin-top:0"><button data-go="kq-mtnl">Ma trận nhầm lẫn</button><button data-go="kq-nguong">Ngưỡng phân loại</button><button data-go="kq-solan">Khác biệt có thật không</button></div>
+    <div class="grid2" id="kq-mtnl" style="align-items:start;margin-top:14px">
+      <div class="sheet">
+        <h3>Nhập kết quả trên tập kiểm tra</h3>
+        <p style="color:var(--muted);font-size:15px">“Dương tính” là lớp em quan tâm nhất, ví dụ tin lừa đảo, lá bị bệnh.</p>
+        <div class="cm" id="cm">
+          <div></div><div class="cmh">Mô hình đoán: dương</div><div class="cmh">Mô hình đoán: âm</div>
+          <div class="cmh cmv">Thực tế: dương</div><label class="cell tp">Đúng dương (TP)<input type="number" min="0" id="cTP" value="40"></label><label class="cell fn">Bỏ sót (FN)<input type="number" min="0" id="cFN" value="8"></label>
+          <div class="cmh cmv">Thực tế: âm</div><label class="cell fp">Báo nhầm (FP)<input type="number" min="0" id="cFP" value="10"></label><label class="cell tn">Đúng âm (TN)<input type="number" min="0" id="cTN" value="142"></label>
+        </div>
+      </div>
+      <div>
+        <div class="sheet" id="cmOut"></div>
+        <p class="note" style="margin-top:14px" id="cmNote"></p>
+      </div>
+    </div>
+
+    <div class="grid2 section" id="kq-nguong" style="align-items:start">
+      <div>
+        <h3>Kéo ngưỡng, xem đánh đổi</h3>
+        <p>Mô hình cho mỗi mẫu một điểm từ 0 đến 1. Mẫu có điểm trên ngưỡng bị coi là dương. Hạ ngưỡng thì bắt được nhiều hơn nhưng báo nhầm cũng nhiều hơn.</p>
+        <svg id="thrSvg" viewBox="0 0 520 220" width="100%" role="img" aria-label="Phân bố điểm của hai lớp và vị trí ngưỡng"></svg>
+        <div class="field" style="margin-top:8px"><label for="thr">Ngưỡng = <span id="thrV">0,50</span></label><input type="range" id="thr" min="0.05" max="0.95" step="0.01" value="0.5" style="width:100%;accent-color:var(--ink)"></div>
+        <div class="field"><label for="sep">Mô hình phân biệt tốt cỡ nào</label><input type="range" id="sep" min="0.5" max="3" step="0.1" value="1.6" style="width:100%;accent-color:var(--ink)"></div>
+      </div>
+      <div>
+        <div class="sheet"><div class="stats3" id="thrStats"></div></div>
+        <p class="note" style="margin-top:14px">Với cảnh báo ngủ gật, bỏ sót nguy hiểm hơn báo nhầm, nên chọn ngưỡng thấp. Với lọc tin lừa đảo, báo nhầm tin thật làm người dùng khó chịu. Em phải giải thích được vì sao chọn ngưỡng đó.</p>
+      </div>
+    </div>
+
+    <div class="grid2 section" id="kq-solan" style="align-items:start">
+      <div class="sheet">
+        <h3>Mô hình mới hơn thật, hay chỉ may mắn?</h3>
+        <p style="color:var(--muted);font-size:15px">Chạy mỗi mô hình vài lần với hạt giống ngẫu nhiên khác nhau, dán kết quả vào đây, cách nhau bằng dấu phẩy hoặc khoảng trắng. Dùng dấu chấm cho phần thập phân.</p>
+        <div class="field"><label for="runA">Mô hình đối chứng</label><input type="text" id="runA" value="0.842 0.851 0.838 0.856 0.847"></div>
+        <div class="field"><label for="runB">Mô hình của em</label><input type="text" id="runB" value="0.861 0.849 0.872 0.858 0.866"></div>
+        <button class="btn" type="button" id="runGo">So sánh</button>
+      </div>
+      <div>
+        <div class="sheet"><svg id="runSvg" viewBox="0 0 520 170" width="100%" role="img" aria-label="Biểu đồ điểm các lần chạy của hai mô hình"></svg><div id="runOut" style="margin-top:10px"></div></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Giám khảo AI -->
+  <div class="tool" id="t-aigk">
+    <div class="grid2" style="align-items:start">
+      <form class="sheet" id="aiForm">
+        <h3>Thông tin dự án của em</h3>
+        <div class="field"><label for="aiTitle">Tên dự án</label><input type="text" id="aiTitle" required></div>
+        <div class="field"><label for="aiQ">Câu hỏi nghiên cứu</label><textarea id="aiQ" style="min-height:60px" required></textarea></div>
+        <div class="field"><label for="aiM">Phương pháp tóm tắt</label><textarea id="aiM" style="min-height:60px"></textarea></div>
+        <div class="field"><label for="aiR">Kết quả chính</label><textarea id="aiR" style="min-height:60px"></textarea></div>
+        <div class="field"><label for="aiP">Giám khảo kiểu nào</label>
+          <select id="aiP"><option value="pp">Chuyên gia phương pháp, hỏi rất kỹ</option><option value="tt">Người dùng thực tế, quan tâm ứng dụng</option><option value="isef">Giám khảo ISEF, hỏi bằng tiếng Anh</option><option value="tre">Bạn học lớp dưới, cần giải thích dễ hiểu</option></select></div>
+        <button class="btn" type="submit">Tạo câu lệnh</button>
+      </form>
+      <div>
+        <div class="out" id="aiOut" style="white-space:pre-wrap;font-size:15px;line-height:1.6;min-height:200px"><span class="note">Điền thông tin bên trái, trang sẽ tạo một câu lệnh để em dán vào chatbot bất kỳ.</span></div>
+        <div class="row" style="margin-top:12px"><button class="btn small" type="button" id="aiCopy">Sao chép và ghi vào nhật ký</button></div>
+        <p class="note" style="margin-top:14px">Câu lệnh yêu cầu AI chỉ đặt câu hỏi và nhận xét câu trả lời của em, không viết nội dung hộ. Đây vẫn là một lần dùng AI, nên trang tự ghi vào Nhật ký prompt khi em sao chép.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Tìm tài liệu -->
+  <div class="tool" id="t-timtl">
+    <div class="grid2" style="align-items:start">
+      <div class="sheet">
+        <h3>Từ khóa tiếng Việt sang tiếng Anh</h3>
+        <div class="field"><label for="kwIn">Đề tài hoặc từ khóa của em</label><input type="text" id="kwIn" value="phát hiện bệnh lá lúa bằng học sâu"></div>
+        <div id="kwOut"></div>
+        <div class="field" style="margin-top:12px"><label for="kwEn">Truy vấn tiếng Anh (sửa thêm nếu cần)</label><input type="text" id="kwEn"></div>
+        <div class="row" id="kwLinks"></div>
+      </div>
+      <div>
+        <h3>Đọc một bài báo trong ba lượt</h3>
+        <ol class="steps" id="read3"></ol>
+        <p class="note" style="margin-top:14px">Đọc xong lượt 2 mà thấy không liên quan thì dừng, chuyển bài khác. Chỉ ghi vào danh mục tài liệu những bài em đã đọc đến lượt 3.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Phòng thí nghiệm mini -->
+  <div class="tool" id="t-lab">
+    <div class="grid2">
+      <div>
+        <canvas id="cv" width="560" height="420" aria-label="Mặt phẳng dữ liệu, chạm để thêm điểm"></canvas>
+        <div class="row" style="margin-top:12px">
+          <div class="seg" role="group" aria-label="Lớp của điểm mới"><button id="cA" aria-pressed="true">Lớp xanh</button><button id="cB" aria-pressed="false">Lớp vàng</button></div>
+          <button class="btn small ghost" id="lRand" type="button">Dữ liệu ngẫu nhiên</button>
+          <button class="btn small ghost" id="lNoise" type="button">Thêm nhiễu</button>
+          <button class="btn small ghost" id="lClear" type="button">Xóa hết</button>
+        </div>
+      </div>
+      <div>
+        <h3>Thuật toán k láng giềng gần nhất</h3>
+        <p>Một điểm mới được gán vào lớp chiếm đa số trong k điểm gần nó nhất. Màu nền là vùng mô hình dự đoán.</p>
+        <div class="field"><label for="kS">k = <span id="kV">3</span></label><input type="range" id="kS" min="1" max="25" step="2" value="3" style="width:100%;accent-color:var(--ink)"></div>
+        <div class="sheet">
+          <div class="row" style="justify-content:space-between"><span>Độ chính xác trên dữ liệu huấn luyện</span><strong id="accTr">–</strong></div>
+          <div class="row" style="justify-content:space-between;margin-top:6px"><span>Độ chính xác kiểm định chéo (bỏ một)</span><strong id="accCv">–</strong></div>
+        </div>
+        <p class="note" style="margin-top:16px">Thử đặt k = 1 rồi thêm nhiễu. Điểm huấn luyện đạt 100% nhưng kiểm định chéo tụt xuống: đó là quá khớp. Giám khảo luôn hỏi em đo trên tập nào.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ============ KỸ NĂNG ============ -->
+<section class="view" id="v-ky-nang">
+  <h2>Kỹ năng của một nhà khoa học</h2>
+  <p class="lead">Mười kỹ năng mà người làm nghiên cứu thật dùng hằng ngày. Bấm vào từng phần của bánh xe để đọc tóm tắt, tự đánh giá mức của mình và nhận một bài luyện ngay.</p>
+  <div class="sub-nav"><button data-go="kn-banh-xe">Bánh xe kỹ năng</button><button data-go="kn-thu-thach">Thử thách tư duy khoa học</button></div>
+
+  <div class="grid2" id="kn-banh-xe" style="margin-top:20px;align-items:start">
+    <div class="sheet wheel">
+      <svg id="wheel" viewBox="-60 -20 520 480" role="img" aria-label="Bánh xe 10 kỹ năng nghiên cứu, mỗi phần dài theo mức em tự đánh giá"></svg>
+      <div class="skill-list" id="skillList"></div>
+      <p style="text-align:center;color:var(--muted);font-size:14px;margin:12px 0 0">Phần tô xanh càng dài, em càng tự tin ở kỹ năng đó. Tự đánh giá được lưu trên trình duyệt này.</p>
+    </div>
+    <div class="sheet" id="skillCard" aria-live="polite"></div>
+  </div>
+
+  <div class="section" id="kn-thu-thach">
+    <h2>Thử thách tư duy khoa học</h2>
+    <p class="lead">Tám tình huống có lỗi thường gặp trong nghiên cứu AI của học sinh. Em có nhận ra trước giám khảo không?</p>
+    <div class="grid2" style="align-items:start">
+      <div class="sheet quiz" id="quiz"></div>
+      <div>
+        <p class="note">Mỗi lỗi ở đây đều từng xuất hiện trong các dự án dự thi thật. Giám khảo có kinh nghiệm sẽ hỏi đúng vào những chỗ này.</p>
+        <p class="note">Làm xong, hãy quay lại bánh xe và tự chấm lại kỹ năng “Tư duy phản biện”.</p>
+        <div class="sheet" style="margin-top:16px"><div class="row" style="justify-content:space-between"><strong>Kết quả tốt nhất của em</strong><span class="total" style="font-size:34px" id="qBest">–</span></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ BÁO CÁO ============ -->
+<section class="view" id="v-bao-cao">
+  <h2>Luyện viết báo cáo dự án</h2>
+  <p class="lead">Báo cáo là nơi giám khảo đọc trước khi gặp em. Ở đây em xem bố cục, viết thử từng phần và được trang kiểm tra ngay những gì còn thiếu.</p>
+  <div class="sub-nav"><button data-go="bc-bo-cuc">Bố cục và xưởng viết</button><button data-go="bc-chon-cau">Câu nào viết tốt hơn</button><button data-go="bc-tom-tat">Tóm tắt 250 từ</button><button data-go="bc-trich-dan">Trích dẫn tài liệu</button><button data-go="bc-tieng-anh">Tiếng Anh cho ISEF</button></div>
+
+  <div id="bc-bo-cuc" style="margin-top:24px">
+    <div class="row" style="justify-content:space-between;align-items:flex-end;margin-bottom:10px">
+      <h3 style="margin:0">Bố cục báo cáo theo số trang</h3>
+      <div class="row"><label for="pgLimit" style="margin:0">Giới hạn số trang theo quy định</label><input type="number" id="pgLimit" min="5" max="60" value="15" style="width:76px;border:1px solid var(--line);border-radius:6px;padding:6px 8px"></div>
+    </div>
+    <div class="rbar" id="rbar" role="group" aria-label="Các phần của báo cáo, chiều rộng theo số trang gợi ý"></div>
+    <div class="rbar-legend"><span>Trang đầu</span><span>Con số là số trang gợi ý. Bấm vào một phần để mở xưởng viết</span><span>Trang cuối</span></div>
+
+    <div class="writer" style="margin-top:28px">
+      <div class="sec-list" id="secList"></div>
+      <div>
+        <h3 id="wTitle" style="margin-bottom:4px"></h3>
+        <p id="wPurpose" style="color:var(--muted)"></p>
+        <label for="wText" class="note" style="font-weight:400;font-size:19px" id="wStarter"></label>
+        <textarea id="wText" placeholder="Viết bản nháp của em ở đây..."></textarea>
+        <div class="row" style="justify-content:space-between;margin-top:8px">
+          <span style="color:var(--muted);font-size:14px"><span class="wc" id="wWords">0</span> từ, gợi ý <span id="wTarget"></span> từ</span>
+          <button class="btn small ghost" id="wCopy" type="button">Sao chép mọi phần đã viết</button>
+        </div>
+      </div>
+      <div class="sheet" style="padding:20px">
+        <div class="row" style="justify-content:space-between"><strong>Mức hoàn thiện</strong><strong id="wPct">0%</strong></div>
+        <div class="meter"><i id="wMeter"></i></div>
+        <ul class="checks" id="wChecks"></ul>
+        <p class="note red" style="font-size:18px;margin:14px 0 0" id="wPitfall"></p>
+      </div>
+    </div>
+    <p style="color:var(--muted);font-size:14px;margin-top:12px">Trang kiểm tra bằng các dấu hiệu đơn giản trong câu chữ, không thay được giáo viên đọc và góp ý. Hãy tự viết, không dán văn bản do AI tạo.</p>
+  </div>
+
+  <div class="section" id="bc-chon-cau">
+    <h2>Câu nào viết tốt hơn?</h2>
+    <p class="lead">Văn phong khoa học cần chính xác, có số liệu, có nguồn và không phóng đại. Chọn câu em thấy tốt hơn.</p>
+    <div class="sheet" id="pairs"></div>
+  </div>
+
+  <div class="section" id="bc-tom-tat">
+    <h2>Viết tóm tắt trong 250 từ</h2>
+    <p class="lead">Tóm tắt của ISEF giới hạn 250 từ và theo năm phần dưới đây. Các cuộc thi trong nước có thể có giới hạn khác, nhưng cấu trúc vẫn dùng được.</p>
+    <div class="grid2" style="align-items:start">
+      <div class="sheet abs-grid" id="absForm"></div>
+      <div>
+        <div class="sheet">
+          <div class="row" style="justify-content:space-between"><strong>Bản tóm tắt ghép lại</strong><span><span class="wc" id="absWc">0</span> / 250 từ</span></div>
+          <div class="meter" id="absMeterWrap"><i id="absMeter"></i></div>
+          <svg id="absBar" viewBox="0 0 400 26" width="100%" style="margin-top:12px" aria-hidden="true"></svg>
+          <div id="absOut" style="margin-top:12px;white-space:pre-wrap;line-height:1.7;color:var(--text)"></div>
+          <div class="row" style="margin-top:12px"><button class="btn small ghost" id="absCopy" type="button">Sao chép tóm tắt</button></div>
+        </div>
+        <p class="note" style="margin-top:14px">Thanh màu cho thấy em đang dành bao nhiêu chữ cho mỗi phần. Phần kết quả nên có số liệu cụ thể và không ngắn hơn phần bối cảnh.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="section" id="bc-trich-dan">
+    <h2>Trích dẫn tài liệu theo kiểu APA</h2>
+    <p class="lead">Nhập thông tin tài liệu, trang tạo dòng trích dẫn đúng định dạng và xếp danh mục theo thứ tự chữ cái.</p>
+    <div class="grid2" style="align-items:start">
+      <form class="sheet" id="refForm">
+        <div class="field"><label for="rType">Loại tài liệu</label><select id="rType"><option value="j">Bài báo khoa học</option><option value="b">Sách</option><option value="w">Trang web</option></select></div>
+        <div class="field"><label for="rAu">Tác giả (Họ, Tên viết tắt; cách nhau bằng dấu chấm phẩy)</label><input type="text" id="rAu" placeholder="Nguyen, V. A.; Tran, T. B." required></div>
+        <div class="grid2" style="gap:12px"><div class="field"><label for="rYr">Năm</label><input type="text" id="rYr" placeholder="2024" required></div><div class="field"><label for="rVol">Tập (số), trang</label><input type="text" id="rVol" placeholder="12(3), 45–60"></div></div>
+        <div class="field"><label for="rTi">Tên bài, sách hoặc trang</label><input type="text" id="rTi" required></div>
+        <div class="field"><label for="rSrc">Tạp chí, nhà xuất bản hoặc tên website</label><input type="text" id="rSrc"></div>
+        <div class="field"><label for="rUrl">DOI hoặc đường dẫn</label><input type="text" id="rUrl" placeholder="https://doi.org/..."></div>
+        <button class="btn" type="submit">Thêm vào danh mục</button>
+      </form>
+      <div class="sheet">
+        <div class="row" style="justify-content:space-between"><h3 style="margin:0">Danh mục của em (<span id="refN">0</span>)</h3><button class="btn small ghost" id="refCopy" type="button">Sao chép danh mục</button></div>
+        <ul class="refs" id="refs"></ul>
+        <p class="note" style="margin-top:12px">Chỉ trích dẫn tài liệu em đã thật sự đọc. Mỗi tài liệu trong danh mục phải được nhắc đến ít nhất một lần trong bài.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="section" id="bc-tieng-anh">
+    <h2>Tiếng Anh cho ISEF</h2>
+    <p class="lead">Ở ISEF mọi thứ đều bằng tiếng Anh. Tra nhanh thuật ngữ và mượn các mẫu câu dưới đây, rồi tự điền nội dung của em.</p>
+    <div class="grid2" style="align-items:start">
+      <div class="sheet">
+        <div class="field"><label for="glQ">Tìm thuật ngữ (tiếng Việt hoặc tiếng Anh)</label><input type="text" id="glQ" placeholder="ví dụ: đối chứng, overfitting"></div>
+        <div class="tbl-wrap" style="max-height:420px;overflow:auto"><table id="glT"><thead><tr><th>Tiếng Việt</th><th>Tiếng Anh</th></tr></thead><tbody></tbody></table></div>
+      </div>
+      <div class="sheet">
+        <div class="seg" role="group" aria-label="Loại mẫu câu" style="margin-bottom:14px"><button type="button" id="frA" aria-pressed="true">Tóm tắt, báo cáo</button><button type="button" id="frB" aria-pressed="false">Phỏng vấn</button></div>
+        <ul class="frames" id="frames"></ul>
+        <p class="note" style="margin-top:10px">Bấm vào một mẫu câu để sao chép. Phần trong ngoặc vuông là chỗ em tự điền.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ============ HỒ SƠ CỦA EM ============ -->
+<section class="view" id="v-ho-so">
+  <h2>Hồ sơ của em</h2>
+  <p class="lead">Mọi thứ em làm trên trang được gom lại ở đây. Mỗi chặng trên hành trình là một huy hiệu, mở khi em hoàn thành một việc thật.</p>
+  <div class="stats4" id="hsStats"></div>
+  <div class="sheet section" style="margin-top:28px">
+    <div class="row" style="justify-content:space-between"><h3 style="margin:0">Hành trình nhà nghiên cứu</h3><strong id="hsBadgeN"></strong></div>
+    <svg id="journey" viewBox="0 0 1000 380" width="100%" role="group" aria-label="Bản đồ hành trình với các huy hiệu"></svg>
+    <div class="out" id="badgeInfo" aria-live="polite"><span class="note">Bấm vào một chặng để xem cách mở huy hiệu.</span></div>
+  </div>
+  <div class="grid2 section" style="align-items:start">
+    <div class="sheet">
+      <h3>Sao lưu hồ sơ</h3>
+      <p>Dữ liệu chỉ nằm trên trình duyệt này. Hãy sao lưu trước khi đổi máy, xóa lịch sử, hoặc để gửi cho giáo viên hướng dẫn.</p>
+      <div class="row"><button class="btn" type="button" id="exDl">Tải file hồ sơ</button><button class="btn ghost" type="button" id="exCopy">Sao chép mã hồ sơ</button></div>
+    </div>
+    <div class="sheet">
+      <h3>Khôi phục hồ sơ</h3>
+      <p>Chọn file hồ sơ đã tải, hoặc dán mã hồ sơ vào ô dưới. Dữ liệu hiện có trên máy này sẽ bị thay thế.</p>
+      <div class="field"><label for="imFile">File hồ sơ (.json)</label><input type="file" id="imFile" accept=".json,application/json"></div>
+      <div class="field"><label for="imText">Hoặc dán mã hồ sơ</label><textarea id="imText" style="min-height:70px"></textarea></div>
+      <button class="btn ghost" type="button" id="imGo">Khôi phục</button>
+    </div>
+  </div>
+</section>
+
+<!-- ============ LỊCH THI ============ -->
+<section class="view" id="v-lo-trinh">
+  <div class="grid2" style="align-items:start">
+    <div>
+      <h2>Lịch các cuộc thi</h2>
+      <p class="lead">Chu kỳ thi KHKT lặp lại mỗi năm học. Thời gian chỉ là thông lệ; ngày cụ thể do Bộ GD&amp;ĐT và Sở GD&amp;ĐT từng địa phương công bố. Ngoài ra còn có các cuộc thi KHKT do một số đại học tổ chức.</p>
+      <ul class="tl" id="tl"></ul>
+    </div>
+    <div>
+      <h2>Kế hoạch ngược</h2>
+      <p class="lead">Nhập ngày em phải nộp hồ sơ dự án. Trang chia thời gian còn lại thành các giai đoạn.</p>
+      <div class="sheet">
+        <div class="grid2" style="gap:12px">
+          <div class="field"><label for="pStart">Ngày bắt đầu</label><input type="date" id="pStart"></div>
+          <div class="field"><label for="pEnd">Hạn nộp hồ sơ</label><input type="date" id="pEnd"></div>
+        </div>
+        <button class="btn" id="pGo" type="button">Lập kế hoạch</button>
+        <div id="pOut" style="margin-top:18px"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PHƯƠNG PHÁP ============ -->
+<section class="view" id="v-phuong-phap">
+  <h2>Phương pháp làm nghiên cứu AI</h2>
+  <p class="lead">Quy trình tám bước dùng cho mọi dự án trên trang, cùng các thành phần hồ sơ dự thi thường gặp.</p>
+  <div class="detail" style="margin-top:26px">
+    <div>
+      <ol class="steps" id="method"></ol>
+      <div class="section" style="margin-top:44px">
+        <h3>Hồ sơ dự thi thường gồm</h3>
+        <ul class="steps" id="dossier"></ul>
+      </div>
+  <div class="section" id="mau-giay-to">
+    <h2>Mẫu giấy tờ in được</h2>
+    <p class="lead">Điền thông tin chung một lần, các mẫu tự điền theo. Đây là mẫu tham khảo; nếu ban tổ chức có biểu mẫu riêng thì dùng biểu mẫu đó. ISEF có bộ biểu mẫu chính thức trong International Rules.</p>
+    <div class="grid2" style="align-items:start">
+      <div class="sheet">
+        <div class="field"><label for="tpProj">Tên dự án</label><input type="text" id="tpProj"></div>
+        <div class="grid2" style="gap:12px">
+          <div class="field"><label for="tpStu">Học sinh thực hiện</label><input type="text" id="tpStu" placeholder="Họ tên, lớp"></div>
+          <div class="field"><label for="tpTea">Giáo viên hướng dẫn</label><input type="text" id="tpTea"></div>
+        </div>
+        <div class="field"><label for="tpSch">Trường</label><input type="text" id="tpSch"></div>
+        <div class="sec-list" id="tplList" style="margin-top:6px"></div>
+      </div>
+      <div>
+        <div class="sheet tpl-paper" id="tplView"></div>
+        <div class="row" style="margin-top:12px"><button class="btn small" type="button" id="tplPrint">In mẫu này</button><button class="btn small ghost" type="button" id="tplCopy">Sao chép nội dung</button></div>
+        <p style="color:var(--muted);font-size:14px;margin-top:8px" id="tplHint"></p>
+      </div>
+    </div>
+  </div>
+
+    </div>
+    <aside>
+      <p class="note">Mô hình đối chứng (baseline) là thứ hay bị quên nhất. Không có nó, con số 92% không nói lên điều gì.</p>
+      <p class="note">Giữ lại cả những lần thử thất bại. Sổ nghiên cứu cần chúng.</p>
+      <p class="note red">Không xé trang, không dùng bút xóa, không chép lại sổ cho đẹp.</p>
+      <p class="note">Dự án có người tham gia (khảo sát, quay video, chụp ảnh) cần giấy đồng ý. Với ISEF còn có biểu mẫu riêng.</p>
+    </aside>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-cols"><div><h2>Bài hướng dẫn</h2><ul><li><a href="du-an/">10 đề tài AI cho học sinh</a></li><li><a href="ky-nang/">10 kỹ năng nghiên cứu khoa học</a></li><li><a href="viet-bao-cao/">Cách viết báo cáo dự án</a></li><li><a href="dung-ai-dung-cach/">Dùng AI trong dự án KHKT</a></li><li><a href="phuong-phap/">Quy trình 8 bước</a></li><li><a href="lich-thi/">Lịch thi KHKT trong năm</a></li><li><a href="hoi-dap/">Hỏi đáp về thi KHKT</a></li></ul></div><div><h2>Đề tài mẫu</h2><ul><li><a href="du-an/benh-la-lua/">Chẩn đoán bệnh lá lúa từ ảnh chụp điện thoại</a></li><li><a href="du-an/ngap-duong/">Dự báo nguy cơ ngập theo tuyến đường ở đô thị</a></li><li><a href="du-an/tin-lua-dao/">Phát hiện tin nhắn lừa đảo tiếng Việt</a></li><li><a href="du-an/ngon-ngu-ky-hieu/">Nhận diện ngôn ngữ ký hiệu Việt Nam qua webcam</a></li><li><a href="du-an/canh-bao-ngu-gat/">Cảnh báo ngủ gật cho người lái xe</a></li><li><a href="du-an/thung-rac-thong-minh/">Thùng rác tự phân loại bằng camera</a></li><li><a href="du-an/du-bao-pm25/">Dự báo bụi mịn PM2.5 ngắn hạn cho một đô thị</a></li><li><a href="du-an/tu-the-ngoi-hoc/">Nhắc tư thế ngồi học đúng bằng webcam</a></li><li><a href="du-an/tro-ly-on-tap/">Trợ lý ôn tập có trích dẫn nguồn</a></li><li><a href="du-an/bai-tap-thich-ung/">Gợi ý bài tập toán thích ứng theo năng lực</a></li></ul></div></div>
+    <p>Sổ Nghiên Cứu AI là tài nguyên học tập mở cho học sinh trung học trên cả nước. Nội dung về cuộc thi được tổng hợp theo thông lệ chung của cuộc thi KHKT các cấp và Regeneron ISEF. Quy định cụ thể thay đổi theo từng năm và từng địa phương, hãy luôn đối chiếu văn bản mới nhất do trường, Sở GD&amp;ĐT và Bộ GD&amp;ĐT ban hành.</p>
+    <p>Dự án mẫu chỉ để luyện tập. Dự án dự thi phải là kết quả nghiên cứu của chính em và chưa công bố ở cuộc thi nào khác.</p>
+  </div>
+</footer>
+<div class="toast" id="toast" role="status"></div>
+
+<script>
+/* ===================== DỮ LIỆU ===================== */
+const PROJECTS = [
+{ id:"benh-la-lua", nbData:"Bộ beans (bệnh lá đậu) trên Hugging Face để luyện quy trình; em thay bằng ảnh lá lúa của mình.", title:"Chẩn đoán bệnh lá lúa từ ảnh chụp điện thoại", code:"ROBO", sub:"Machine Learning", level:1, hw:false, weeks:10,
+  short:"Mạng nơ-ron tích chập nhận diện bệnh đạo ôn, bạc lá, đốm nâu và chạy được không cần mạng.",
+  q:"Một mô hình học chuyển giao nhỏ có giữ được độ chính xác khi chuyển từ ảnh phòng lab sang ảnh chụp ngoài ruộng ở địa phương không?",
+  hyp:"Huấn luyện thêm với 300 ảnh thực địa tự chụp sẽ tăng F1 trên ảnh thực địa ít nhất 15 điểm phần trăm so với mô hình chỉ học ảnh công khai.",
+  data:"Bộ ảnh bệnh lá lúa công khai trên Kaggle hoặc kho UCI, cộng ảnh tự chụp tại ruộng (ghi rõ ngày, giờ, địa điểm, loại điện thoại).",
+  method:"Học chuyển giao với MobileNetV3 hoặc EfficientNet-B0; tăng cường dữ liệu; so sánh với mô hình đối chứng không học chuyển giao; xuất mô hình ONNX để chạy trên điện thoại.",
+  metric:"Độ chính xác, F1 trung bình theo lớp, ma trận nhầm lẫn, thời gian suy luận trên điện thoại tầm trung.",
+  novelty:["Đo mức sụt giảm khi đổi miền ảnh (phòng lab sang ruộng) và đề xuất cách khắc phục.","Thêm lớp “không chắc chắn” để mô hình biết từ chối trả lời.","Kiểm tra với nông dân thật: họ có làm theo gợi ý không?"],
+  ethics:"Xin phép chủ ruộng khi chụp. Không đưa ra khuyến nghị thuốc bảo vệ thực vật thay chuyên gia.",
+  tools:"Google Colab, PyTorch, Teachable Machine để thử nhanh.",
+  ms:["Đọc 5 bài báo về nhận diện bệnh cây bằng CNN, ghi tóm tắt tay","Gom và làm sạch dữ liệu công khai, chia tập huấn luyện, kiểm định, kiểm tra","Huấn luyện mô hình đối chứng và mô hình học chuyển giao","Đi thực địa chụp ảnh, gán nhãn cùng người có chuyên môn","Đánh giá trên ảnh thực địa, phân tích lỗi bằng ma trận nhầm lẫn","Đóng gói ứng dụng, viết báo cáo, poster và video"] },
+{ id:"ngap-duong", nbData:"Lượng mưa thật từ Open-Meteo; mực triều và nhãn ngập là giả lập, em thay bằng số liệu tự thu thập.", title:"Dự báo nguy cơ ngập theo tuyến đường ở đô thị", code:"ROBO", sub:"Machine Learning", level:2, hw:false, weeks:12,
+  short:"Kết hợp lượng mưa, đỉnh triều và lịch sử ngập để cảnh báo trước vài giờ.",
+  q:"Thêm dữ liệu mực triều vào mô hình chỉ dùng lượng mưa có cải thiện khả năng dự báo ngập trên các tuyến đường trũng không?",
+  hyp:"Mô hình mưa cộng triều đạt recall cao hơn mô hình chỉ dùng mưa ít nhất 10 điểm phần trăm với cùng mức báo động giả.",
+  data:"Lượng mưa lịch sử theo giờ (Open-Meteo hoặc NASA POWER), dữ liệu mực nước, triều do đài khí tượng thủy văn khu vực công bố, danh sách điểm ngập em tự thu thập từ báo chí và khảo sát.",
+  method:"Xây bảng dữ liệu theo (tuyến đường, giờ); hồi quy logistic làm đối chứng; rừng ngẫu nhiên và gradient boosting; kiểm định theo thời gian, không trộn ngẫu nhiên.",
+  metric:"Recall, precision, AUC, số giờ cảnh báo sớm trung bình.",
+  novelty:["Tự xây bộ dữ liệu điểm ngập có nhãn thời gian, chưa ai công bố.","Giải thích mô hình bằng SHAP để thấy yếu tố nào quyết định.","Bản đồ cảnh báo đơn giản cho học sinh đi học."],
+  ethics:"Ghi rõ nguồn từng bài báo dùng để gán nhãn. Không công bố cảnh báo như thông tin chính thức.",
+  tools:"Python, pandas, scikit-learn, XGBoost, folium để vẽ bản đồ.",
+  ms:["Xác định 20 đến 40 tuyến đường hay ngập, thu thập lịch sử ngập","Tải và ghép dữ liệu mưa, triều theo giờ","Huấn luyện đối chứng hồi quy logistic","Huấn luyện mô hình cây và so sánh","Kiểm định theo mùa mưa năm khác, giải thích bằng SHAP","Làm bản đồ minh họa, hoàn thiện hồ sơ"] },
+{ id:"tin-lua-dao", nbData:"Bộ SMS Spam Collection (UCI) để luyện; khung xử lý tiếng Việt và tinh chỉnh PhoBERT cho dữ liệu của em.", title:"Phát hiện tin nhắn lừa đảo tiếng Việt", code:"SFTD", sub:"Cybersecurity", level:2, hw:false, weeks:10,
+  short:"Mô hình ngôn ngữ phân loại tin nhắn giả danh ngân hàng, trúng thưởng, việc nhẹ lương cao.",
+  q:"Mô hình PhoBERT tinh chỉnh có chống chịu tốt hơn mô hình TF-IDF khi kẻ gian viết không dấu, teencode hoặc chèn ký tự lạ không?",
+  hyp:"Khi tin nhắn bị biến đổi, F1 của PhoBERT giảm ít hơn F1 của TF-IDF cộng hồi quy logistic.",
+  data:"Tin nhắn lừa đảo thu thập từ người thân và cộng đồng (đã xóa số điện thoại, tên, số tài khoản), tin nhắn bình thường làm lớp đối chứng; bộ tin nhắn biến đổi do em tự tạo theo quy tắc.",
+  method:"Đối chứng TF-IDF cộng hồi quy logistic; tinh chỉnh PhoBERT (VinAI); tạo tập kiểm tra đối kháng bằng bộ biến đổi tự viết.",
+  metric:"Precision, recall, F1; mức giảm F1 trên tập đối kháng; tỷ lệ báo nhầm tin thật.",
+  novelty:["Bộ quy tắc biến đổi tin nhắn tiếng Việt để kiểm tra độ bền.","Phân loại theo kịch bản lừa đảo, không chỉ có hay không.","Tiện ích cảnh báo kèm giải thích dấu hiệu đáng ngờ."],
+  ethics:"Ẩn danh hóa toàn bộ dữ liệu, có sự đồng ý của người cung cấp. Không lưu thông tin tài khoản.",
+  tools:"Python, Hugging Face Transformers, scikit-learn, Google Colab.",
+  ms:["Tìm hiểu các kịch bản lừa đảo phổ biến, đọc tài liệu","Thu thập, ẩn danh hóa và gán nhãn tin nhắn","Huấn luyện đối chứng TF-IDF","Tinh chỉnh PhoBERT","Xây tập đối kháng và đo độ bền","Làm bản demo, viết báo cáo"] },
+{ id:"ngon-ngu-ky-hieu", nbData:"Trích điểm mốc bàn tay từ video của em bằng MediaPipe; dữ liệu giả lập cho thấy vì sao cần mô hình chuỗi.", title:"Nhận diện ngôn ngữ ký hiệu Việt Nam qua webcam", code:"ROBO", sub:"Cognitive Systems", level:3, hw:false, weeks:14,
+  short:"Trích điểm mốc bàn tay rồi phân loại cử chỉ để chuyển thành chữ cho người nghe.",
+  q:"Mô hình học chuỗi trên điểm mốc bàn tay có nhận diện được các từ ký hiệu động tốt hơn mô hình chỉ nhìn một khung hình không?",
+  hyp:"LSTM trên chuỗi 30 khung điểm mốc đạt độ chính xác cao hơn MLP một khung với các ký hiệu có chuyển động.",
+  data:"Video tự quay một bộ từ vựng ký hiệu cơ bản, có sự hướng dẫn và đồng ý của người dùng ngôn ngữ ký hiệu từ trường hoặc trung tâm hỗ trợ người khiếm thính.",
+  method:"MediaPipe Hands trích 21 điểm mốc mỗi bàn tay; chuẩn hóa vị trí; so sánh MLP một khung và LSTM hoặc GRU trên chuỗi.",
+  metric:"Độ chính xác từng từ, độ chính xác với người chưa có trong tập huấn luyện, độ trễ.",
+  novelty:["Kiểm tra trên người ký mới, không trùng người trong tập huấn luyện.","Phát hiện ranh giới giữa hai ký hiệu liên tiếp.","Đánh giá cùng chính cộng đồng người khiếm thính."],
+  ethics:"Dự án có người tham gia: cần giấy đồng ý, giải thích mục đích, cho phép rút dữ liệu. Khuôn mặt nên được làm mờ khi lưu.",
+  tools:"Python, MediaPipe, OpenCV, TensorFlow hoặc PyTorch.",
+  ms:["Liên hệ đối tác cộng đồng, chọn 15 đến 30 từ","Quay dữ liệu có giấy đồng ý, gán nhãn","Trích điểm mốc và chuẩn hóa","Huấn luyện MLP đối chứng và mô hình chuỗi","Kiểm tra với người ký mới, phân tích lỗi","Thử nghiệm cùng người dùng, hoàn thiện hồ sơ"] },
+{ id:"canh-bao-ngu-gat", nbData:"Tính tỉ lệ khung mắt từ video của em; mô phỏng 12 người lái để so sánh ba cách cảnh báo.", title:"Cảnh báo ngủ gật cho người lái xe", code:"ROBO", sub:"Cognitive Systems", level:2, hw:true, weeks:10,
+  short:"Camera theo dõi mắt và ngáp, phát cảnh báo trước khi người lái mất tập trung.",
+  q:"Kết hợp tỉ lệ khép mắt với tần suất ngáp có giảm báo động giả so với chỉ dùng tỉ lệ khép mắt trong điều kiện thiếu sáng không?",
+  hyp:"Mô hình kết hợp giảm số báo động giả mỗi giờ ít nhất 30% mà không bỏ sót thêm sự kiện buồn ngủ.",
+  data:"Bộ ảnh mắt mở và nhắm công khai (ví dụ MRL Eye), video tự quay mô phỏng có người lớn giám sát, ở nhiều điều kiện ánh sáng.",
+  method:"MediaPipe Face Mesh tính tỉ lệ khung mắt (EAR) và miệng (MAR); so sánh ngưỡng cố định, ngưỡng cá nhân hóa và CNN nhỏ; chạy trên Raspberry Pi hoặc điện thoại cũ.",
+  metric:"Recall sự kiện buồn ngủ, báo động giả mỗi giờ, độ trễ cảnh báo.",
+  novelty:["Ngưỡng tự hiệu chỉnh theo từng người trong 1 phút đầu.","Thử với kính râm, ánh sáng đèn đường ban đêm.","Thiết bị gắn mũ bảo hiểm cho người đi xe máy."],
+  ethics:"Tuyệt đối không thử nghiệm khi đang lái thật. Chỉ mô phỏng khi ngồi yên.",
+  tools:"Python, OpenCV, MediaPipe; Raspberry Pi 4 hoặc 5 và camera (tùy chọn).",
+  ms:["Đọc tài liệu về dấu hiệu buồn ngủ và chỉ số EAR","Viết bản đầu dùng ngưỡng cố định","Quay video mô phỏng có kịch bản và nhãn thời gian","Thêm ngáp và ngưỡng cá nhân hóa, so sánh","Đưa lên thiết bị nhúng, đo độ trễ","Tổng hợp kết quả, làm hồ sơ"] },
+{ id:"thung-rac-thong-minh", nbData:"Bộ TrashNet trên Hugging Face; kèm mã mẫu Raspberry Pi điều khiển servo.", title:"Thùng rác tự phân loại bằng camera", code:"ROBO", sub:"Machine Learning", level:3, hw:true, weeks:14,
+  short:"Nhận diện hộp sữa giấy, chai nhựa, lon, túi nilon rồi điều khiển nắp mở đúng ngăn.",
+  q:"Mô hình phát hiện vật thể huấn luyện thêm bằng rác thải đặc thù ở Việt Nam có phân loại đúng hơn mô hình chỉ học dữ liệu nước ngoài không?",
+  hyp:"Thêm 500 ảnh rác tự chụp ở căng tin trường giúp độ chính xác phân loại tăng ít nhất 20 điểm phần trăm trên rác thật.",
+  data:"Bộ TrashNet công khai cộng ảnh rác tự chụp tại căng tin trường (hộp sữa, ly trà sữa, ống hút, túi nilon).",
+  method:"YOLO (Ultralytics) bản nhỏ; ESP32-CAM hoặc Raspberry Pi; động cơ servo mở ngăn; so sánh với mô hình không tinh chỉnh.",
+  metric:"Độ chính xác phân loại, mAP, thời gian từ lúc bỏ rác đến lúc mở nắp, tỷ lệ phân loại đúng trong một tuần dùng thử.",
+  novelty:["Bộ dữ liệu rác học đường Việt Nam.","Đo thay đổi hành vi bỏ rác của học sinh trước và sau.","Tự học tiếp từ những lần bị người dùng sửa."],
+  ethics:"Không quay mặt người bỏ rác. Kiểm tra an toàn điện cho thiết bị đặt nơi công cộng.",
+  tools:"Python, Ultralytics YOLO, Arduino IDE, Raspberry Pi, servo, khung in 3D hoặc thùng nhựa.",
+  ms:["Khảo sát loại rác ở căng tin, chọn 4 đến 5 lớp","Chụp và gán nhãn khung ảnh","Huấn luyện và so sánh với mô hình gốc","Lắp mạch, servo và khung thùng","Thử nghiệm một tuần tại trường, ghi số liệu","Phân tích, viết báo cáo, quay video"] },
+{ id:"du-bao-pm25", nbData:"PM2.5 và thời tiết từ Open-Meteo; so sánh mô hình lặp lại, hồi quy Ridge và LSTM.", title:"Dự báo bụi mịn PM2.5 ngắn hạn cho một đô thị", code:"ROBO", sub:"Machine Learning", level:2, hw:false, weeks:10,
+  short:"Mô hình chuỗi thời gian dự báo chất lượng không khí 24 giờ tới cho từng quận.",
+  q:"Mạng LSTM có dự báo PM2.5 trước 24 giờ tốt hơn mô hình “ngày mai giống hôm nay” và ARIMA không?",
+  hyp:"LSTM dùng thêm gió và độ ẩm cho MAE thấp hơn mô hình lặp lại ít nhất 20%.",
+  data:"Dữ liệu trạm quan trắc trên OpenAQ, thời tiết theo giờ từ Open-Meteo; có thể tự lắp cảm biến bụi giá rẻ để đối chiếu.",
+  method:"Mô hình lặp lại làm đối chứng; ARIMA hoặc SARIMA; LSTM; kiểm định cuộn theo thời gian.",
+  metric:"MAE, RMSE, độ đúng khi phân mức cảnh báo AQI.",
+  novelty:["Hiệu chỉnh cảm biến giá rẻ bằng ML theo trạm chuẩn.","Dự báo cho giờ tan trường để nhắc học sinh đeo khẩu trang.","So sánh mùa khô và mùa mưa."],
+  ethics:"Nêu rõ giới hạn của dự báo, không thay thông báo chính thức.",
+  tools:"Python, pandas, statsmodels, TensorFlow hoặc PyTorch; cảm biến PMS5003 và ESP32 (tùy chọn).",
+  ms:["Tải và làm sạch dữ liệu trạm, xử lý giá trị thiếu","Phân tích khám phá theo giờ, mùa","Xây đối chứng lặp lại và ARIMA","Huấn luyện LSTM, chỉnh siêu tham số","Kiểm định cuộn và so sánh","Làm biểu đồ, hoàn thiện hồ sơ"] },
+{ id:"tu-the-ngoi-hoc", nbData:"Đo góc cổ bằng MediaPipe Pose, chọn ngưỡng theo nhãn người quan sát, phân tích thí nghiệm hai nhóm.", title:"Nhắc tư thế ngồi học đúng bằng webcam", code:"SFTD", sub:"Human/Machine Interface", level:1, hw:false, weeks:8,
+  short:"Ước lượng tư thế cơ thể, nhắc khi cúi quá thấp hoặc gù lưng lâu.",
+  q:"Nhắc nhở theo thời gian thực trong hai tuần có làm giảm thời gian ngồi sai tư thế của học sinh không?",
+  hyp:"Nhóm dùng ứng dụng có tỷ lệ thời gian ngồi sai giảm nhiều hơn nhóm đối chứng.",
+  data:"Ảnh tư thế tự thu thập có đồng ý; nhật ký sử dụng của 20 đến 40 học sinh tình nguyện.",
+  method:"MediaPipe Pose lấy góc cổ và lưng; ngưỡng hoặc bộ phân loại nhỏ; thí nghiệm hai nhóm trong hai tuần.",
+  metric:"Độ chính xác nhận diện tư thế so với nhãn của người quan sát; tỷ lệ thời gian ngồi sai trước và sau.",
+  novelty:["Thí nghiệm có nhóm đối chứng, điều nhiều dự án bỏ qua.","Kiểu nhắc nào hiệu quả: âm thanh, rung, hay hình nền đổi màu.","Chạy hoàn toàn trên máy, không gửi hình đi."],
+  ethics:"Nghiên cứu trên người: cần giấy đồng ý của học sinh và phụ huynh. Không lưu hình ảnh, chỉ lưu góc đo.",
+  tools:"JavaScript với MediaPipe hoặc Python, OpenCV.",
+  ms:["Tìm hiểu tư thế ngồi đúng theo tài liệu y khoa phổ thông","Làm bản nhận diện tư thế đầu tiên","Gán nhãn 300 khung hình, đo độ chính xác","Tuyển tình nguyện viên, chia nhóm, lấy đồng ý","Chạy thí nghiệm hai tuần, thu số liệu","Phân tích thống kê, viết báo cáo"] },
+{ id:"tro-ly-on-tap", nbData:"12 đoạn tài liệu Sinh học mẫu; so sánh TF-IDF với tìm kiếm vector, tạo phiếu chấm mù cho giáo viên.", title:"Trợ lý ôn tập có trích dẫn nguồn", code:"SFTD", sub:"Online Learning", level:2, hw:false, weeks:10,
+  short:"Mô hình ngôn ngữ chỉ trả lời dựa trên tài liệu của lớp và chỉ ra đoạn đã dùng.",
+  q:"Truy xuất tăng cường (RAG) có giảm tỷ lệ trả lời sai sự thật của mô hình ngôn ngữ trên câu hỏi môn Sinh học lớp 11 không?",
+  hyp:"Hệ thống RAG có tỷ lệ câu trả lời sai thấp hơn mô hình không truy xuất và trích đúng đoạn nguồn trong phần lớn câu trả lời.",
+  data:"Tài liệu ôn tập do giáo viên soạn và cho phép dùng; bộ 150 câu hỏi kèm đáp án do em và giáo viên viết.",
+  method:"Chia đoạn tài liệu; mô hình nhúng mã nguồn mở; tìm kiếm vector; so sánh có và không có truy xuất; giáo viên chấm mù.",
+  metric:"Tỷ lệ đúng, tỷ lệ bịa thông tin, độ chính xác trích dẫn, điểm hữu ích do học sinh đánh giá.",
+  novelty:["Bộ câu hỏi đánh giá bằng tiếng Việt cho một môn học.","Cho mô hình nói “không có trong tài liệu” khi cần.","So sánh các cách chia đoạn văn bản."],
+  ethics:"Chỉ dùng tài liệu được phép. Ghi rõ đây là công cụ ôn tập, không thay giáo viên.",
+  tools:"Python, LangChain hoặc LlamaIndex, FAISS hoặc Chroma, một mô hình ngôn ngữ mở hoặc API.",
+  ms:["Chọn môn và chương, xin phép dùng tài liệu","Viết bộ câu hỏi đánh giá cùng giáo viên","Dựng hệ thống không truy xuất làm đối chứng","Dựng hệ thống RAG","Chấm mù, so sánh, phân tích lỗi","Thử với học sinh, hoàn thiện hồ sơ"] },
+{ id:"bai-tap-thich-ung", nbData:"Mô phỏng học sinh làm bài; BKT tự cài đặt so với DKT khi thay đổi lượng dữ liệu.", title:"Gợi ý bài tập toán thích ứng theo năng lực", code:"SFTD", sub:"Online Learning", level:3, hw:false, weeks:14,
+  short:"Mô hình truy vết kiến thức đoán em đã nắm kỹ năng nào để chọn bài kế tiếp.",
+  q:"Mô hình truy vết kiến thức Bayes có dự đoán câu trả lời kế tiếp của học sinh tốt bằng mô hình học sâu trên dữ liệu nhỏ của một trường không?",
+  hyp:"Với dưới 5.000 lượt trả lời, BKT đạt AUC tương đương DKT và dễ giải thích hơn.",
+  data:"Bộ dữ liệu công khai ASSISTments để học phương pháp; dữ liệu làm bài ẩn danh từ một lớp thí điểm có đồng ý.",
+  method:"BKT làm mô hình dễ giải thích; DKT với LSTM; so sánh; thử nghiệm gợi ý bài trong 3 tuần.",
+  metric:"AUC dự đoán câu trả lời kế tiếp, mức tiến bộ giữa bài kiểm tra đầu và cuối.",
+  novelty:["So sánh mô hình trên dữ liệu nhỏ như ở trường Việt Nam.","Bản đồ kỹ năng cho chương trình Toán hiện hành.","Bảng điều khiển cho giáo viên."],
+  ethics:"Ẩn danh hóa mã học sinh. Phụ huynh và học sinh đồng ý. Không dùng kết quả để xếp loại.",
+  tools:"Python, pyBKT, PyTorch, một trang web đơn giản để làm bài.",
+  ms:["Đọc tài liệu về BKT và DKT, chạy thử trên ASSISTments","Xây bản đồ kỹ năng cho một chương Toán","Làm trang làm bài và ghi dữ liệu","Thu dữ liệu thí điểm có đồng ý","Huấn luyện, so sánh hai mô hình","Thử gợi ý bài, đo tiến bộ, viết báo cáo"] }
+];
+
+const AI_RULES = [
+ {s:"Nhờ AI tóm ý chính một bài báo để quyết định có nên đọc kỹ không", v:"y", why:"Được phép có điều kiện: em vẫn phải tự đọc bài báo sau đó, và ghi câu lệnh vào sổ."},
+ {s:"Nhờ AI tóm tắt các nguồn để viết phần tổng quan tài liệu, không tự đọc", v:"r", why:"Thường bị cấm: tổng quan tài liệu phải dựa trên việc em tự đọc nguồn."},
+ {s:"Hỏi AI gợi ý thêm hướng phát triển ý tưởng ban đầu", v:"y", why:"Được phép có điều kiện: ghi câu lệnh vào sổ. Ý tưởng cuối cùng phải do em lựa chọn và lập luận."},
+ {s:"Nhờ AI sửa lỗi ngữ pháp, câu chữ trong báo cáo em đã viết", v:"y", why:"Được phép có điều kiện: chỉ sửa ngữ pháp, cú pháp; ghi câu lệnh vào sổ."},
+ {s:"Nhờ AI viết một đoạn trong kế hoạch, báo cáo, poster hoặc bài báo", v:"r", why:"Thường bị cấm: không phần nào của tài liệu nộp dưới tên em được để AI viết."},
+ {s:"Hỏi AI nên dùng phép kiểm định thống kê nào", v:"y", why:"Được phép có điều kiện: AI chỉ gợi ý công cụ; em phải hiểu và giải thích được lựa chọn."},
+ {s:"Nhờ AI viết mã nguồn ban đầu cho chương trình", v:"y", why:"Được phép có điều kiện: đánh dấu rõ đoạn mã do AI tạo và đính kèm nhật ký câu lệnh."},
+ {s:"Dùng AI tạo hình minh họa hoặc sơ đồ cho poster", v:"y", why:"Được phép có điều kiện: ghi nhãn “hình do AI tạo” và mô tả cách tạo."},
+ {s:"Nhờ AI viết phần kết luận hoặc hướng phát triển", v:"r", why:"Thường bị cấm: lập luận, kết luận và hướng phát triển phải là của em."},
+ {s:"Dùng AI để thu thập dữ liệu cho nghiên cứu", v:"r", why:"Thường bị cấm: dữ liệu phải do em thu thập."},
+ {s:"Nhờ AI tìm trích dẫn ủng hộ một nhận định của em", v:"r", why:"Thường bị cấm: AI hay bịa nguồn, và việc tìm tài liệu là một phần nghiên cứu."},
+ {s:"Nhờ AI lập danh mục tài liệu tham khảo ban đầu", v:"r", why:"Thường bị cấm: danh mục tài liệu phải do em tự tìm và đọc."},
+ {s:"Nhờ AI đóng vai giám khảo để luyện phỏng vấn", v:"y", why:"Thường chấp nhận được vì AI không tạo nội dung nộp dưới tên em. Vẫn ghi câu lệnh vào sổ. Dùng công cụ Giám khảo AI để có câu lệnh đúng cách."},
+ {s:"Huấn luyện mô hình AI của chính em làm đối tượng nghiên cứu", v:"g", why:"Đây là nội dung nghiên cứu, không phải nhờ AI làm hộ. Vẫn cần mô tả đầy đủ trong phần phương pháp. Nếu có dùng AI để viết mã thì xem mục “viết mã nguồn”."}
+];
+
+const PROBLEMS = ["Ngập nước khi mưa lớn và triều cường","Ùn tắc giao thông giờ tan trường","Bụi mịn và chất lượng không khí","Tin nhắn, cuộc gọi lừa đảo trực tuyến","Rác thải nhựa trong trường học","Sức khỏe tư thế và thị lực của học sinh","Áp lực học tập và ôn thi","Bệnh trên cây trồng, vật nuôi","Hỗ trợ người khuyết tật giao tiếp","Sạt lở bờ sông, xâm nhập mặn","An toàn khi tham gia giao thông bằng xe máy","Lãng phí điện và nước trong trường"];
+const DATAS = [
+ {n:"Ảnh tự chụp",u:"ảnh",m:"số ảnh, số lớp, điều kiện chụp"},
+ {n:"Văn bản tiếng Việt",u:"văn bản",m:"số mẫu, cách gán nhãn, mức đồng thuận giữa người gán"},
+ {n:"Chuỗi số liệu theo thời gian",u:"chuỗi thời gian",m:"tần suất lấy mẫu, khoảng thời gian, cách xử lý giá trị thiếu"},
+ {n:"Cảm biến tự lắp (ESP32, Arduino)",u:"dữ liệu cảm biến",m:"loại cảm biến, cách hiệu chuẩn, tần suất đo"},
+ {n:"Video hoặc tư thế người",u:"video tư thế",m:"số người tham gia, giấy đồng ý, cách ẩn danh"},
+ {n:"Khảo sát và nhật ký sử dụng",u:"dữ liệu khảo sát",m:"cỡ mẫu, cách chọn mẫu, bảng hỏi"}
+];
+const TECHS = [
+ {n:"Phân loại ảnh bằng CNN",a:"mạng nơ-ron tích chập (CNN) phân loại ảnh",b:"một mô hình đơn giản như hồi quy logistic trên đặc trưng màu",met:"F1 trung bình theo lớp và ma trận nhầm lẫn"},
+ {n:"Phát hiện vật thể (YOLO)",a:"mô hình phát hiện vật thể YOLO đã tinh chỉnh",b:"mô hình gốc chưa tinh chỉnh",met:"mAP và độ chính xác trên dữ liệu thực tế"},
+ {n:"Xử lý ngôn ngữ (PhoBERT)",a:"mô hình ngôn ngữ PhoBERT tinh chỉnh",b:"TF-IDF cộng hồi quy logistic",met:"precision, recall, F1"},
+ {n:"Dự báo chuỗi thời gian (LSTM)",a:"mạng LSTM dự báo chuỗi thời gian",b:"mô hình “ngày mai giống hôm nay” và ARIMA",met:"MAE và RMSE với kiểm định cuộn theo thời gian"},
+ {n:"Mô hình cây (rừng ngẫu nhiên, XGBoost)",a:"mô hình cây (rừng ngẫu nhiên hoặc XGBoost)",b:"hồi quy logistic hoặc tuyến tính",met:"AUC, recall và giải thích bằng SHAP"},
+ {n:"Ước lượng tư thế (MediaPipe)",a:"ước lượng tư thế bằng MediaPipe",b:"quy tắc ngưỡng cố định",met:"độ chính xác so với nhãn người quan sát"},
+ {n:"Truy xuất tăng cường (RAG)",a:"hệ thống truy xuất tăng cường (RAG)",b:"mô hình ngôn ngữ không truy xuất",met:"tỷ lệ trả lời đúng và tỷ lệ bịa thông tin"},
+ {n:"Học tăng cường",a:"tác tử học tăng cường",b:"chiến lược ngẫu nhiên và chiến lược theo quy tắc",met:"phần thưởng trung bình qua nhiều lần chạy"}
+];
+
+/* khung điểm theo tiêu chí chấm của ISEF, gần với cách chấm của nhiều cuộc thi KHKT trong nước */
+const CRITS = [
+ {n:"Câu hỏi nghiên cứu",max:10,items:["Câu hỏi rõ ràng, giới hạn được trong thời gian làm","Gắn với một vấn đề thực tế có người chịu ảnh hưởng","Đọc và trích dẫn ít nhất 5 tài liệu chính"]},
+ {n:"Thiết kế và phương pháp",max:15,items:["Có mô hình đối chứng để so sánh","Chia tập dữ liệu đúng, không rò rỉ dữ liệu kiểm tra","Xác định trước biến số và chỉ số đo","Xử lý vấn đề đạo đức, giấy đồng ý nếu có người tham gia"]},
+ {n:"Thực hiện và kiểm thử",max:20,items:["Thu thập đủ dữ liệu và mô tả cách thu","Chạy lặp lại nhiều lần hoặc có khoảng tin cậy","Phân tích lỗi, không chỉ báo một con số","Sổ nghiên cứu ghi đủ, kể cả lần thất bại"]},
+ {n:"Tính sáng tạo",max:20,items:["Có điểm mới so với các nghiên cứu đã đọc","Em giải thích được điểm mới đó trong một câu","Giải pháp phù hợp bối cảnh Việt Nam"]},
+ {n:"Trình bày và phỏng vấn",max:35,items:["Thuyết trình gọn trong 3 phút","Poster đọc được từ xa 2 mét, ít chữ","Trả lời được vì sao chọn mô hình và chỉ số này","Nói rõ giới hạn của nghiên cứu","Mỗi thành viên nói được phần việc của mình"]}
+];
+const QUESTIONS = ["Vì sao em chọn mô hình này mà không chọn mô hình đơn giản hơn?","Mô hình đối chứng của em là gì, và em hơn nó bao nhiêu?","Em chia dữ liệu huấn luyện và kiểm tra như thế nào? Có khả năng rò rỉ dữ liệu không?","Điều gì xảy ra nếu dữ liệu thực tế khác dữ liệu em huấn luyện?","Điểm mới nhất của dự án là gì, nói trong một câu?","Nếu có thêm 3 tháng, em sẽ làm gì tiếp?","Em đã dùng AI tạo sinh ở bước nào, và kiểm chứng ra sao?","Ai là người dùng thật của sản phẩm, em đã hỏi họ chưa?","Lần thử thất bại nào dạy em nhiều nhất?","Kết quả của em có ý nghĩa thống kê không? Em kiểm tra bằng cách nào?","Giới hạn lớn nhất của nghiên cứu này là gì?","Nếu mô hình đoán sai, hậu quả với người dùng là gì?","Dữ liệu của em có thiên lệch không? Nhóm nào có thể bị bất lợi?","Em đã đọc những nghiên cứu nào gần nhất với đề tài của em?","Chi phí để triển khai thực tế là bao nhiêu?","Mỗi thành viên trong nhóm đã đóng góp phần nào?"];
+
+const STAGES = [
+ {m:[8,9,10], t:"Cấp trường", s:"Quan sát vấn đề, đọc tài liệu, viết kế hoạch nghiên cứu và được giáo viên hướng dẫn duyệt. Nhà trường chọn dự án dự thi cấp tỉnh, thành phố."},
+ {m:[10,11,12,1], t:"Cấp tỉnh, thành phố", s:"Sở GD&ĐT tổ chức, thường gồm xét hồ sơ, trưng bày sản phẩm và phỏng vấn. Mỗi địa phương có lịch riêng, có nơi tổ chức vào tháng 1 hoặc 2."},
+ {m:[12,1], t:"Tuyển chọn và hoàn thiện dự án dự thi quốc gia", s:"Các dự án tốt nhất được phản biện thêm, hoàn thiện hồ sơ và đăng ký với Bộ GD&ĐT."},
+ {m:[2,3], t:"Cấp quốc gia", s:"Bộ GD&ĐT tổ chức cho học sinh THCS và THPT theo quy chế hiện hành. Một số dự án xuất sắc được chọn tham dự quốc tế."},
+ {m:[5], t:"Quốc tế: Regeneron ISEF", s:"Diễn ra tại Hoa Kỳ vào tháng 5. Hồ sơ, poster, tóm tắt và phỏng vấn đều bằng tiếng Anh, kèm các biểu mẫu theo quy định ISEF."},
+ {m:[6,7], t:"Nghỉ hè: chuẩn bị mùa mới", s:"Lúc tốt nhất để luyện kỹ năng nền: lập trình, thống kê, đọc bài báo, và bắt đầu ghi lại những vấn đề em quan sát được."}
+];
+const monthsLabel = m => m.length===1 ? "Tháng "+m[0] : "Tháng "+m[0]+" đến tháng "+m[m.length-1];
+
+const METHOD = [
+ ["Quan sát và đặt vấn đề","Tìm một vấn đề có người thật chịu ảnh hưởng. Viết ra ai, ở đâu, thiệt hại gì."],
+ ["Đọc tài liệu","Đọc kỹ các tài liệu chính, thường từ 5 trở lên. Ghi tay tóm tắt từng bài: họ làm gì, đạt bao nhiêu, còn thiếu gì."],
+ ["Câu hỏi và giả thuyết","Một câu hỏi đo được, một giả thuyết có con số. Xác định biến độc lập, biến phụ thuộc, biến kiểm soát."],
+ ["Thiết kế thí nghiệm","Chọn mô hình đối chứng, cách chia dữ liệu, chỉ số đo. Giáo viên hướng dẫn duyệt kế hoạch trước khi làm."],
+ ["Thu thập và làm sạch dữ liệu","Ghi rõ nguồn, ngày thu, cách gán nhãn. Giữ nguyên dữ liệu thô."],
+ ["Xây và huấn luyện mô hình","Bắt đầu từ thứ đơn giản nhất chạy được. Ghi mọi thay đổi siêu tham số vào sổ."],
+ ["Đánh giá và phân tích lỗi","So với đối chứng trên tập kiểm tra chưa từng thấy. Xem các ca sai cụ thể."],
+ ["Kết luận và trình bày","Trả lời câu hỏi ban đầu, nêu giới hạn, viết báo cáo, poster và video."]
+];
+const DOSSIER = ["Sổ nghiên cứu ghi chép từ ý tưởng đến sản phẩm, theo thứ tự thời gian, mực xanh hoặc đen","Báo cáo dự án đúng giới hạn số trang trong quy định","Danh mục tài liệu tham khảo đủ số lượng yêu cầu (nhiều nơi đòi tối thiểu 5 tài liệu chính)","Poster theo mẫu của ban tổ chức","Video giới thiệu ngắn nếu cuộc thi yêu cầu","Nhật ký câu lệnh AI đính kèm nếu có dùng AI","Kế hoạch nghiên cứu được giáo viên hướng dẫn duyệt trước khi bắt đầu","Ghi rõ đóng góp riêng của từng thành viên nếu làm nhóm 2 người"];
+
+/* ===================== CẤU HÌNH NOTEBOOK ===================== */
+// Điền "ten-tai-khoan/ten-repo" nếu trang không nằm trên GitHub Pages. Để trống thì trang tự nhận địa chỉ repo.
+const GITHUB_REPO = "vantupham/nghien-cuu-khkt-ai";
+const GITHUB_BRANCH = "main";
+function repoPath(){
+  if(GITHUB_REPO) return GITHUB_REPO;
+  const h=location.hostname;
+  if(h.endsWith(".github.io")){ const u=h.split(".")[0]; const seg=location.pathname.split("/").filter(Boolean)[0];
+    return (seg && !seg.includes(".")) ? u+"/"+seg : u+"/"+h; }
+  return "";
+}
+const nbFile = p => String(PROJECTS.indexOf(p)+1).padStart(2,"0")+"-"+p.id+".ipynb";
+
+/* ===================== TIỆN ÍCH ===================== */
+const $ = s => document.querySelector(s);
+const $$ = s => [...document.querySelectorAll(s)];
+const store = {
+  get(k, d){ try{ const v = localStorage.getItem("sncai:"+k); return v ? JSON.parse(v) : d; }catch(e){ return d; } },
+  set(k, v){ try{ localStorage.setItem("sncai:"+k, JSON.stringify(v)); }catch(e){} }
+};
+const esc = s => String(s).replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+function toast(msg){ const t=$("#toast"); t.textContent=msg; t.classList.add("show"); clearTimeout(t._h); t._h=setTimeout(()=>t.classList.remove("show"),2200); }
+async function copyText(txt, ok){
+  try{ await navigator.clipboard.writeText(txt); toast(ok); }
+  catch(e){ const ta=document.createElement("textarea"); ta.value=txt; document.body.appendChild(ta); ta.select();
+    try{ document.execCommand("copy"); toast(ok); }catch(_){ toast("Trình duyệt chặn sao chép. Hãy bôi đen và sao chép thủ công."); } ta.remove(); }
+}
+const fmt = d => d.toLocaleDateString("vi-VN",{day:"2-digit",month:"2-digit",year:"numeric"});
+const today = () => { const n=new Date(); n.setHours(0,0,0,0); return n; };
+const parseD = s => { const [y,m,d]=s.split("-").map(Number); return new Date(y,m-1,d); };
+
+/* ===================== ĐỊNH TUYẾN ===================== */
+const VIEWS = ["trang-chu","du-an","ky-nang","bao-cao","cong-cu","lo-trinh","phuong-phap","ho-so"];
+function route(){
+  let h = location.hash.slice(1) || "trang-chu";
+  $$(".view").forEach(v=>v.classList.remove("active"));
+  $$(".nav a").forEach(a=>a.removeAttribute("aria-current"));
+  const p = PROJECTS.find(x=>"da-"+x.id===h);
+  if(p){ renderDetail(p); $("#v-chi-tiet").classList.add("active"); $('.nav a[href="#du-an"]').setAttribute("aria-current","page"); }
+  else{
+    if(!VIEWS.includes(h)) h="trang-chu";
+    $("#v-"+h).classList.add("active");
+    const a=$('.nav a[href="#'+h+'"]'); if(a) a.setAttribute("aria-current","page");
+    if(h==="du-an") renderToc();
+    if(h==="ho-so") drawHoSo();
+  }
+  $("#nav").classList.remove("open"); $("#menuBtn").setAttribute("aria-expanded","false");
+  window.scrollTo(0,0);
+}
+window.addEventListener("hashchange", route);
+$("#menuBtn").onclick = () => { const o=$("#nav").classList.toggle("open"); $("#menuBtn").setAttribute("aria-expanded",o); };
+$$("[data-tool]").forEach(a=>a.addEventListener("click",()=>setTimeout(()=>openTool(a.dataset.tool),0)));
+
+/* ===================== HERO ===================== */
+(function hero(){
+  $("#heroDate").textContent = fmt(new Date());
+  const el=$("#heroQ"), meta=$("#heroMeta");
+  const reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
+  let i=0;
+  function show(p){ meta.innerHTML = 'Dự án mẫu: <a href="#da-'+p.id+'">'+esc(p.title)+'</a>'; }
+  if(reduce){ el.textContent=PROJECTS[0].q; show(PROJECTS[0]); return; }
+  function type(){
+    const p=PROJECTS[i%PROJECTS.length]; let n=0; meta.innerHTML="&nbsp;";
+    const iv=setInterval(()=>{ n+=2; el.innerHTML=esc(p.q.slice(0,n))+'<span class="caret"></span>';
+      if(n>=p.q.length){ clearInterval(iv); show(p); setTimeout(()=>{ i++; type(); },5200); } },28);
+  }
+  type();
+  // đếm ngược tới mốc kế tiếp
+  const mo=new Date().getMonth()+1; const cur=STAGES.filter(x=>x.m.includes(mo));
+  $("#cdNum").textContent="Tháng "+mo;
+  $("#cdLabel").textContent= cur.length ? "Giai đoạn thường gặp: "+cur.map(x=>x.t.toLowerCase()).join(", ") : "Giữa các vòng thi";
+  $("#cdSub").innerHTML='Lịch theo thông lệ, ngày cụ thể tùy địa phương. <a href="#lo-trinh">Xem cả chu kỳ</a>';
+})();
+
+/* ===================== DANH SÁCH DỰ ÁN ===================== */
+let filt="all";
+const CODE_NAME = {ROBO:"Rô bốt và máy thông minh", SFTD:"Phần mềm"};
+function prog(p){ const d=store.get("p:"+p.id,[]); return Math.round(100*d.filter(Boolean).length/p.ms.length); }
+function renderToc(){
+  const list = PROJECTS.filter(p => filt==="all" || p.code===filt || (filt==="lv1"&&p.level===1) || (filt==="nohw"&&!p.hw));
+  $("#toc").innerHTML = list.map(p=>`
+    <a href="#da-${p.id}">
+      <span><span class="chip code">${p.code}</span></span>
+      <span><span class="t">${esc(p.title)}</span><span class="d">${esc(p.short)}</span></span>
+      <span class="right"><span class="dots" title="Độ khó ${p.level}/3" aria-label="Độ khó ${p.level} trên 3">${[1,2,3].map(n=>`<i class="${n<=p.level?"on":""}"></i>`).join("")}</span>
+      <span class="chip" title="Có notebook Colab">Colab</span><span class="chip">${p.weeks} tuần</span><span class="prog">${prog(p)}%</span></span>
+    </a>`).join("") || '<p style="padding:20px">Không có dự án nào khớp bộ lọc.</p>';
+}
+$$(".filters button").forEach(b=>b.onclick=()=>{ filt=b.dataset.f; $$(".filters button").forEach(x=>x.setAttribute("aria-pressed",x===b)); renderToc(); });
+
+/* ===================== CHI TIẾT ===================== */
+function renderDetail(p){
+  const done = store.get("p:"+p.id, []);
+  const per = Math.max(1, Math.round(p.weeks/p.ms.length));
+  $("#detail").innerHTML = `
+    <div class="row" style="margin-bottom:10px"><span class="chip code">${p.code}, ${esc(p.sub)}</span><span class="chip">${CODE_NAME[p.code]}</span><span class="chip">Độ khó ${p.level}/3</span><span class="chip">${p.hw?"Cần phần cứng":"Chỉ cần máy tính"}</span><span class="chip">Khoảng ${p.weeks} tuần</span></div>
+    <h2>${esc(p.title)}</h2>
+    <div class="detail">
+      <div>
+        <div class="page" style="min-height:0;margin-bottom:28px"><div class="meta">Câu hỏi nghiên cứu:</div><div class="q" style="min-height:0">${esc(p.q)}</div><div class="meta">Giả thuyết: ${esc(p.hyp)}</div></div>
+        <div class="kv">
+          <div>Dữ liệu</div><div>${esc(p.data)}</div>
+          <div>Phương pháp</div><div>${esc(p.method)}</div>
+          <div>Cách đo kết quả</div><div>${esc(p.metric)}</div>
+          <div>Công cụ</div><div>${esc(p.tools)}</div>
+          <div>Đạo đức và an toàn</div><div>${esc(p.ethics)}</div>
+        </div>
+        <div class="nbbox">
+          <div><h3 style="margin:0 0 4px">Mã nguồn chạy được</h3><p style="margin:0;color:var(--muted);font-size:15px">${esc(p.nbData)} Notebook có sẵn mô hình đối chứng, cách chia dữ liệu đúng, phần đánh giá và mục Việc của em.</p></div>
+          <div class="row">${repoPath()?`<a class="btn" href="https://colab.research.google.com/github/${repoPath()}/blob/${GITHUB_BRANCH}/notebooks/${nbFile(p)}" target="_blank" rel="noopener">Mở trên Colab</a>`:""}<a class="btn ${repoPath()?"ghost":""} nbdl" href="notebooks/${nbFile(p)}" download>Tải notebook</a></div>
+          ${repoPath()?"":`<p class="nbhint">Nút Mở trên Colab xuất hiện khi trang đã được đưa lên GitHub Pages cùng thư mục <code>notebooks/</code>.</p>`}
+        </div>
+        <h3 style="margin-top:34px">Lộ trình <span style="font-weight:500;color:var(--muted);font-size:16px">(<span id="pp">${prog(p)}</span>% hoàn thành)</span></h3>
+        <ul class="steps">${p.ms.map((m,i)=>`<li class="${done[i]?"done":""}"><input type="checkbox" id="ms${i}" ${done[i]?"checked":""} data-i="${i}"><label for="ms${i}" style="font-weight:500;font-size:16px;margin:0;cursor:pointer"><span class="wk">Tuần ${i*per+1}–${Math.min(p.weeks,(i+1)*per)}</span><br><span class="txt">${esc(m)}</span></label></li>`).join("")}</ul>
+      </div>
+      <aside>
+        <h3>Hướng tạo tính mới</h3>
+        ${p.novelty.map(n=>`<p class="note">${esc(n)}</p>`).join("")}
+        <p class="note red">Đây là dự án mẫu để luyện tập. Khi đi thi, điểm mới phải là của em.</p>
+        <a class="btn small ghost" href="#cong-cu" onclick="setTimeout(()=>openTool('giamkhao'),0)">Tự chấm dự án này</a>
+        <p style="margin-top:14px;font-size:14px"><a href="du-an/${p.id}/">Trang giới thiệu dự án</a> để chia sẻ lên Facebook, Zalo.</p>
+      </aside>
+    </div>`;
+  if(typeof IN_FRAME!=="undefined" && IN_FRAME){ $$("#detail .nbdl").forEach(a=>a.style.display="none"); const h=$("#detail .nbhint"); if(h) h.textContent="Bản xem thử không tải hay mở được notebook. Khi trang nằm trên GitHub Pages cùng thư mục notebooks/, hai nút Mở trên Colab và Tải notebook sẽ hoạt động."; }
+  $$("#detail .steps input").forEach(cb=>cb.onchange=()=>{
+    const d=store.get("p:"+p.id,[]); d[cb.dataset.i]=cb.checked; store.set("p:"+p.id,d);
+    cb.closest("li").classList.toggle("done",cb.checked); $("#pp").textContent=prog(p);
+  });
+}
+
+/* ===================== TAB CÔNG CỤ ===================== */
+function openTool(t){
+  $$(".tabs button").forEach(b=>b.setAttribute("aria-selected", b.dataset.t===t));
+  $$(".tool").forEach(x=>x.classList.toggle("active", x.id==="t-"+t));
+  if(t==="lab") drawLab();
+}
+$$(".tabs button").forEach(b=>b.onclick=()=>openTool(b.dataset.t));
+
+/* Đèn AI */
+$("#scen").innerHTML = AI_RULES.map((r,i)=>`<button data-i="${i}" aria-pressed="false">${esc(r.s)}</button>`).join("");
+$$("#scen button").forEach(b=>b.onclick=()=>{
+  const r=AI_RULES[b.dataset.i];
+  $$("#scen button").forEach(x=>x.setAttribute("aria-pressed",x===b));
+  $$(".lamp i").forEach(l=>l.classList.toggle("on", l.classList.contains(r.v)));
+  const title={g:"Được làm",y:"Được làm, có điều kiện",r:"Không nên làm, thường bị cấm"}[r.v];
+  const col={g:"var(--green)",y:"var(--amber)",r:"var(--red)"}[r.v];
+  $("#verdict").innerHTML=`<h3 style="color:${col}">${title}</h3><p>${esc(r.why)}</p>${r.v==="y"?'<button class="btn small" type="button" id="toLog">Ghi lần dùng này vào nhật ký</button>':""}`;
+  const tl=$("#toLog"); if(tl) tl.onclick=()=>openTool("nhatky");
+});
+
+/* Nhật ký prompt */
+function renderLog(){
+  const L=store.get("log",[]); $("#lgCount").textContent=L.length;
+  $("#lgTable tbody").innerHTML = L.length ? L.map((r,i)=>`<tr><td>${esc(r.date)}</td><td>${esc(r.tool)}</td><td>${esc(r.purpose)}</td><td>${esc(r.prompt)}${r.use?`<br><em>Dùng vào: ${esc(r.use)}</em>`:""}${r.check?`<br><em>Kiểm chứng: ${esc(r.check)}</em>`:""}</td><td><button class="btn small ghost" data-del="${i}" type="button" aria-label="Xóa dòng">Xóa</button></td></tr>`).join("")
+    : '<tr><td colspan="5" style="color:var(--muted)">Chưa có dòng nào. Mỗi lần dùng AI, thêm một dòng ở bên trái.</td></tr>';
+  $$("[data-del]").forEach(b=>b.onclick=()=>{ const L=store.get("log",[]); L.splice(+b.dataset.del,1); store.set("log",L); renderLog(); });
+}
+$("#lgDate").valueAsDate = new Date();
+$("#logForm").onsubmit = e => { e.preventDefault();
+  const L=store.get("log",[]); L.push({date:$("#lgDate").value,tool:$("#lgTool").value.trim(),purpose:$("#lgPurpose").value,prompt:$("#lgPrompt").value.trim(),use:$("#lgUse").value.trim(),check:$("#lgCheck").value.trim()});
+  store.set("log",L); $("#lgPrompt").value=""; $("#lgUse").value=""; $("#lgCheck").value=""; renderLog(); toast("Đã lưu vào nhật ký"); };
+function logRows(){ return store.get("log",[]).map(r=>[r.date,r.tool,r.purpose,r.prompt,r.use,r.check]); }
+const HEAD=["Ngày","Công cụ","Mục đích","Prompt","Dùng vào","Kiểm chứng"];
+$("#lgCopy").onclick = () => { const rows=logRows(); if(!rows.length) return toast("Nhật ký đang trống");
+  copyText([HEAD,...rows].map(r=>r.map(c=>String(c).replace(/[\t\n]/g," ")).join("\t")).join("\n"), "Đã sao chép. Dán vào Word hoặc Google Docs sẽ thành bảng"); };
+$("#lgDl").onclick = () => { const rows=logRows(); if(!rows.length) return toast("Nhật ký đang trống");
+  const csv="﻿"+[HEAD,...rows].map(r=>r.map(c=>'"'+String(c).replace(/"/g,'""')+'"').join(",")).join("\n");
+  try{ const a=document.createElement("a"); a.href=URL.createObjectURL(new Blob([csv],{type:"text/csv"})); a.download="nhat-ky-prompt-ai.csv"; document.body.appendChild(a); a.click(); a.remove(); toast("Đang tải file"); }
+  catch(e){ toast("Trình duyệt chặn tải file. Hãy dùng nút sao chép."); } };
+renderLog();
+
+/* Xưởng đề tài */
+$("#xProb").innerHTML=PROBLEMS.map((p,i)=>`<option value="${i}">${esc(p)}</option>`).join("");
+$("#xData").innerHTML=DATAS.map((p,i)=>`<option value="${i}">${esc(p.n)}</option>`).join("");
+$("#xTech").innerHTML=TECHS.map((p,i)=>`<option value="${i}">${esc(p.n)}</option>`).join("");
+let xText="";
+$("#xGo").onclick=()=>{
+  const pr=PROBLEMS[$("#xProb").value], d=DATAS[$("#xData").value], t=TECHS[$("#xTech").value], who=$("#xWho").value.trim()||"người dùng";
+  const prl=pr.charAt(0).toLowerCase()+pr.slice(1);
+  const lines=[
+   ["Câu hỏi nghiên cứu", `Dùng ${t.a} trên ${d.u} có giúp giải quyết vấn đề ${prl} cho ${who} tốt hơn ${t.b} không?`],
+   ["Giả thuyết", `Mô hình đề xuất cải thiện chỉ số chính (${t.met}) ít nhất [X]% so với ${t.b}.`],
+   ["Biến độc lập", `Loại mô hình hoặc cách xử lý dữ liệu em thay đổi.`],
+   ["Biến phụ thuộc", t.met],
+   ["Biến kiểm soát", `Cùng tập dữ liệu kiểm tra, cùng số lần chạy, cùng phần cứng.`],
+   ["Mô hình đối chứng", t.b],
+   ["Dữ liệu cần mô tả", d.m],
+   ["Kiểm tra khả thi", `Em thu được dữ liệu trong 4 tuần không? Có người chuyên môn để hỏi không? Có máy tính hoặc Google Colab không?`]
+  ];
+  store.set("flag:xuong",1);
+  xText=lines.map(l=>l[0]+": "+l[1]).join("\n");
+  $("#xOut").innerHTML = lines.map(l=>`<p><strong>${l[0]}.</strong> ${esc(l[1])}</p>`).join("") + `<p class="note">Đây là khung để em tự viết lại bằng lời của mình. Thay [X] bằng con số em thấy hợp lý sau khi đọc tài liệu.</p>`;
+};
+$("#xCopy").onclick=()=> xText? copyText(xText,"Đã sao chép khung đề tài") : toast("Hãy tạo khung đề tài trước");
+
+/* Giám khảo thử */
+function renderCrits(){
+  const st=store.get("crit",{});
+  $("#crits").innerHTML = CRITS.map((c,ci)=>`<div class="crit"><h3><span>${esc(c.n)}</span><span style="color:var(--muted)">${c.max} điểm</span></h3>${c.items.map((it,ii)=>`<label><input type="checkbox" data-c="${ci}" data-i="${ii}" ${st[ci+"-"+ii]?"checked":""}>${esc(it)}</label>`).join("")}</div>`).join("")
+   + `<p style="color:var(--muted);font-size:14px;margin-top:10px">Khung tham khảo theo tiêu chí chấm của ISEF. Thang điểm của từng cuộc thi có thể khác, hãy đối chiếu với quy định nơi em dự thi.</p>`;
+  $$("#crits input").forEach(cb=>cb.onchange=()=>{ const st=store.get("crit",{}); st[cb.dataset.c+"-"+cb.dataset.i]=cb.checked; store.set("crit",st); scoreUpd(); });
+  scoreUpd();
+}
+function scoreUpd(){
+  const st=store.get("crit",{}); let total=0; const pct=[];
+  CRITS.forEach((c,ci)=>{ const k=c.items.filter((_,ii)=>st[ci+"-"+ii]).length; const s=c.max*k/c.items.length; total+=s; pct.push(k/c.items.length); });
+  $("#score").textContent=Math.round(total);
+  // radar
+  const cx=160,cy=150,R=105,n=CRITS.length; const pt=(i,r)=>{ const a=-Math.PI/2+i*2*Math.PI/n; return [cx+r*Math.cos(a), cy+r*Math.sin(a)]; };
+  let svg="";
+  [0.25,.5,.75,1].forEach(f=>{ svg+=`<polygon points="${CRITS.map((_,i)=>pt(i,R*f).join(",")).join(" ")}" fill="none" stroke="#DDE5F0"/>`; });
+  CRITS.forEach((c,i)=>{ const [x,y]=pt(i,R); svg+=`<line x1="${cx}" y1="${cy}" x2="${x}" y2="${y}" stroke="#DDE5F0"/>`;
+    const [lx,ly]=pt(i,R+22); svg+=`<text x="${lx}" y="${ly}" font-size="11.5" font-family="Be Vietnam Pro" fill="#52607A" text-anchor="${lx<cx-5?"end":lx>cx+5?"start":"middle"}" dominant-baseline="middle">${esc(c.n.split(" ")[0]+" "+(c.n.split(" ")[1]||""))}</text>`; });
+  svg+=`<polygon points="${pct.map((p,i)=>pt(i,R*Math.max(p,.02)).join(",")).join(" ")}" fill="rgba(247,225,75,.55)" stroke="#1E3A9E" stroke-width="2"/>`;
+  pct.forEach((p,i)=>{ const [x,y]=pt(i,R*Math.max(p,.02)); svg+=`<circle cx="${x}" cy="${y}" r="3.5" fill="#1E3A9E"/>`; });
+  $("#radar").innerHTML=svg;
+  let mi=0; pct.forEach((p,i)=>{ if(p<pct[mi]) mi=i; });
+  $("#advice").textContent = pct[mi]===1 ? "Mọi mục đều đã đánh dấu. Giờ hãy nhờ một bạn khác đóng vai giám khảo hỏi vặn em." : "Nên ưu tiên cải thiện: "+CRITS[mi].n.toLowerCase()+". Mục này đang thấp nhất so với số điểm tối đa.";
+}
+renderCrits();
+$("#qNext").onclick=()=>{ let q; do{ q=QUESTIONS[Math.floor(Math.random()*QUESTIONS.length)]; }while(q===$("#flash").textContent && QUESTIONS.length>1); $("#flash").textContent=q; };
+let tLeft=180, tIv=null;
+function tShow(){ const a=Math.abs(tLeft); $("#timer").textContent=(tLeft<0?"+":"")+Math.floor(a/60)+":"+String(a%60).padStart(2,"0"); $("#timer").classList.toggle("over",tLeft<0); }
+$("#tStart").onclick=()=>{ if(tIv){ clearInterval(tIv); tIv=null; $("#tStart").textContent="Tiếp tục"; } else { tIv=setInterval(()=>{ tLeft--; tShow(); },1000); $("#tStart").textContent="Tạm dừng"; } };
+$("#tReset").onclick=()=>{ clearInterval(tIv); tIv=null; tLeft=180; tShow(); $("#tStart").textContent="Bắt đầu"; };
+
+/* Phòng thí nghiệm mini: kNN */
+const cv=$("#cv"), cx2=cv.getContext("2d"); let pts=[], cls=0, K=3;
+function randData(){ pts=[]; for(let i=0;i<40;i++){ const c=i%2; const mx=c?0.68:0.32, my=c?0.62:0.38; pts.push({x:Math.min(.98,Math.max(.02,mx+gauss()*.13)), y:Math.min(.98,Math.max(.02,my+gauss()*.13)), c}); } }
+function gauss(){ return Math.sqrt(-2*Math.log(Math.random()||1e-9))*Math.cos(2*Math.PI*Math.random()); }
+function predict(x,y,skip){ const ds=[]; pts.forEach((p,i)=>{ if(i!==skip) ds.push([(p.x-x)**2+(p.y-y)**2,p.c]); }); ds.sort((a,b)=>a[0]-b[0]); const k=Math.min(K,ds.length); let s=0; for(let i=0;i<k;i++) s+=ds[i][1]; return s*2>k?1:0; }
+function drawLab(){
+  const W=cv.width,H=cv.height; cx2.clearRect(0,0,W,H);
+  if(pts.length>=2 && new Set(pts.map(p=>p.c)).size>1){
+    const st=10; for(let x=0;x<W;x+=st) for(let y=0;y<H;y+=st){ const c=predict((x+st/2)/W,(y+st/2)/H,-1); cx2.fillStyle=c?"rgba(247,225,75,.32)":"rgba(30,58,158,.13)"; cx2.fillRect(x,y,st,st); }
+    let tr=0,cvc=0; pts.forEach((p,i)=>{ if(predict(p.x,p.y,-1)===p.c) tr++; if(predict(p.x,p.y,i)===p.c) cvc++; });
+    $("#accTr").textContent=Math.round(100*tr/pts.length)+"%"; $("#accCv").textContent=Math.round(100*cvc/pts.length)+"%";
+  } else { $("#accTr").textContent="–"; $("#accCv").textContent="–"; }
+  pts.forEach(p=>{ cx2.beginPath(); cx2.arc(p.x*W,p.y*H,7,0,7); cx2.fillStyle=p.c?"#F7E14B":"#1E3A9E"; cx2.fill(); cx2.lineWidth=2; cx2.strokeStyle=p.c?"#8A6D00":"#fff"; cx2.stroke(); });
+  if(!pts.length){ cx2.fillStyle="#52607A"; cx2.font="18px 'Patrick Hand'"; cx2.fillText("Chạm vào đây để thêm điểm dữ liệu",W/2-130,H/2); }
+}
+cv.addEventListener("pointerdown",e=>{ const r=cv.getBoundingClientRect(); pts.push({x:(e.clientX-r.left)/r.width,y:(e.clientY-r.top)/r.height,c:cls}); drawLab(); });
+$("#cA").onclick=()=>{cls=0;$("#cA").setAttribute("aria-pressed",true);$("#cB").setAttribute("aria-pressed",false);};
+$("#cB").onclick=()=>{cls=1;$("#cB").setAttribute("aria-pressed",true);$("#cA").setAttribute("aria-pressed",false);};
+$("#lRand").onclick=()=>{randData();drawLab();};
+$("#lNoise").onclick=()=>{ for(let i=0;i<8;i++) pts.push({x:Math.random()*.9+.05,y:Math.random()*.9+.05,c:Math.random()<.5?0:1}); drawLab(); };
+$("#lClear").onclick=()=>{pts=[];drawLab();};
+$("#kS").oninput=e=>{K=+e.target.value;$("#kV").textContent=K;drawLab();};
+randData();
+
+/* ===================== LỊCH THI ===================== */
+(function(){
+  const mo=new Date().getMonth()+1;
+  $("#tl").innerHTML=STAGES.map(m=>`<li class="${m.m.includes(mo)?"now":""}"><span class="when">${monthsLabel(m.m)}</span>${m.m.includes(mo)?'<span class="tag">đang ở đây</span>':""}<br><strong>${esc(m.t)}</strong><br><span style="color:var(--muted)">${esc(m.s)}</span></li>`).join("");
+  $("#pStart").valueAsDate=new Date();
+  const def=new Date(); def.setDate(def.getDate()+84); $("#pEnd").valueAsDate=def;
+  const PH=[["Đặt vấn đề, đọc tài liệu",.15],["Câu hỏi, giả thuyết, kế hoạch (giáo viên duyệt)",.08],["Thu thập và làm sạch dữ liệu",.2],["Xây và huấn luyện mô hình",.2],["Đánh giá, phân tích lỗi, lặp lại",.15],["Viết báo cáo dự án",.1],["Poster, video, luyện phỏng vấn",.12]];
+  $("#pGo").onclick=()=>{
+    const a=$("#pStart").value, b=$("#pEnd").value; if(!a||!b) return toast("Hãy chọn đủ hai ngày");
+    const s=parseD(a), e=parseD(b), days=Math.round((e-s)/864e5);
+    if(days<14) { $("#pOut").innerHTML='<p class="note red">Còn chưa tới 2 tuần. Hãy tập trung hoàn thiện hồ sơ và luyện phỏng vấn, không bắt đầu thí nghiệm mới.</p>'; return; }
+    let cur=new Date(s); const rows=PH.map(([n,f],i)=>{ const st=new Date(cur); const len=i===PH.length-1? Math.round((e-cur)/864e5) : Math.max(2,Math.round(days*f)); cur.setDate(cur.getDate()+len); const en=new Date(cur); en.setDate(en.getDate()-1); return `<tr><td>${fmt(st)} đến ${fmt(en)}</td><td>${n}</td></tr>`; });
+    $("#pOut").innerHTML=`<p><strong>${days} ngày</strong>, khoảng ${Math.round(days/7)} tuần.</p><div class="tbl-wrap"><table class="plan"><thead><tr><th>Thời gian</th><th>Việc chính</th></tr></thead><tbody>${rows.join("")}</tbody></table></div>${days<56?'<p class="note red" style="margin-top:12px">Dưới 8 tuần là khá gấp. Nên chọn dự án độ khó 1 và dữ liệu có sẵn.</p>':""}`;
+  };
+})();
+
+/* ===================== PHƯƠNG PHÁP ===================== */
+$("#method").innerHTML=METHOD.map((m,i)=>`<li style="grid-template-columns:44px 1fr"><span style="font-size:26px;font-weight:800;color:var(--ink)">${i+1}</span><span><strong>${m[0]}</strong><br><span style="color:var(--muted)">${m[1]}</span></span></li>`).join("");
+const dz=store.get("dossier",[]);
+$("#dossier").innerHTML=DOSSIER.map((d,i)=>`<li class="${dz[i]?"done":""}"><input type="checkbox" id="dz${i}" data-i="${i}" ${dz[i]?"checked":""}><label for="dz${i}" style="font-weight:500;font-size:16px;margin:0;cursor:pointer"><span class="txt">${esc(d)}</span></label></li>`).join("");
+$$("#dossier input").forEach(cb=>cb.onchange=()=>{ const d=store.get("dossier",[]); d[cb.dataset.i]=cb.checked; store.set("dossier",d); cb.closest("li").classList.toggle("done",cb.checked); });
+
+const CYCLE_Q=["Vấn đề này ảnh hưởng tới ai, và em có số liệu nào chứng minh?","Ba nghiên cứu gần nhất với đề tài của em đã làm được gì và còn thiếu gì?","Câu hỏi của em có trả lời được bằng một phép đo cụ thể không?","Nếu kết quả tốt, em đã chắc rằng không phải nhờ may mắn hay rò rỉ dữ liệu chưa?","Người khác có thể lấy lại đúng dữ liệu của em từ mô tả trong sổ không?","Em đã thử mô hình đơn giản nhất trước chưa?","Mô hình sai ở những ca nào, và vì sao?","Kết luận của em có vượt quá những gì dữ liệu cho phép nói không?"];
+
+/* ===================== VÒNG TRÒN NGHIÊN CỨU (trang chủ) ===================== */
+(function(){
+  const svg=$("#cycle"); if(!svg) return;
+  const n=METHOD.length, cx=220, cy=220, R=150;
+  const P=i=>{ const a=-Math.PI/2+i*2*Math.PI/n; return [cx+R*Math.cos(a), cy+R*Math.sin(a), a]; };
+  let h=`<defs><marker id="arr" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#4A63B8"/></marker></defs>`;
+  for(let i=0;i<n;i++){ const a1=-Math.PI/2+i*2*Math.PI/n+0.24, a2=-Math.PI/2+(i+1)*2*Math.PI/n-0.24;
+    h+=`<path d="M${cx+R*Math.cos(a1)} ${cy+R*Math.sin(a1)} A${R} ${R} 0 0 1 ${cx+R*Math.cos(a2)} ${cy+R*Math.sin(a2)}" fill="none" stroke="#4A63B8" stroke-width="2" opacity=".55" marker-end="url(#arr)"/>`; }
+  h+=`<text x="${cx}" y="${cy-8}" text-anchor="middle" font-family="Patrick Hand, cursive" font-size="24" fill="#1E3A9E">Kết quả mới</text><text x="${cx}" y="${cy+20}" text-anchor="middle" font-family="Patrick Hand, cursive" font-size="24" fill="#1E3A9E">lại sinh câu hỏi mới</text>`;
+  METHOD.forEach((m,i)=>{ const [x,y,a]=P(i); const lx=cx+(R+46)*Math.cos(a), ly=cy+(R+46)*Math.sin(a);
+    const anc = Math.abs(Math.cos(a))<.3 ? "middle" : (Math.cos(a)>0?"start":"end");
+    const words=m[0].split(" "); const half=Math.ceil(words.length/2);
+    const l1=words.length>3?words.slice(0,half).join(" "):m[0], l2=words.length>3?words.slice(half).join(" "):"";
+    const lxx = anc==="middle"?lx:(anc==="start"?x+30:x-30);
+    const lyy = anc==="middle"? (Math.sin(a)<0? y-40 : y+44) : y-(l2?6:-4);
+    h+=`<g class="node" data-i="${i}" tabindex="0" role="button" aria-label="Bước ${i+1}: ${m[0]}"><circle cx="${x}" cy="${y}" r="22"/><text x="${x}" y="${y+6}" text-anchor="middle">${i+1}</text></g>`;
+    h+=`<text class="lbl" x="${lxx}" y="${lyy}" text-anchor="${anc}">${esc(l1)}${l2?`<tspan x="${lxx}" dy="15">${esc(l2)}</tspan>`:""}</text>`;
+  });
+  svg.innerHTML=h;
+  let cur=0, iv=null;
+  function sel(i){ cur=i; $$("#cycle .node").forEach(g=>g.classList.toggle("on",+g.dataset.i===i));
+    $("#stepCard").innerHTML=`<div class="num">Bước ${i+1} trên ${n}</div><h3>${esc(METHOD[i][0])}</h3><p>${esc(METHOD[i][1])}</p><p style="color:var(--muted);font-size:15px;margin:0"><strong>Câu hỏi tự kiểm tra:</strong> ${esc(CYCLE_Q[i])}</p><div class="row" style="margin-top:14px"><button class="btn small" type="button" id="cyPlay">${iv?"Dừng":"Xem cả vòng"}</button><button class="btn small ghost" type="button" id="cyNext">Bước tiếp</button></div>`;
+    $("#cyPlay").onclick=()=>{ if(iv){clearInterval(iv);iv=null;sel(cur);} else { iv=setInterval(()=>sel((cur+1)%n),2600); sel(cur);} };
+    $("#cyNext").onclick=()=>{ if(iv){clearInterval(iv);iv=null;} sel((cur+1)%n); };
+  }
+  $$("#cycle .node").forEach(g=>{ g.onclick=()=>{ if(iv){clearInterval(iv);iv=null;} sel(+g.dataset.i); }; g.onkeydown=e=>{ if(e.key==="Enter"||e.key===" "){e.preventDefault(); g.onclick();} }; });
+  sel(0);
+})();
+
+/* ===================== KỸ NĂNG ===================== */
+const LV_NAMES=["Mới bắt đầu","Đang luyện","Làm được","Dạy lại được"];
+const SKILLS=[
+ {n:"Quan sát và đặt câu hỏi", short:"Quan sát", sum:"Nhìn ra điều chưa ổn trong đời sống và biến nó thành một câu hỏi đo được, đủ hẹp để trả lời trong vài tháng.",
+  habits:["Ghi lại mọi điều khiến mình thắc mắc, kể cả điều nhỏ","Hỏi “vì sao” và “bao nhiêu” thay vì chỉ “có hay không”","Thu hẹp câu hỏi đến khi biết cần đo cái gì"],
+  drill:"Viết 5 câu hỏi về một vấn đề quanh trường em. Gạch bỏ câu nào không đo được, viết lại câu còn lại sao cho có con số.",
+  lv:["Có ý tưởng chung chung","Đặt được câu hỏi nhưng còn rộng","Câu hỏi đo được, vừa sức","Giúp bạn khác thu hẹp câu hỏi"]},
+ {n:"Đọc và tổng hợp tài liệu", short:"Đọc tài liệu", sum:"Tìm, đọc và so sánh các nghiên cứu đã có để biết thế giới đã làm đến đâu và khoảng trống nằm ở đâu.",
+  habits:["Đọc tóm tắt và hình trước, đọc toàn bài sau","Ghi cho mỗi bài: họ làm gì, đạt bao nhiêu, còn thiếu gì","Dùng Google Scholar, arXiv, tạp chí trong nước"],
+  drill:"Chọn 3 bài báo về đề tài của em, kẻ bảng so sánh: dữ liệu, phương pháp, kết quả, hạn chế.",
+  lv:["Chỉ đọc bài phổ biến khoa học","Đọc được tóm tắt bài báo","So sánh được nhiều bài, thấy khoảng trống","Hướng dẫn bạn cách đọc bài báo"]},
+ {n:"Tư duy phản biện", short:"Phản biện", sum:"Nghi ngờ đúng chỗ, kể cả với kết quả của chính mình: dữ liệu có thiên lệch không, có giải thích nào khác không.",
+  habits:["Luôn hỏi “còn cách giải thích nào khác?”","Phân biệt tương quan với nhân quả","Tìm ca mô hình đoán sai trước khi khoe ca đoán đúng"],
+  drill:"Làm phần Thử thách tư duy khoa học bên dưới, rồi tìm một điểm yếu trong dự án của chính em.",
+  lv:["Tin ngay kết quả đầu tiên","Biết vài lỗi phổ biến","Tự tìm được lỗi trong dự án mình","Phản biện có xây dựng cho dự án khác"]},
+ {n:"Thiết kế thí nghiệm", short:"Thiết kế", sum:"Lên kế hoạch so sánh công bằng: một thứ thay đổi, mọi thứ khác giữ nguyên, có đối chứng và chỉ số đo đặt ra từ trước.",
+  habits:["Xác định biến độc lập, phụ thuộc, kiểm soát","Luôn có mô hình đối chứng","Quyết định cách đo trước khi nhìn kết quả"],
+  drill:"Viết thiết kế thí nghiệm một trang cho dự án của em: giả thuyết, biến, đối chứng, cách chia dữ liệu, chỉ số.",
+  lv:["Thử đại xem có chạy không","Có so sánh nhưng chưa công bằng","Thiết kế có đối chứng, kiểm soát biến","Phát hiện lỗi thiết kế của người khác"]},
+ {n:"Xử lý dữ liệu và thống kê", short:"Dữ liệu", sum:"Làm sạch dữ liệu, mô tả bằng biểu đồ, và biết khi nào khác biệt là thật, khi nào chỉ là may rủi.",
+  habits:["Vẽ dữ liệu trước khi chạy mô hình","Báo cáo trung bình kèm độ lệch hoặc khoảng tin cậy","Chạy lại nhiều lần với hạt giống ngẫu nhiên khác nhau"],
+  drill:"Chạy mô hình của em 5 lần, ghi lại độ chính xác mỗi lần, tính trung bình và độ lệch chuẩn.",
+  lv:["Chỉ báo một con số","Vẽ được biểu đồ mô tả","Dùng được kiểm định, khoảng tin cậy","Chọn đúng phép thống kê cho bài toán mới"]},
+ {n:"Lập trình và công cụ", short:"Lập trình", sum:"Dùng Python, thư viện học máy và các công cụ như Colab, Git để biến ý tưởng thành thí nghiệm chạy được và chạy lại được.",
+  habits:["Viết mã sao cho người khác chạy lại được","Lưu phiên bản bằng Git","Ghi rõ đoạn mã nào do AI gợi ý"],
+  drill:"Đưa mã dự án lên GitHub kèm README hướng dẫn chạy lại từ đầu.",
+  lv:["Chạy mã có sẵn","Sửa được mã mẫu","Tự viết quy trình huấn luyện, đánh giá","Đóng gói để người khác chạy lại"]},
+ {n:"Ghi chép khoa học", short:"Ghi chép", sum:"Giữ sổ nghiên cứu trung thực theo thời gian: ngày, mục tiêu, cách làm, kết quả thô, cả lần thất bại.",
+  habits:["Ghi ngay trong ngày, không chép lại cho đẹp","Dán hoặc chép số liệu thô","Ghi lý do mỗi lần thay đổi cách làm"],
+  drill:"Từ hôm nay, mỗi buổi làm dự án viết ít nhất 5 dòng vào sổ: hôm nay làm gì, kết quả, việc tiếp theo.",
+  lv:["Ghi khi nhớ ra","Ghi đều nhưng thiếu số liệu","Sổ đủ để người khác lặp lại","Sổ là tài liệu mẫu cho bạn khác"]},
+ {n:"Giao tiếp khoa học", short:"Trình bày", sum:"Viết báo cáo rõ ràng, làm poster dễ đọc, nói về nghiên cứu cho cả giám khảo lẫn người không chuyên.",
+  habits:["Một hình nói một ý","Mở đầu bằng vấn đề, không bằng công nghệ","Tập giải thích cho người thân nghe"],
+  drill:"Giải thích dự án của em trong 60 giây cho một người không học công nghệ, rồi hỏi họ nhắc lại.",
+  lv:["Đọc theo giấy","Trình bày rõ nhưng dài","Gọn trong 3 phút, trả lời tốt","Điều chỉnh theo từng người nghe"]},
+ {n:"Đạo đức và liêm chính", short:"Liêm chính", sum:"Trung thực với dữ liệu, ghi nguồn đầy đủ, bảo vệ người tham gia và minh bạch khi dùng AI.",
+  habits:["Không bỏ dữ liệu xấu cho đẹp kết quả","Xin đồng ý trước khi thu dữ liệu về người","Khai báo rõ mọi lần dùng AI tạo sinh"],
+  drill:"Viết một đoạn ngắn: dự án của em có thể gây hại cho ai, và em đã làm gì để giảm rủi ro đó.",
+  lv:["Chưa nghĩ tới","Biết các quy tắc cơ bản","Áp dụng đầy đủ trong dự án","Nhắc nhở và giúp nhóm khác"]},
+ {n:"Hợp tác và đón nhận góp ý", short:"Hợp tác", sum:"Làm việc nhóm có phân công rõ, nhờ chuyên gia góp ý và coi phản biện là quà, không phải đòn tấn công.",
+  habits:["Ghi rõ ai làm phần nào","Chủ động hỏi giáo viên, chuyên gia","Cảm ơn, ghi lại và xử lý từng góp ý"],
+  drill:"Nhờ một người đọc báo cáo của em và ghi 3 góp ý. Viết em sẽ xử lý từng góp ý thế nào.",
+  lv:["Ngại hỏi","Hỏi khi bí","Chủ động xin góp ý định kỳ","Tổ chức buổi góp ý cho nhóm"]}
+];
+const THINK=[
+ {q:"Nhóm A đạt độ chính xác 99% khi phân loại ảnh. Sau đó họ phát hiện ảnh của cùng một chiếc lá xuất hiện ở cả tập huấn luyện lẫn tập kiểm tra. Vấn đề là gì?",
+  o:["Mô hình quá đơn giản","Rò rỉ dữ liệu: tập kiểm tra không còn là dữ liệu mới","Cần thêm ảnh","Không có vấn đề, 99% là tốt"],a:1,
+  e:"Khi ảnh gần giống nhau nằm ở cả hai tập, mô hình chỉ cần nhớ là đạt điểm cao. Phải chia theo chiếc lá, theo người hoặc theo thời gian."},
+ {q:"Dữ liệu có 95 tin nhắn bình thường và 5 tin lừa đảo. Mô hình đạt độ chính xác 95%. Nhận xét nào đúng nhất?",
+  o:["Mô hình rất tốt","Có thể mô hình đoán mọi tin là bình thường; cần xem recall của lớp lừa đảo","Cần tăng số lớp","Nên bỏ 5 tin lừa đảo"],a:1,
+  e:"Với dữ liệu mất cân bằng, độ chính xác dễ đánh lừa. Hãy báo precision, recall, F1 cho lớp quan trọng và ma trận nhầm lẫn."},
+ {q:"Học sinh dùng ứng dụng học thích ứng có điểm cao hơn. Nhưng những em tự nguyện dùng ứng dụng vốn đã chăm hơn. Kết luận “ứng dụng làm tăng điểm” gặp vấn đề gì?",
+  o:["Tương quan chưa chắc là nhân quả; cần chia nhóm ngẫu nhiên","Cỡ mẫu quá lớn","Ứng dụng chạy chậm","Không có vấn đề gì"],a:0,
+  e:"Biến gây nhiễu (sự chăm chỉ) có thể giải thích cả hai. Thí nghiệm có nhóm đối chứng chia ngẫu nhiên mới cho phép kết luận nhân quả."},
+ {q:"Em thử 30 cấu hình mô hình trên tập kiểm tra rồi báo cáo cấu hình đạt cao nhất. Điều gì không ổn?",
+  o:["Nên thử 100 cấu hình","Tập kiểm tra đã bị dùng để chọn mô hình, nên kết quả bị thổi phồng","Không có vấn đề","Phải dùng mô hình lớn hơn"],a:1,
+  e:"Chọn cấu hình phải dùng tập kiểm định riêng. Tập kiểm tra chỉ được dùng một lần ở cuối để báo kết quả."},
+ {q:"Mô hình mới hơn mô hình cũ 0,8 điểm phần trăm, mỗi mô hình chỉ chạy một lần. Em nên làm gì trước khi kết luận?",
+  o:["Kết luận ngay mô hình mới tốt hơn","Chạy lại nhiều lần với hạt giống khác nhau và xem khác biệt có vượt độ dao động không","Làm tròn thành 1%","Bỏ mô hình cũ khỏi báo cáo"],a:1,
+  e:"Kết quả học máy dao động giữa các lần chạy. Khác biệt nhỏ hơn độ dao động thì chưa đủ để nói bên nào tốt hơn."},
+ {q:"Bộ ảnh nhận diện khuôn mặt buồn ngủ chủ yếu là người trẻ, da sáng, đủ ánh sáng. Rủi ro lớn nhất khi dùng thật là gì?",
+  o:["Mô hình chạy chậm","Mô hình có thể kém với người lớn tuổi, da tối màu hoặc ban đêm: thiên lệch dữ liệu","Tốn bộ nhớ","Không có rủi ro"],a:1,
+  e:"Mô hình chỉ giỏi trên kiểu dữ liệu nó đã thấy. Hãy đo kết quả riêng theo từng nhóm và nói rõ giới hạn."},
+ {q:"Một dự án không so sánh với cách làm nào khác, chỉ báo “mô hình đạt 87%”. Giám khảo sẽ hỏi gì đầu tiên?",
+  o:["Em dùng máy tính nào?","87% so với cái gì? Mô hình đối chứng hoặc cách làm hiện tại đạt bao nhiêu?","Sao không đạt 100%?","Em làm mất bao lâu?"],a:1,
+  e:"Một con số đứng riêng không có ý nghĩa. Cần mô hình đối chứng, thậm chí đối chứng đơn giản như luôn đoán lớp phổ biến nhất."},
+ {q:"Em chép một đoạn định nghĩa từ bài báo vào phần tổng quan, có ghi nguồn ở cuối báo cáo nhưng không đặt trong ngoặc kép. Như vậy có ổn không?",
+  o:["Ổn vì đã ghi nguồn","Chưa ổn: chép nguyên văn phải đặt trong ngoặc kép và ghi nguồn ngay tại chỗ, tốt nhất là viết lại bằng lời của em","Ổn nếu đoạn ngắn","Chỉ cần đổi vài từ"],a:1,
+  e:"Ghi nguồn ở cuối không đủ. Hãy diễn đạt lại bằng lời của mình và trích dẫn ngay trong câu, hoặc đặt nguyên văn trong ngoặc kép."}
+];
+let skSel=0;
+function skLevels(){ return store.get("skills", SKILLS.map(()=>0)); }
+function drawWheel(){
+  const L=skLevels(), n=SKILLS.length, cx=200, cy=220, r0=48, R=170;
+  const arc=(a1,a2,r1,r2)=>{ const p=(a,r)=>[cx+r*Math.cos(a),cy+r*Math.sin(a)]; const [x1,y1]=p(a1,r2),[x2,y2]=p(a2,r2),[x3,y3]=p(a2,r1),[x4,y4]=p(a1,r1);
+    return `M${x1} ${y1}A${r2} ${r2} 0 0 1 ${x2} ${y2}L${x3} ${y3}A${r1} ${r1} 0 0 0 ${x4} ${y4}Z`; };
+  let h="";
+  [1,2,3,4].forEach(k=>{ h+=`<circle cx="${cx}" cy="${cy}" r="${r0+(R-r0)*k/4}" fill="none" stroke="#DDE5F0" stroke-dasharray="${k<4?"3 4":""}"/>`; });
+  SKILLS.forEach((s,i)=>{ const a1=-Math.PI/2+i*2*Math.PI/n+0.025, a2=-Math.PI/2+(i+1)*2*Math.PI/n-0.025, am=(a1+a2)/2;
+    const rr=r0+(R-r0)*L[i]/4;
+    const op=[0,.35,.55,.75,1][L[i]];
+    h+=`<g class="wedge${i===skSel?" sel":""}" data-i="${i}" tabindex="0" role="button" aria-label="${s.n}, mức ${L[i]} trên 4"><path class="bg" d="${arc(a1,a2,r0,R)}" fill="#F7F9FC" stroke="#DDE5F0"/>${L[i]?`<path d="${arc(a1,a2,r0,rr)}" fill="#1E3A9E" fill-opacity="${op}"/>`:""}</g>`;
+    const lx=cx+(R+18)*Math.cos(am), ly=cy+(R+18)*Math.sin(am); const anc=Math.abs(Math.cos(am))<.25?"middle":(Math.cos(am)>0?"start":"end");
+    h+=`<text x="${lx}" y="${ly}" text-anchor="${anc}" dominant-baseline="middle" font-family="Be Vietnam Pro" font-size="14" font-weight="${i===skSel?800:500}" fill="${i===skSel?"#1E3A9E":"#52607A"}" style="pointer-events:none">${esc(s.short)}</text>`; });
+  const avg=L.reduce((a,b)=>a+b,0)/n;
+  h+=`<circle cx="${cx}" cy="${cy}" r="${r0-4}" fill="#fff" stroke="#C9D4E5"/><text x="${cx}" y="${cy-4}" text-anchor="middle" font-family="Be Vietnam Pro" font-weight="800" font-size="24" fill="#1E3A9E">${avg.toFixed(1)}</text><text x="${cx}" y="${cy+16}" text-anchor="middle" font-family="Be Vietnam Pro" font-size="11" fill="#52607A">trên 4</text>`;
+  $("#wheel").innerHTML=h;
+  $$("#wheel .wedge").forEach(g=>{ g.onclick=()=>selSkill(+g.dataset.i); g.onkeydown=e=>{ if(e.key==="Enter"||e.key===" "){e.preventDefault();selSkill(+g.dataset.i);} }; });
+}
+function selSkill(i){
+  skSel=i; const s=SKILLS[i], L=skLevels();
+  $$("#skillList button").forEach((b,j)=>b.setAttribute("aria-pressed",j===i));
+  $("#skillCard").innerHTML=`<div class="note" style="font-size:19px">Kỹ năng ${i+1} trên ${SKILLS.length}</div><h3 style="font-size:24px">${esc(s.n)}</h3><p>${esc(s.sum)}</p>
+   <strong>Nhà khoa học thực thụ thường</strong><ul class="habits">${s.habits.map(x=>`<li>${esc(x)}</li>`).join("")}</ul>
+   <div class="out" style="margin-bottom:16px"><strong>Luyện ngay</strong><p style="margin:.3em 0 0">${esc(s.drill)}</p></div>
+   <strong>Em đang ở mức nào?</strong>
+   <div class="lvbtns">${s.lv.map((d,k)=>`<button type="button" data-k="${k+1}" aria-pressed="${L[i]===k+1}"><b>${k+1}. ${LV_NAMES[k]}</b>${esc(d)}</button>`).join("")}</div>`;
+  $$("#skillCard .lvbtns button").forEach(b=>b.onclick=()=>{ const L=skLevels(); const k=+b.dataset.k; L[i]= L[i]===k?0:k; store.set("skills",L); selSkill(i); });
+  drawWheel();
+}
+$("#skillList").innerHTML=SKILLS.map((s,i)=>`<button type="button" aria-pressed="false">${esc(s.short)}</button>`).join("");
+$$("#skillList button").forEach((b,i)=>b.onclick=()=>selSkill(i));
+selSkill(0);
+
+/* Thử thách tư duy */
+let qi=0, qres=[];
+function showBest(){ const b=store.get("quizBest",null); $("#qBest").textContent = b===null?"–":b+"/"+THINK.length; }
+function drawQuiz(){
+  const prog=`<div class="qprog">${THINK.map((_,i)=>`<i class="${qres[i]===true?"ok":qres[i]===false?"no":i===qi?"cur":""}"></i>`).join("")}</div>`;
+  if(qi>=THINK.length){
+    const sc=qres.filter(Boolean).length; const best=store.get("quizBest",0); if(sc>best) store.set("quizBest",sc); showBest();
+    $("#quiz").innerHTML=prog+`<div class="total">${sc}<span style="font-size:22px;color:var(--muted)"> / ${THINK.length}</span></div><p style="margin-top:10px">${sc===THINK.length?"Xuất sắc. Em đã nhìn như một người phản biện thật sự.":sc>=5?"Khá tốt. Xem lại các câu sai, đó chính là những chỗ giám khảo hay hỏi.":"Đừng lo, đây là những lỗi mà cả người làm nghiên cứu lâu năm cũng mắc. Đọc lại giải thích và làm lại nhé."}</p><button class="btn small" type="button" id="qAgain">Làm lại</button>`;
+    $("#qAgain").onclick=()=>{ qi=0; qres=[]; drawQuiz(); }; return;
+  }
+  const q=THINK[qi];
+  $("#quiz").innerHTML=prog+`<div class="note" style="font-size:19px">Tình huống ${qi+1} trên ${THINK.length}</div><div class="qtext">${esc(q.q)}</div><div class="opts">${q.o.map((o,k)=>`<button type="button" data-k="${k}">${esc(o)}</button>`).join("")}</div><div id="qEx"></div>`;
+  $$("#quiz .opts button").forEach(b=>b.onclick=()=>{ const k=+b.dataset.k, ok=k===q.a; qres[qi]=ok;
+    $$("#quiz .opts button").forEach((x,j)=>{ x.disabled=true; if(j===q.a) x.classList.add("ok"); else if(j===k) x.classList.add("no"); });
+    $("#qEx").innerHTML=`<p style="margin-top:14px"><strong style="color:${ok?"var(--green)":"var(--red)"}">${ok?"Chính xác.":"Chưa đúng."}</strong> ${esc(q.e)}</p><button class="btn small" type="button" id="qNx">${qi<THINK.length-1?"Tình huống tiếp":"Xem kết quả"}</button>`;
+    $("#qNx").onclick=()=>{ qi++; drawQuiz(); };
+    $$(".qprog i")[qi].className=ok?"ok":"no";
+  });
+}
+drawQuiz(); showBest();
+
+/* ===================== BÁO CÁO ===================== */
+const has = re => t => re.test(t);
+const countRe = (re,n) => t => (t.match(re)||[]).length>=n;
+const CITE = /\([^()]{2,60},?\s*\d{4}\)|\[\d+\]/g;
+const SECTIONS=[
+ {id:"tt",n:"Tóm tắt",f:.05,w:[150,250],purpose:"Cả dự án trong một đoạn: vì sao, làm gì, kết quả bao nhiêu, nghĩa là gì. Viết sau cùng.",
+  starter:"Bắt đầu: “Ở [địa phương], [vấn đề] gây ra [hậu quả có số liệu]. Dự án này…”",
+  pit:"Lỗi hay gặp: chỉ kể đã làm gì mà không có kết quả bằng số.",
+  checks:[["Nêu vấn đề hoặc bối cảnh",has(/(vấn đề|thực trạng|hiện nay|gây|ảnh hưởng)/i)],["Nêu phương pháp hoặc mô hình",has(/(phương pháp|mô hình|sử dụng|xây dựng|huấn luyện)/i)],["Có kết quả bằng số",has(/\d/)],["Nêu ý nghĩa hoặc kết luận",has(/(cho thấy|kết luận|có thể|ứng dụng|góp phần)/i)]]},
+ {id:"dvd",n:"Đặt vấn đề",f:.10,w:[200,450],purpose:"Thuyết phục người đọc rằng vấn đề có thật, quan trọng, và chưa được giải quyết tốt.",
+  starter:"Bắt đầu bằng một con số về mức độ nghiêm trọng của vấn đề, kèm nguồn.",
+  pit:"Lỗi hay gặp: mở đầu bằng công nghệ (“AI đang phát triển mạnh…”) thay vì bằng vấn đề.",
+  checks:[["Có số liệu về mức độ vấn đề",has(/\d/)],["Nói rõ ai chịu ảnh hưởng",has(/(người|học sinh|nông dân|cộng đồng|bệnh nhân|người dân|gia đình)/i)],["Có trích dẫn nguồn",countRe(CITE,1)],["Nêu điều còn thiếu ở giải pháp hiện tại",has(/(chưa|hạn chế|thiếu|khó khăn|tốn)/i)]]},
+ {id:"tq",n:"Tổng quan tài liệu",f:.15,w:[300,700],purpose:"Tóm lược các nghiên cứu đã có, so sánh chúng, và chỉ ra khoảng trống mà dự án của em lấp vào.",
+  starter:"Nhóm các nghiên cứu theo hướng tiếp cận, không liệt kê từng bài một.",
+  pit:"Lỗi hay gặp: liệt kê bài này làm A, bài kia làm B mà không so sánh, không chỉ ra khoảng trống.",
+  checks:[["Có từ 3 trích dẫn trở lên",countRe(CITE,3)],["Có so sánh giữa các nghiên cứu",has(/(trong khi|ngược lại|tương tự|so với|khác với)/i)],["Chỉ ra khoảng trống",has(/(chưa|khoảng trống|hạn chế|chưa có|ít nghiên cứu)/i)]]},
+ {id:"ch",n:"Câu hỏi, mục tiêu, giả thuyết",f:.05,w:[60,200],purpose:"Nói chính xác dự án trả lời câu hỏi gì và em dự đoán điều gì sẽ xảy ra.",
+  starter:"“Câu hỏi nghiên cứu: … ? Giả thuyết: … sẽ … ít nhất …%.”",
+  pit:"Lỗi hay gặp: mục tiêu kiểu “xây dựng ứng dụng X” mà không có câu hỏi kiểm chứng được.",
+  checks:[["Có câu hỏi (dấu chấm hỏi)",has(/\?/)],["Có giả thuyết",has(/giả thuyết/i)],["Giả thuyết có con số kiểm chứng",has(/\d/)],["Nêu biến số",has(/biến/i)]]},
+ {id:"pp",n:"Phương pháp",f:.20,w:[350,900],purpose:"Mô tả đủ chi tiết để người khác làm lại được: dữ liệu, cách chia, mô hình, đối chứng, chỉ số.",
+  starter:"Đi theo thứ tự: dữ liệu → tiền xử lý → mô hình → đối chứng → cách đánh giá.",
+  pit:"Lỗi hay gặp: không nói cách chia tập huấn luyện và kiểm tra, không có mô hình đối chứng.",
+  checks:[["Mô tả dữ liệu và nguồn",has(/(dữ liệu|mẫu|bộ ảnh|thu thập)/i)],["Có cách chia tập huấn luyện, kiểm tra",has(/(huấn luyện|kiểm tra|kiểm định)/i)],["Có mô hình đối chứng",has(/(đối chứng|baseline|so sánh với)/i)],["Nêu chỉ số đánh giá",has(/(độ chính xác|F1|MAE|RMSE|AUC|recall|precision|chỉ số)/i)],["Có số lượng cụ thể",has(/\d/)]]},
+ {id:"kq",n:"Kết quả",f:.20,w:[250,700],purpose:"Trình bày những gì đo được, bằng bảng và hình, chưa vội giải thích.",
+  starter:"“Bảng 1 cho thấy…”, “Hình 2 trình bày…”",
+  pit:"Lỗi hay gặp: chỉ báo kết quả tốt nhất, giấu các lần chạy kém.",
+  checks:[["Có từ 3 con số trở lên",countRe(/\d+([.,]\d+)?/g,3)],["Nhắc tới bảng hoặc hình",has(/(Bảng|Hình)\s*\d/)],["So sánh với đối chứng",has(/(so với|cao hơn|thấp hơn|tăng|giảm)/i)]]},
+ {id:"tl",n:"Thảo luận",f:.12,w:[200,600],purpose:"Giải thích kết quả, so với nghiên cứu khác, nói thẳng các giới hạn.",
+  starter:"“Kết quả này có thể được giải thích bởi…”, “Hạn chế của nghiên cứu là…”",
+  pit:"Lỗi hay gặp: không có phần hạn chế, hoặc khẳng định quá mức so với dữ liệu.",
+  checks:[["Giải thích nguyên nhân",has(/(do|vì|nguyên nhân|có thể giải thích)/i)],["Nêu hạn chế",has(/(hạn chế|giới hạn)/i)],["Liên hệ nghiên cứu khác",t=>(t.match(CITE)||[]).length>0||/(nghiên cứu khác|tương tự|khác với)/i.test(t)]]},
+ {id:"kl",n:"Kết luận và hướng phát triển",f:.05,w:[80,250],purpose:"Trả lời thẳng câu hỏi ban đầu, giả thuyết đúng hay sai, và bước tiếp theo.",
+  starter:"“Giả thuyết ban đầu được (hoặc không được) ủng hộ vì…”",
+  pit:"Lỗi hay gặp: viết kết luận chung chung không gắn với câu hỏi nghiên cứu.",
+  checks:[["Nhắc lại câu hỏi hoặc giả thuyết",has(/(giả thuyết|câu hỏi)/i)],["Có hướng phát triển",has(/(hướng phát triển|tiếp theo|tương lai|mở rộng)/i)]]},
+ {id:"tlk",n:"Tài liệu tham khảo",f:.08,w:[30,600],purpose:"Danh mục mọi nguồn đã trích dẫn, đúng một định dạng thống nhất.",
+  starter:"Dán danh mục, mỗi tài liệu một dòng. Có thể tạo nhanh ở mục Trích dẫn tài liệu bên dưới.",
+  pit:"Lỗi hay gặp: chỉ dán đường dẫn web, thiếu tác giả và năm.",
+  checks:[["Có từ 5 tài liệu trở lên",t=>t.split(/\n/).filter(l=>l.trim().length>10).length>=5],["Mỗi tài liệu có năm",t=>{const ls=t.split(/\n/).filter(l=>l.trim().length>10); return ls.length>0 && ls.every(l=>/\(\d{4}\)|\d{4}/.test(l));}],["Không chỉ là đường dẫn trơn",t=>{const ls=t.split(/\n/).filter(l=>l.trim().length>0); return ls.length>0 && !ls.some(l=>/^\s*https?:\/\/\S+\s*$/.test(l));}]]}
+];
+const UNI=[["Không dùng cảm tính (tôi nghĩ, em thấy)",t=>!/(^|\s)(tôi|em|mình)\s+(nghĩ|thấy|cảm thấy)/i.test(t)],["Không phóng đại (tuyệt đối, hoàn hảo, 100% chính xác)",t=>!/(tuyệt đối|hoàn hảo|cực kỳ|siêu|100% chính xác|chứng minh hoàn toàn|hoàn toàn chính xác)/i.test(t)],["Câu không quá dài (trung bình dưới 35 từ)",t=>{const ss=t.split(/[.!?…]+/).filter(x=>x.trim()); if(!ss.length) return false; return words(t)/ss.length<35;}]];
+const SEC_COLORS=["#1E3A9E","#2E4BB0","#4A63B8","#6A7FC6","#1E3A9E","#2E4BB0","#4A63B8","#6A7FC6","#8C9BD2"];
+function words(t){ return (t.trim().match(/\S+/g)||[]).length; }
+let wSel=0;
+function drawBar(){
+  const lim=Math.max(5,+$("#pgLimit").value||15);
+  $("#rbar").innerHTML=SECTIONS.map((s,i)=>`<button type="button" style="flex:${s.f};background:${SEC_COLORS[i]}" aria-pressed="${i===wSel}" data-i="${i}" title="${s.n}: khoảng ${(s.f*lim).toFixed(1)} trang" aria-label="${s.n}, khoảng ${(s.f*lim).toFixed(1)} trang">${s.f>=.1?esc(s.n.split(",")[0])+"<br>":""}${(s.f*lim).toFixed(1)}</button>`).join("");
+  $$("#rbar button").forEach(b=>b.onclick=()=>selSec(+b.dataset.i));
+  $("#secList").innerHTML=SECTIONS.map((s,i)=>{ const d=store.get("draft:"+s.id,""); const p=secPct(s,d); return `<button type="button" aria-pressed="${i===wSel}" data-i="${i}"><span>${esc(s.n)}</span><span class="pc">${d?p+"%":"–"}</span></button>`; }).join("");
+  $$("#secList button").forEach(b=>b.onclick=()=>selSec(+b.dataset.i));
+}
+function secChecks(s,t){
+  const wc=words(t); const all=[...s.checks, ...UNI, ["Độ dài "+s.w[0]+"–"+s.w[1]+" từ", ()=>wc>=s.w[0]&&wc<=s.w[1]]];
+  return all.map(([l,f])=>{ let ok=false; try{ ok=!!t.trim() && f(t); }catch(e){} return [l,ok]; });
+}
+function secPct(s,t){ const c=secChecks(s,t); return Math.round(100*c.filter(x=>x[1]).length/c.length); }
+function evalSec(){
+  const s=SECTIONS[wSel], t=$("#wText").value; store.set("draft:"+s.id,t);
+  const c=secChecks(s,t), p=Math.round(100*c.filter(x=>x[1]).length/c.length);
+  $("#wChecks").innerHTML=c.map(([l,ok])=>`<li class="${ok?"ok":"no"}">${esc(l)}</li>`).join("");
+  $("#wPct").textContent=p+"%"; $("#wMeter").style.width=p+"%";
+  const wc=words(t); $("#wWords").textContent=wc;
+  const pc=$$("#secList .pc")[wSel]; if(pc) pc.textContent=t?p+"%":"–";
+}
+function selSec(i){
+  wSel=i; const s=SECTIONS[i];
+  $("#wTitle").textContent=s.n; $("#wPurpose").textContent=s.purpose; $("#wStarter").textContent=s.starter; $("#wPitfall").textContent=s.pit;
+  $("#wTarget").textContent=s.w[0]+"–"+s.w[1];
+  $("#wText").value=store.get("draft:"+s.id,"");
+  drawBar(); evalSec();
+}
+$("#wText").addEventListener("input",evalSec);
+$("#pgLimit").addEventListener("input",drawBar);
+$("#wCopy").onclick=()=>{ const txt=SECTIONS.map(s=>{ const d=store.get("draft:"+s.id,""); return d.trim()? s.n.toUpperCase()+"\n"+d.trim() : ""; }).filter(Boolean).join("\n\n"); txt? copyText(txt,"Đã sao chép bản nháp báo cáo") : toast("Chưa có phần nào được viết"); };
+selSec(0);
+
+/* Câu nào tốt hơn */
+const PAIRS=[
+ ["Mô hình của em cực kỳ chính xác và hoạt động hoàn hảo.","Mô hình đạt F1 trung bình 0,87 trên 412 ảnh kiểm tra, cao hơn mô hình đối chứng 0,09.",1,"Câu tốt có số liệu, có tập đo và có so sánh. Các từ như “hoàn hảo” không chứng minh được."],
+ ["Theo thống kê năm 2023, khoảng 1,2 triệu người dân bị ảnh hưởng bởi ngập (Nguyễn, 2023).","Ngập lụt là vấn đề rất nghiêm trọng mà ai cũng biết.",0,"Đặt vấn đề cần con số và nguồn. “Ai cũng biết” không phải bằng chứng."],
+ ["Kết quả chứng minh hoàn toàn rằng AI có thể giải quyết vấn đề rác thải.","Kết quả cho thấy mô hình phân loại đúng 81% rác tại căng tin trong 5 ngày thử nghiệm; cần thử ở quy mô lớn hơn.",1,"Kết luận phải vừa với dữ liệu. Một thử nghiệm 5 ngày không “chứng minh hoàn toàn” điều gì lớn như vậy."],
+ ["Em nghĩ là mô hình bị sai vì ảnh hơi tối.","Tỷ lệ nhận diện sai tăng từ 9% lên 31% với các ảnh có độ sáng trung bình dưới 60, cho thấy ánh sáng yếu là một nguyên nhân chính.",1,"Thay cảm nhận bằng phân tích lỗi có số liệu."],
+ ["Dữ liệu gồm 2.400 tin nhắn, chia 70% huấn luyện, 15% kiểm định và 15% kiểm tra theo người gửi.","Em đã thu thập rất nhiều dữ liệu và chia ra để huấn luyện.",0,"Phần phương pháp phải đủ chi tiết để người khác làm lại được."],
+ ["Hạn chế của nghiên cứu là dữ liệu chỉ thu ở một trường, nên kết quả có thể chưa đúng với học sinh vùng khác.","Nghiên cứu không có hạn chế nào đáng kể.",0,"Nghiên cứu nào cũng có giới hạn. Nói rõ chúng cho thấy em hiểu dữ liệu của mình."],
+ ["AI là công nghệ của tương lai và đang thay đổi thế giới.","Nông dân hiện mất trung bình 3 đến 5 ngày để có kết quả chẩn đoán bệnh lá từ cán bộ kỹ thuật.",1,"Mở đầu bằng vấn đề cụ thể của người dùng, không bằng câu chung chung về công nghệ."],
+ ["Giả thuyết: mô hình có thêm dữ liệu triều sẽ đạt recall cao hơn ít nhất 10 điểm phần trăm.","Giả thuyết: mô hình sẽ hoạt động tốt.",0,"Giả thuyết phải kiểm chứng được, nghĩa là có thể sai, và tốt nhất có con số."]
+];
+let pRes=[];
+function drawPairs(){
+  const sc=pRes.filter(Boolean).length, done=PAIRS.filter((_,i)=>pRes[i]!==undefined).length;
+  if(done===PAIRS.length && sc>store.get("pairsBest",0)) store.set("pairsBest",sc);
+  $("#pairs").innerHTML=`<div class="row" style="justify-content:space-between;margin-bottom:14px"><strong>Đúng ${sc} trên ${done} câu đã chọn</strong>${done?'<button class="btn small ghost" type="button" id="pReset">Làm lại</button>':""}</div>`+
+   PAIRS.map((p,i)=>{ const order=i%2? [1,0]:[0,1]; const r=pRes[i];
+     return `<div style="margin-bottom:22px"><div class="note" style="font-size:18px">Cặp ${i+1}</div><div class="pair">${order.map(k=>`<button type="button" data-i="${i}" data-k="${k}" ${r!==undefined?"disabled":""} class="${r!==undefined?(k===p[2]?"ok":(r===false&&pRes["c"+i]===k?"no":"")):""}">${esc(p[k])}</button>`).join("")}</div>${r!==undefined?`<p style="margin:8px 0 0"><strong style="color:${r?"var(--green)":"var(--red)"}">${r?"Đúng.":"Chưa đúng."}</strong> ${esc(p[3])}</p>`:""}</div>`; }).join("");
+  $$("#pairs .pair button").forEach(b=>b.onclick=()=>{ const i=+b.dataset.i,k=+b.dataset.k; pRes[i]= k===PAIRS[i][2]; pRes["c"+i]=k; drawPairs(); });
+  const rs=$("#pReset"); if(rs) rs.onclick=()=>{ pRes=[]; drawPairs(); };
+}
+drawPairs();
+
+/* Tóm tắt 250 từ */
+const ABS=[["bc","Bối cảnh và vấn đề","Vấn đề gì, ở đâu, nghiêm trọng thế nào.","#8C9BD2"],["mt","Mục tiêu","Dự án nhằm trả lời câu hỏi gì.","#6A7FC6"],["pp","Phương pháp","Dữ liệu, mô hình, đối chứng, cách đo.","#4A63B8"],["kq","Kết quả","Các con số chính, so với đối chứng.","#1E3A9E"],["kl","Kết luận","Ý nghĩa và ứng dụng.","#F2C94C"]];
+$("#absForm").innerHTML=ABS.map(a=>`<div class="field"><label for="ab-${a[0]}"><span style="display:inline-block;width:10px;height:10px;background:${a[3]};border-radius:2px;margin-right:6px"></span>${a[1]}</label><textarea id="ab-${a[0]}" placeholder="${a[2]}"></textarea></div>`).join("");
+const absSaved=store.get("abs",{});
+ABS.forEach(a=>{ const el=$("#ab-"+a[0]); el.value=absSaved[a[0]]||""; el.addEventListener("input",absUpd); });
+function absUpd(){
+  const v={}; ABS.forEach(a=>v[a[0]]=$("#ab-"+a[0]).value.trim()); store.set("abs",v);
+  const ws=ABS.map(a=>words(v[a[0]])), tot=ws.reduce((x,y)=>x+y,0);
+  $("#absWc").textContent=tot; $("#absMeter").style.width=Math.min(100,tot/2.5)+"%"; $("#absMeterWrap").classList.toggle("warn",tot>250);
+  let x=0, svg=""; const W=400, scale=W/Math.max(250,tot);
+  ABS.forEach((a,i)=>{ const w=ws[i]*scale; if(w>0) svg+=`<rect x="${x}" y="0" width="${w}" height="26" fill="${a[3]}"><title>${a[1]}: ${ws[i]} từ</title></rect>`; x+=w; });
+  svg+=`<line x1="${250*scale}" x2="${250*scale}" y1="0" y2="26" stroke="#C8303B" stroke-width="2" stroke-dasharray="3 2"/>`;
+  $("#absBar").innerHTML=svg;
+  $("#absOut").textContent = ABS.map(a=>v[a[0]]).filter(Boolean).join(" ") || "Bản tóm tắt sẽ hiện ở đây khi em viết.";
+}
+absUpd();
+$("#absCopy").onclick=()=>{ const t=ABS.map(a=>$("#ab-"+a[0]).value.trim()).filter(Boolean).join(" "); t?copyText(t,"Đã sao chép tóm tắt"):toast("Chưa có nội dung"); };
+
+/* Trích dẫn APA */
+function fmtAuthors(s){ const a=s.split(";").map(x=>x.trim()).filter(Boolean); if(a.length<=1) return a[0]||""; if(a.length===2) return a[0]+", & "+a[1]; return a.slice(0,-1).join(", ")+", & "+a[a.length-1]; }
+function apa(r){
+  const au=fmtAuthors(r.au), yr="("+r.yr+"). ", url=r.url? " "+r.url : "";
+  const end = s => /[.?!]$/.test(s)? s : s+".";
+  if(r.type==="j") return `${end(au)} ${yr}${end(r.ti)} <i>${esc(r.src)}</i>${r.vol?", "+esc(r.vol):""}.${esc(url)}`;
+  if(r.type==="b") return `${end(au)} ${yr}<i>${esc(end(r.ti))}</i> ${esc(r.src?end(r.src):"")}${esc(url)}`;
+  return `${end(au)} ${yr}<i>${esc(end(r.ti))}</i> ${esc(r.src?end(r.src):"")}${esc(url)}`;
+}
+function drawRefs(){
+  const L=store.get("refs",[]).slice().sort((a,b)=>a.au.localeCompare(b.au,"vi"));
+  $("#refN").textContent=L.length;
+  $("#refs").innerHTML=L.length? L.map(r=>`<li>${apa(r)} <button class="btn small ghost" type="button" data-id="${r.id}" style="padding:1px 8px;font-size:12px;text-indent:0">Xóa</button></li>`).join("") : '<li style="text-indent:0;padding-left:0;color:var(--muted)">Chưa có tài liệu nào.</li>';
+  $$("#refs [data-id]").forEach(b=>b.onclick=()=>{ store.set("refs",store.get("refs",[]).filter(r=>r.id!=b.dataset.id)); drawRefs(); });
+}
+$("#refForm").onsubmit=e=>{ e.preventDefault();
+  const r={id:Date.now(),type:$("#rType").value,au:$("#rAu").value.trim(),yr:$("#rYr").value.trim(),ti:$("#rTi").value.trim(),src:$("#rSrc").value.trim(),vol:$("#rVol").value.trim(),url:$("#rUrl").value.trim()};
+  const L=store.get("refs",[]); L.push(r); store.set("refs",L); e.target.reset(); drawRefs(); toast("Đã thêm vào danh mục"); };
+$("#refCopy").onclick=()=>{ const t=$$("#refs li").map(li=>li.textContent.replace(/\s*Xóa\s*$/,"").trim()).filter(x=>x&&!x.startsWith("Chưa có")).join("\n"); t?copyText(t,"Đã sao chép danh mục"):toast("Danh mục đang trống"); };
+drawRefs();
+
+/* nút nhảy mục trong trang */
+$$("[data-go]").forEach(b=>b.onclick=()=>{ const el=document.getElementById(b.dataset.go); if(el) el.scrollIntoView({behavior:matchMedia("(prefers-reduced-motion: reduce)").matches?"auto":"smooth"}); });
+
+
+/* ===================== ĐỢT 3 ===================== */
+const IN_FRAME = (()=>{ try{ return window.self!==window.top; }catch(e){ return true; } })();
+const nf = (x,d=1) => Number(x).toLocaleString("vi-VN",{minimumFractionDigits:d,maximumFractionDigits:d});
+function dlFile(name, text, type){
+  try{ const a=document.createElement("a"); a.href=URL.createObjectURL(new Blob([text],{type})); a.download=name; document.body.appendChild(a); a.click(); a.remove(); toast("Đang tải "+name); }
+  catch(e){ toast("Trình duyệt chặn tải file. Hãy dùng nút sao chép."); }
+}
+
+/* ---------- Kiểm tra kết quả: ma trận nhầm lẫn ---------- */
+function cmUpd(){
+  const g=id=>Math.max(0,+$(id).value||0); const TP=g("#cTP"),FN=g("#cFN"),FP=g("#cFP"),TN=g("#cTN"); const N=TP+FN+FP+TN;
+  if(!N){ $("#cmOut").innerHTML="<p>Nhập số liệu vào bốn ô.</p>"; return; }
+  const acc=(TP+TN)/N, pre=TP+FP?TP/(TP+FP):0, rec=TP+FN?TP/(TP+FN):0, f1=pre+rec?2*pre*rec/(pre+rec):0, spe=TN+FP?TN/(TN+FP):0;
+  const pos=(TP+FN)/N, base=Math.max(pos,1-pos);
+  // khoảng tin cậy Wilson 95% cho độ chính xác
+  const z=1.96, den=1+z*z/N, ctr=(acc+z*z/(2*N))/den, hw=z*Math.sqrt(acc*(1-acc)/N+z*z/(4*N*N))/den;
+  const row=(n,v,cls)=>`<div><div class="lab"><span>${n}</span><span>${nf(v*100)}%</span></div><div class="tr"><i class="${cls||""}" style="width:${v*100}%"></i></div></div>`;
+  $("#cmOut").innerHTML=`<div class="bars">${row("Độ chính xác (accuracy)",acc)}${row("Đoán toàn lớp đa số (đối chứng ngây thơ)",base,"base")}${row("Precision: báo dương thì đúng bao nhiêu",pre)}${row("Recall: bắt được bao nhiêu ca dương",rec)}${row("F1",f1)}${row("Specificity: nhận đúng ca âm",spe)}</div>
+   <p style="margin:14px 0 0;font-size:15px">Khoảng tin cậy 95% của độ chính xác với ${N} mẫu: <strong>${nf((ctr-hw)*100)}% đến ${nf((ctr+hw)*100)}%</strong>.</p>`;
+  const notes=[];
+  if(pos<.25||pos>.75) notes.push(`Dữ liệu mất cân bằng: lớp dương chiếm ${nf(pos*100)}%. Đừng chỉ báo độ chính xác, hãy báo F1 và recall.`);
+  if(acc-base<.05) notes.push(`Độ chính xác chỉ hơn cách đoán toàn lớp đa số ${nf((acc-base)*100)} điểm phần trăm. Mô hình gần như chưa học được gì.`);
+  if(N<100) notes.push(`Tập kiểm tra chỉ có ${N} mẫu nên khoảng tin cậy rộng ${nf(hw*200)} điểm phần trăm. Nên tăng số mẫu kiểm tra.`);
+  if(rec<.6&&pre>.8) notes.push("Mô hình thận trọng: ít báo nhầm nhưng bỏ sót nhiều. Thử hạ ngưỡng ở phần bên dưới.");
+  $("#cmNote").textContent = notes.length? notes.join(" ") : "Các chỉ số khá cân đối. Hãy so với mô hình đối chứng của em và xem các ca sai cụ thể.";
+}
+["#cTP","#cFN","#cFP","#cTN"].forEach(id=>$(id).addEventListener("input",()=>{cmUpd();store.set("flag:check2",1);})); cmUpd();
+
+/* ---------- Ngưỡng phân loại ---------- */
+let thrPos=[], thrNeg=[];
+function thrData(){ const sep=+$("#sep").value; let seed=7; const rnd=()=>{ seed=(seed*16807)%2147483647; return seed/2147483647; };
+  const g=()=>Math.sqrt(-2*Math.log(rnd()||1e-9))*Math.cos(2*Math.PI*rnd()); const sig=x=>1/(1+Math.exp(-x));
+  thrPos=[]; thrNeg=[]; for(let i=0;i<300;i++){ thrPos.push(sig(sep/2+g())); thrNeg.push(sig(-sep/2+g())); } }
+function thrUpd(){
+  const t=+$("#thr").value; $("#thrV").textContent=nf(t,2);
+  const TP=thrPos.filter(x=>x>=t).length, FN=thrPos.length-TP, FP=thrNeg.filter(x=>x>=t).length, TN=thrNeg.length-FP;
+  const pre=TP+FP?TP/(TP+FP):0, rec=TP/thrPos.length, fpr=FP/thrNeg.length;
+  const B=26, hp=Array(B).fill(0), hn=Array(B).fill(0); thrPos.forEach(x=>hp[Math.min(B-1,Math.floor(x*B))]++); thrNeg.forEach(x=>hn[Math.min(B-1,Math.floor(x*B))]++);
+  const mx=Math.max(...hp,...hn)/0.8, W=500, H=170, x0=10, bw=W/B;
+  let s=`<line x1="${x0}" y1="${H+10}" x2="${x0+W}" y2="${H+10}" stroke="#C9D4E5"/>`;
+  for(let i=0;i<B;i++){ const hP=hp[i]/mx*H, hN=hn[i]/mx*H;
+    s+=`<rect x="${x0+i*bw+1}" y="${H+10-hN}" width="${bw-2}" height="${hN}" fill="#52607A" opacity=".35"/>`;
+    s+=`<rect x="${x0+i*bw+1}" y="${H+10-hP}" width="${bw-2}" height="${hP}" fill="#1E3A9E" opacity=".55"/>`; }
+  const tx=x0+t*W; s+=`<line x1="${tx}" x2="${tx}" y1="0" y2="${H+12}" stroke="#C8303B" stroke-width="2.5"/><text x="${tx+6}" y="34" font-family="Be Vietnam Pro" font-size="13" fill="#C8303B" font-weight="700">ngưỡng</text>`;
+  s+=`<text x="${x0}" y="${H+28}" font-family="Be Vietnam Pro" font-size="12" fill="#52607A">0</text><text x="${x0+W-8}" y="${H+28}" font-family="Be Vietnam Pro" font-size="12" fill="#52607A">1</text>`;
+  s+=`<rect x="${x0}" y="2" width="12" height="12" fill="#1E3A9E" opacity=".55"/><text x="${x0+18}" y="12" font-family="Be Vietnam Pro" font-size="12.5" fill="#0F1B33">ca dương thật</text><rect x="${x0+120}" y="2" width="12" height="12" fill="#52607A" opacity=".35"/><text x="${x0+138}" y="12" font-family="Be Vietnam Pro" font-size="12.5" fill="#0F1B33">ca âm thật</text>`;
+  $("#thrSvg").innerHTML=s;
+  $("#thrStats").innerHTML=`<div class="stat"><b>${nf(pre*100,0)}%</b><span>Precision</span></div><div class="stat"><b>${nf(rec*100,0)}%</b><span>Recall</span></div><div class="stat"><b>${FP}</b><span>Báo nhầm trên ${thrNeg.length} ca âm (${nf(fpr*100,0)}%)</span></div>`;
+}
+$("#thr").addEventListener("input",thrUpd); $("#sep").addEventListener("input",()=>{thrData();thrUpd();}); thrData(); thrUpd();
+
+/* ---------- Khác biệt có thật không: kiểm định t Welch ---------- */
+function lnG(x){ const c=[76.18009172947146,-86.50532032941677,24.01409824083091,-1.231739572450155,.1208650973866179e-2,-.5395239384953e-5]; let y=x,t=x+5.5; t-=(x+.5)*Math.log(t); let s=1.000000000190015; for(const k of c) s+=k/++y; return -t+Math.log(2.5066282746310005*s/x); }
+function betacf(a,b,x){ let qab=a+b,qap=a+1,qam=a-1,c=1,d=1-qab*x/qap; if(Math.abs(d)<1e-30)d=1e-30; d=1/d; let h=d;
+  for(let m=1;m<=200;m++){ const m2=2*m; let aa=m*(b-m)*x/((qam+m2)*(a+m2)); d=1+aa*d; if(Math.abs(d)<1e-30)d=1e-30; c=1+aa/c; if(Math.abs(c)<1e-30)c=1e-30; d=1/d; h*=d*c;
+    aa=-(a+m)*(qab+m)*x/((a+m2)*(qap+m2)); d=1+aa*d; if(Math.abs(d)<1e-30)d=1e-30; c=1+aa/c; if(Math.abs(c)<1e-30)c=1e-30; d=1/d; const del=d*c; h*=del; if(Math.abs(del-1)<3e-7) break; } return h; }
+function ibeta(a,b,x){ if(x<=0) return 0; if(x>=1) return 1; const bt=Math.exp(lnG(a+b)-lnG(a)-lnG(b)+a*Math.log(x)+b*Math.log(1-x)); return x<(a+1)/(a+b+2)? bt*betacf(a,b,x)/a : 1-bt*betacf(b,a,1-x)/b; }
+const tP2 = (t,df) => ibeta(df/2,.5,df/(df+t*t));
+function tCrit(df){ let lo=0,hi=50; for(let i=0;i<60;i++){ const m=(lo+hi)/2; if(tP2(m,df)>.05) lo=m; else hi=m; } return (lo+hi)/2; }
+const parseRuns = s => { let t=s.trim(); t = t.includes(".") ? t.replace(/,/g," ") : t.replace(/,\s+/g," ").replace(/,/g,"."); return t.split(/[\s;]+/).map(parseFloat).filter(x=>!isNaN(x)); };
+function runCmp(){
+  const A=parseRuns($("#runA").value), B=parseRuns($("#runB").value);
+  if(A.length<2||B.length<2){ $("#runOut").innerHTML='<div class="verd bad">Cần ít nhất 2 lần chạy cho mỗi mô hình, tốt nhất từ 5 lần.</div>'; $("#runSvg").innerHTML=""; return; }
+  const mean=a=>a.reduce((x,y)=>x+y,0)/a.length, vr=a=>{const m=mean(a); return a.reduce((x,y)=>x+(y-m)**2,0)/(a.length-1);};
+  const mA=mean(A),mB=mean(B),vA=vr(A),vB=vr(B),nA=A.length,nB=B.length, se=Math.sqrt(vA/nA+vB/nB)||1e-12, t=(mB-mA)/se;
+  const df=(vA/nA+vB/nB)**2/((vA/nA)**2/(nA-1)+(vB/nB)**2/(nB-1)||1e-12), p=tP2(Math.abs(t),Math.max(1,df)), tc=tCrit(Math.max(1,df));
+  const lo=mB-mA-tc*se, hi=mB-mA+tc*se;
+  const all=[...A,...B], mn=Math.min(...all), mx=Math.max(...all), pad=(mx-mn)*.15||.01, X=v=>40+(v-(mn-pad))/((mx+pad)-(mn-pad))*460;
+  let s=`<line x1="40" x2="500" y1="150" y2="150" stroke="#C9D4E5"/>`;
+  [[A,"Đối chứng",50,"#52607A",mA],[B,"Của em",110,"#1E3A9E",mB]].forEach(([arr,lab,y,col,m])=>{
+    s+=`<text x="40" y="${y-24}" font-family="Be Vietnam Pro" font-size="13" font-weight="700" fill="${col}">${lab}: trung bình ${nf(m,3)}</text>`;
+    arr.forEach((v,i)=>{ s+=`<circle cx="${X(v)}" cy="${y+(i%3-1)*5}" r="6" fill="${col}" fill-opacity=".7"/>`; });
+    s+=`<line x1="${X(m)}" x2="${X(m)}" y1="${y-14}" y2="${y+14}" stroke="${col}" stroke-width="3"/>`; });
+  s+=`<text x="40" y="166" font-family="Be Vietnam Pro" font-size="11" fill="#52607A">${nf(mn-pad,3)}</text><text x="500" y="166" text-anchor="end" font-family="Be Vietnam Pro" font-size="11" fill="#52607A">${nf(mx+pad,3)}</text>`;
+  $("#runSvg").innerHTML=s;
+  const good=p<.05&&mB>mA, worse=p<.05&&mB<mA;
+  $("#runOut").innerHTML=`<p style="margin:0;font-size:15px">Chênh lệch trung bình: <strong>${mB-mA>=0?"+":""}${nf(mB-mA,4)}</strong>, khoảng tin cậy 95% từ ${nf(lo,4)} đến ${nf(hi,4)}. Kiểm định t Welch: t = ${nf(t,2)}, p = ${p<.001?"< 0,001":nf(p,3)}.</p>
+   <div class="verd ${good?"good":worse?"bad":""}">${good?"Khác biệt có ý nghĩa thống kê ở mức 5%: mô hình của em tốt hơn một cách đáng tin.":worse?"Mô hình của em kém hơn đối chứng một cách đáng tin. Đây cũng là một kết quả cần báo cáo trung thực.":"Chưa đủ bằng chứng để nói mô hình của em tốt hơn: khác biệt còn nằm trong mức dao động ngẫu nhiên. Hãy chạy thêm lần hoặc cải tiến tiếp."}</div>
+   ${nA<5||nB<5?'<p style="color:var(--muted);font-size:14px;margin:8px 0 0">Mỗi mô hình nên chạy ít nhất 5 lần để kết luận vững hơn.</p>':""}`;
+}
+$("#runGo").onclick=()=>{runCmp();store.set("flag:check2",1);}; runCmp();
+
+/* ---------- Giám khảo AI ---------- */
+const PERSONA={
+ pp:"một giám khảo là nhà nghiên cứu về học máy, rất kỹ tính về phương pháp: cách chia dữ liệu, mô hình đối chứng, rò rỉ dữ liệu, ý nghĩa thống kê, thiên lệch",
+ tt:"một giám khảo đến từ doanh nghiệp, quan tâm người dùng thật, chi phí, khả năng triển khai và rủi ro khi mô hình đoán sai",
+ isef:"a Grand Award judge at Regeneron ISEF. Conduct the whole interview in clear English, at a level suitable for a Vietnamese high school student, and point out any English phrasing that was unclear",
+ tre:"một học sinh lớp 7 tò mò, hỏi những câu đơn giản để kiểm tra xem tôi có giải thích dự án dễ hiểu được không"
+};
+let aiPrompt="";
+$("#aiForm").onsubmit=e=>{ e.preventDefault();
+  const v=id=>$(id).value.trim()||"(chưa có)"; const p=$("#aiP").value;
+  aiPrompt=`Hãy đóng vai ${PERSONA[p]}. Tôi là học sinh trung học đang luyện phỏng vấn cho cuộc thi khoa học kỹ thuật.
+
+Thông tin dự án của tôi:
+- Tên dự án: ${v("#aiTitle")}
+- Câu hỏi nghiên cứu: ${v("#aiQ")}
+- Phương pháp: ${v("#aiM")}
+- Kết quả chính: ${v("#aiR")}
+
+Quy tắc:
+1. Mỗi lượt chỉ hỏi MỘT câu, rồi chờ tôi trả lời.
+2. Sau mỗi câu trả lời, nhận xét ngắn: điểm tốt, điểm còn yếu, và giám khảo thật có thể hỏi tiếp điều gì.
+3. Không viết hộ câu trả lời, không viết bất kỳ nội dung nào cho báo cáo, poster hay tóm tắt của tôi.
+4. Hỏi tổng cộng 8 câu, từ dễ đến khó. Cuối buổi, chấm tôi theo 5 tiêu chí: câu hỏi nghiên cứu, thiết kế, thực hiện, sáng tạo, trình bày; mỗi tiêu chí nêu một việc cần cải thiện.
+
+Bắt đầu bằng câu hỏi đầu tiên.`;
+  $("#aiOut").textContent=aiPrompt; };
+$("#aiCopy").onclick=()=>{ if(!aiPrompt) return toast("Hãy tạo câu lệnh trước");
+  copyText(aiPrompt,"Đã sao chép và ghi vào nhật ký");
+  const L=store.get("log",[]); L.push({date:new Date().toISOString().slice(0,10),tool:"(ghi chatbot em dùng)",purpose:"Luyện phỏng vấn với AI đóng vai giám khảo",prompt:aiPrompt.slice(0,600),use:"Chỉ để luyện phỏng vấn, không dùng vào hồ sơ nộp",check:""}); store.set("log",L); renderLog(); store.set("flag:aigk",1); };
+
+/* ---------- Tìm tài liệu ---------- */
+const KW={"bệnh lá lúa":"rice leaf disease","lúa":"rice","lá":"leaf","bệnh":"disease","học sâu":"deep learning","học máy":"machine learning","phát hiện":"detection","phân loại":"classification","nhận diện":"recognition","dự báo":"forecasting","ngập":"urban flooding","bụi mịn":"PM2.5","chất lượng không khí":"air quality","lừa đảo":"scam detection","tin nhắn":"SMS","tiếng việt":"Vietnamese","ngôn ngữ ký hiệu":"sign language recognition","ngủ gật":"driver drowsiness detection","rác thải":"waste","phân loại rác":"waste classification","tư thế":"posture","ước lượng tư thế":"pose estimation","trợ lý ôn tập":"question answering","truy xuất tăng cường":"retrieval-augmented generation","bài tập thích ứng":"adaptive learning","truy vết kiến thức":"knowledge tracing","mạng nơ-ron tích chập":"convolutional neural network","thị giác máy tính":"computer vision","xử lý ngôn ngữ tự nhiên":"natural language processing","chuỗi thời gian":"time series","cảm biến":"sensor","điện thoại":"smartphone","nông nghiệp":"agriculture","giáo dục":"education","học sinh":"students","sức khỏe":"health","giao thông":"traffic","ùn tắc":"traffic congestion","xâm nhập mặn":"salinity intrusion","sạt lở":"riverbank erosion","khuyết tật":"disability","khiếm thính":"deaf","thiết bị nhúng":"edge device","học chuyển giao":"transfer learning","tăng cường dữ liệu":"data augmentation","mô hình ngôn ngữ":"language model","phát hiện vật thể":"object detection","dữ liệu mất cân bằng":"imbalanced data","giải thích mô hình":"explainable AI","học tăng cường":"reinforcement learning"};
+function kwUpd(){
+  let t=" "+$("#kwIn").value.toLowerCase()+" "; const found=[];
+  Object.keys(KW).sort((a,b)=>b.length-a.length).forEach(k=>{ if(t.includes(k)){ found.push([k,KW[k]]); t=t.split(k).join(" "); } });
+  $("#kwOut").innerHTML = found.length? `<div class="row" style="gap:6px;margin-top:4px">${found.map(f=>`<span class="chip">${esc(f[0])} → <b style="color:var(--ink)">${esc(f[1])}</b></span>`).join("")}</div>` : '<p style="color:var(--muted);font-size:14px">Chưa nhận ra từ khóa nào. Hãy tự gõ truy vấn tiếng Anh bên dưới.</p>';
+  $("#kwEn").value=found.map(f=>f[1]).join(" "); kwLinks();
+}
+function kwLinks(){ const q=encodeURIComponent($("#kwEn").value.trim());
+  const L=[["Google Scholar","https://scholar.google.com/scholar?q="+q],["arXiv","https://arxiv.org/search/?query="+q+"&searchtype=all"],["Semantic Scholar","https://www.semanticscholar.org/search?q="+q],["Tìm bộ dữ liệu (Google)","https://datasetsearch.research.google.com/search?query="+q],["Kaggle Datasets","https://www.kaggle.com/datasets?search="+q]];
+  $("#kwLinks").innerHTML=L.map(l=>`<a class="btn small ghost" href="${l[1]}" target="_blank" rel="noopener">${l[0]}</a>`).join(""); }
+$("#kwIn").addEventListener("input",kwUpd); $("#kwEn").addEventListener("input",kwLinks); kwUpd();
+$("#read3").innerHTML=[["Lượt 1, 5 phút","Đọc tên bài, tóm tắt, các hình và kết luận. Tự hỏi: bài này có liên quan tới câu hỏi của mình không?"],["Lượt 2, 20 phút","Đọc phần giới thiệu và phương pháp. Ghi tay: dữ liệu gì, mô hình gì, đối chứng gì, đạt bao nhiêu."],["Lượt 3, khi bài thật sự quan trọng","Đọc kỹ toàn bài, kiểm tra các con số, tìm hạn chế mà tác giả thừa nhận hoặc bỏ qua. Ghi khoảng trống em có thể lấp."]]
+ .map((r,i)=>`<li style="grid-template-columns:44px 1fr"><span style="font-size:26px;font-weight:800;color:var(--ink)">${i+1}</span><span><strong>${r[0]}</strong><br><span style="color:var(--muted)">${r[1]}</span></span></li>`).join("");
+
+/* ---------- Tiếng Anh cho ISEF ---------- */
+const GLOSS=[["Câu hỏi nghiên cứu","research question"],["Giả thuyết","hypothesis"],["Biến độc lập","independent variable"],["Biến phụ thuộc","dependent variable"],["Biến kiểm soát","controlled variable"],["Mô hình đối chứng","baseline model"],["Nhóm đối chứng","control group"],["Tập huấn luyện","training set"],["Tập kiểm định","validation set"],["Tập kiểm tra","test set"],["Rò rỉ dữ liệu","data leakage"],["Quá khớp","overfitting"],["Chưa khớp","underfitting"],["Kiểm định chéo","cross-validation"],["Tăng cường dữ liệu","data augmentation"],["Học chuyển giao","transfer learning"],["Tinh chỉnh","fine-tuning"],["Siêu tham số","hyperparameter"],["Gán nhãn dữ liệu","data labeling / annotation"],["Ma trận nhầm lẫn","confusion matrix"],["Độ chính xác","accuracy"],["Độ phủ","recall (sensitivity)"],["Dữ liệu mất cân bằng","imbalanced dataset"],["Thiên lệch dữ liệu","dataset bias"],["Khoảng tin cậy","confidence interval"],["Ý nghĩa thống kê","statistical significance"],["Độ lệch chuẩn","standard deviation"],["Phân tích lỗi","error analysis"],["Tính mới","novelty"],["Hạn chế","limitation"],["Hướng phát triển","future work"],["Tổng quan tài liệu","literature review"],["Sổ nghiên cứu","research notebook / logbook"],["Người tham gia nghiên cứu","human participants"],["Giấy đồng ý","informed consent form"],["Ẩn danh hóa","anonymization"],["Suy luận trên thiết bị","on-device inference"],["Độ trễ","latency"],["Triển khai","deployment"],["Thử nghiệm người dùng","user study"]];
+function glDraw(){ const q=$("#glQ").value.trim().toLowerCase(); const r=GLOSS.filter(g=>!q||g[0].toLowerCase().includes(q)||g[1].toLowerCase().includes(q));
+  $("#glT tbody").innerHTML=r.length? r.map(g=>`<tr><td>${esc(g[0])}</td><td><strong>${esc(g[1])}</strong></td></tr>`).join("") : '<tr><td colspan="2" style="color:var(--muted)">Không tìm thấy. Thử từ khác.</td></tr>'; }
+$("#glQ").addEventListener("input",glDraw); glDraw();
+const FRAMES={a:[["[Problem] affects [who], causing [impact with number] ([Author], [year]).","Mở đầu tóm tắt bằng vấn đề"],["This project investigates whether [method] can [goal] better than [baseline].","Nêu mục tiêu"],["We collected [N] [samples] from [source] and split them by [person/time] into training, validation and test sets.","Mô tả dữ liệu"],["Our model achieved an F1 score of [x] on the held-out test set, compared with [y] for the baseline.","Báo kết quả có đối chứng"],["The improvement was statistically significant (Welch's t-test, p = [p]).","Nói về ý nghĩa thống kê"],["A key limitation is that [limitation]; future work will [plan].","Nêu hạn chế và hướng phát triển"],["These results suggest that [conclusion], which could help [users] to [benefit].","Kết luận và ứng dụng"]],
+ b:[["Thank you for visiting. In one sentence, my project [what it does] for [who].","Mở đầu phần thuyết trình"],["That's a great question. Let me show you on this figure.","Mua thời gian, chỉ vào poster"],["We chose [model] because [reason], and we compared it with [baseline].","Giải thích lựa chọn mô hình"],["To avoid data leakage, we split the data by [person/time], not randomly by image.","Trả lời về chia dữ liệu"],["I'm not sure about that yet, but my hypothesis is [idea], and I would test it by [method].","Khi chưa biết câu trả lời"],["The biggest limitation is [x]. If we had more time, we would [y].","Nói về hạn chế"],["My teammate [name] was mainly responsible for [part], and I focused on [part].","Phân công trong nhóm"],["Could you repeat the question more slowly, please?","Khi chưa nghe rõ"]]};
+let frK="a"; function frDraw(){ $("#frames").innerHTML=FRAMES[frK].map(f=>`<li><button type="button">${esc(f[0])}<small>${esc(f[1])}</small></button></li>`).join(""); $$("#frames button").forEach((b,i)=>b.onclick=()=>copyText(FRAMES[frK][i][0],"Đã sao chép mẫu câu")); }
+$("#frA").onclick=()=>{frK="a";$("#frA").setAttribute("aria-pressed",true);$("#frB").setAttribute("aria-pressed",false);frDraw();};
+$("#frB").onclick=()=>{frK="b";$("#frB").setAttribute("aria-pressed",true);$("#frA").setAttribute("aria-pressed",false);frDraw();};
+frDraw();
+
+/* ---------- Mẫu giấy tờ ---------- */
+const LN=(n=1)=>Array(n).fill('<div class="ln"></div>').join("");
+const TPLS=[
+ {n:"Kế hoạch nghiên cứu (giáo viên duyệt)",f:i=>`<h3>KẾ HOẠCH NGHIÊN CỨU</h3><div class="sub">Nộp cho giáo viên hướng dẫn duyệt trước khi bắt đầu thu thập dữ liệu</div>
+  <p><b>Tên dự án:</b> ${i.p||'<span class="ln" style="display:inline-block;width:70%"></span>'}<br><b>Học sinh:</b> ${i.s||"……………………"} &nbsp; <b>Trường:</b> ${i.c||"……………………"}<br><b>Giáo viên hướng dẫn:</b> ${i.t||"……………………"}</p>
+  <p><b>1. Vấn đề và lý do chọn đề tài</b></p>${LN(3)}<p><b>2. Câu hỏi nghiên cứu</b></p>${LN(2)}<p><b>3. Giả thuyết (có con số kiểm chứng)</b></p>${LN(2)}
+  <p><b>4. Biến số:</b> độc lập / phụ thuộc / kiểm soát</p>${LN(2)}<p><b>5. Dữ liệu: nguồn, số lượng, cách thu thập, cách chia tập</b></p>${LN(3)}
+  <p><b>6. Mô hình đối chứng và chỉ số đánh giá</b></p>${LN(2)}<p><b>7. Rủi ro, đạo đức, người tham gia (nếu có)</b></p>${LN(2)}<p><b>8. Dự kiến dùng AI tạo sinh vào việc gì</b></p>${LN(2)}
+  <p><b>9. Tiến độ dự kiến theo tuần</b></p>${LN(3)}
+  <div class="sig"><div>Học sinh<br><span style="font-weight:400;font-size:13px">(ký, ghi rõ họ tên, ngày)</span></div><div>Giáo viên hướng dẫn duyệt<br><span style="font-weight:400;font-size:13px">(ký, ghi rõ họ tên, ngày)</span></div></div>`},
+ {n:"Giấy đồng ý tham gia nghiên cứu",f:i=>`<h3>PHIẾU ĐỒNG Ý THAM GIA NGHIÊN CỨU</h3><div class="sub">Dùng khi dự án thu thập dữ liệu về người: khảo sát, ảnh, video, giọng nói, dữ liệu sử dụng</div>
+  <p><b>Tên dự án:</b> ${i.p||"……………………………………"}<br><b>Người thực hiện:</b> ${i.s||"……………………"}, ${i.c||"……………………"}<br><b>Giáo viên hướng dẫn:</b> ${i.t||"……………………"}</p>
+  <p><b>Mục đích nghiên cứu:</b></p>${LN(2)}<p><b>Bạn sẽ được đề nghị làm gì, trong bao lâu:</b></p>${LN(2)}
+  <p><b>Dữ liệu được thu thập và cách bảo vệ:</b> Dữ liệu chỉ dùng cho dự án này, được ẩn danh khi phân tích và trình bày, không chia sẻ cho bên thứ ba${LN(1)}</p>
+  <p><b>Rủi ro có thể có:</b></p>${LN(1)}
+  <p>Việc tham gia là tự nguyện. Bạn có thể dừng hoặc yêu cầu xóa dữ liệu của mình bất cứ lúc nào mà không cần nêu lý do.</p>
+  <p>☐ Tôi đồng ý tham gia. &nbsp; ☐ Tôi đồng ý cho dùng hình ảnh hoặc video đã làm mờ khuôn mặt.</p>
+  <div class="sig"><div>Người tham gia<br><span style="font-weight:400;font-size:13px">(ký, ghi rõ họ tên, ngày)</span></div><div>Cha mẹ hoặc người giám hộ<br><span style="font-weight:400;font-size:13px">(nếu người tham gia dưới 18 tuổi)</span></div></div>`},
+ {n:"Trang sổ nghiên cứu",f:i=>`<h3>SỔ NGHIÊN CỨU</h3><div class="sub">${esc(i.p||"Tên dự án")}. Ghi bằng mực xanh hoặc đen, theo thứ tự thời gian, không tẩy xóa</div>
+  <p><b>Ngày:</b> ……/……/………… &nbsp; <b>Thời gian làm:</b> từ ……… đến ……… &nbsp; <b>Người ghi:</b> ………………</p>
+  <p><b>Mục tiêu buổi hôm nay</b></p>${LN(2)}<p><b>Đã làm gì (các bước, tham số, phiên bản mã)</b></p>${LN(4)}
+  <p><b>Kết quả thô (số liệu, ảnh chụp màn hình dán kèm)</b></p>${LN(4)}<p><b>Điều bất ngờ hoặc thất bại, và em nghĩ vì sao</b></p>${LN(2)}
+  <p><b>Có dùng AI không?</b> ☐ Không &nbsp; ☐ Có: công cụ ……………… câu lệnh ghi ở dòng dưới</p>${LN(2)}<p><b>Việc tiếp theo</b></p>${LN(2)}
+  <div class="sig"><div></div><div>Giáo viên kiểm tra<br><span style="font-weight:400;font-size:13px">(ký, ngày)</span></div></div>`},
+ {n:"Phiếu góp ý, phản biện",f:i=>`<h3>PHIẾU GÓP Ý DỰ ÁN</h3><div class="sub">Dành cho bạn bè, giáo viên, chuyên gia đọc thử hoặc nghe thử dự án</div>
+  <p><b>Dự án:</b> ${i.p||"……………………………………"} &nbsp; <b>Người góp ý:</b> ………………………… &nbsp; <b>Ngày:</b> ……/……</p>
+  <table><thead><tr><th style="width:34%">Tiêu chí</th><th style="width:14%">Điểm 1–5</th><th>Nhận xét cụ thể</th></tr></thead><tbody>
+  ${["Câu hỏi nghiên cứu rõ ràng","Thiết kế có đối chứng, chia dữ liệu đúng","Số liệu, phân tích lỗi","Tính mới, sáng tạo","Trình bày, poster, trả lời câu hỏi"].map(c=>`<tr><td>${c}</td><td></td><td></td></tr>`).join("")}</tbody></table>
+  <p style="margin-top:14px"><b>Điều tôi thích nhất</b></p>${LN(2)}<p><b>Câu hỏi tôi sẽ hỏi nếu là giám khảo</b></p>${LN(2)}
+  <p><b>Học sinh ghi lại cách xử lý góp ý</b></p>${LN(3)}`}
+];
+let tplSel=0;
+const tpInfo=()=>({p:$("#tpProj").value.trim(),s:$("#tpStu").value.trim(),t:$("#tpTea").value.trim(),c:$("#tpSch").value.trim()});
+function tplDraw(){ const inf=tpInfo(); store.set("tpinfo",inf); const ei={p:esc(inf.p),s:esc(inf.s),t:esc(inf.t),c:esc(inf.c)};
+  $("#tplList").innerHTML=TPLS.map((t,i)=>`<button type="button" aria-pressed="${i===tplSel}"><span>${esc(t.n)}</span></button>`).join("");
+  $$("#tplList button").forEach((b,i)=>b.onclick=()=>{tplSel=i;tplDraw();});
+  $("#tplView").innerHTML=TPLS[tplSel].f(ei); }
+(function(){ const s=store.get("tpinfo",{}); $("#tpProj").value=s.p||""; $("#tpStu").value=s.s||""; $("#tpTea").value=s.t||""; $("#tpSch").value=s.c||""; })();
+["#tpProj","#tpStu","#tpTea","#tpSch"].forEach(id=>$(id).addEventListener("input",tplDraw)); tplDraw();
+$("#tplPrint").onclick=()=>{ document.body.classList.add("print-tpl"); try{ window.print(); }catch(e){} setTimeout(()=>document.body.classList.remove("print-tpl"),500); };
+$("#tplCopy").onclick=()=>copyText($("#tplView").innerText,"Đã sao chép nội dung mẫu");
+if(IN_FRAME){ $("#tplHint").textContent="Nút In chạy khi mở trang trên GitHub Pages. Trong bản xem thử, hãy dùng nút sao chép rồi dán vào Word hoặc Google Docs."; ["#lgDl","#exDl"].forEach(id=>{ const b=$(id); if(b) b.style.display="none"; }); }
+
+/* ---------- Hồ sơ của em: huy hiệu ---------- */
+function rubricScore(){ const st=store.get("crit",{}); let t=0; CRITS.forEach((c,ci)=>{ t+=c.max*c.items.filter((_,ii)=>st[ci+"-"+ii]).length/c.items.length; }); return Math.round(t); }
+function reportSecDone(){ return SECTIONS.filter(s=>{ const d=store.get("draft:"+s.id,""); return d && secPct(s,d)>=60; }).length; }
+function absWords(){ const a=store.get("abs",{}); return Object.values(a).reduce((x,y)=>x+words(y||""),0); }
+const BADGES=[
+ {n:"Đặt câu hỏi",h:"Tạo một khung đề tài trong Xưởng đề tài.",ok:()=>!!store.get("flag:xuong",0),go:"cong-cu"},
+ {n:"Tự soi mình",h:"Tự đánh giá đủ 10 kỹ năng trên bánh xe.",ok:()=>skLevels().every(x=>x>0),go:"ky-nang"},
+ {n:"Người đọc",h:"Có ít nhất 5 tài liệu trong danh mục trích dẫn.",ok:()=>store.get("refs",[]).length>=5,go:"bao-cao"},
+ {n:"Minh bạch AI",h:"Ghi ít nhất 3 lần dùng AI vào Nhật ký prompt.",ok:()=>store.get("log",[]).length>=3,go:"cong-cu"},
+ {n:"Thám tử dữ liệu",h:"Đạt từ 6/8 trong Thử thách tư duy khoa học.",ok:()=>store.get("quizBest",0)>=6,go:"ky-nang"},
+ {n:"Kiểm chứng",h:"Dùng công cụ Kiểm tra kết quả với số liệu của em.",ok:()=>!!store.get("flag:check2",0),go:"cong-cu"},
+ {n:"Văn phong khoa học",h:"Chọn đúng ít nhất 7/8 cặp câu ở Câu nào viết tốt hơn.",ok:()=>store.get("pairsBest",0)>=7,go:"bao-cao"},
+ {n:"Tóm tắt gọn",h:"Viết bản tóm tắt dài 150 đến 250 từ.",ok:()=>{const w=absWords(); return w>=150&&w<=250;},go:"bao-cao"},
+ {n:"Người viết",h:"Có ít nhất 6 phần báo cáo đạt mức hoàn thiện từ 60%.",ok:()=>reportSecDone()>=6,go:"bao-cao"},
+ {n:"Luyện phỏng vấn",h:"Tạo và dùng câu lệnh Giám khảo AI.",ok:()=>!!store.get("flag:aigk",0),go:"cong-cu"},
+ {n:"Sẵn sàng",h:"Tự chấm đạt từ 70/100 ở Giám khảo thử.",ok:()=>rubricScore()>=70,go:"cong-cu"},
+ {n:"Về đích",h:"Hoàn thành 100% lộ trình một dự án mẫu.",ok:()=>PROJECTS.some(p=>prog(p)===100),go:"du-an"}
+];
+let bdSel=-1;
+function drawHoSo(){
+  const won=BADGES.map(b=>{ try{ return b.ok(); }catch(e){ return false; } }), nW=won.filter(Boolean).length;
+  const L=skLevels(), best=Math.max(0,...PROJECTS.map(prog)), rep=Math.round(SECTIONS.reduce((a,s)=>a+secPct(s,store.get("draft:"+s.id,"")),0)/SECTIONS.length);
+  $("#hsStats").innerHTML=`<div class="stat"><b>${nW}/${BADGES.length}</b><span>Huy hiệu</span></div><div class="stat"><b>${best}%</b><span>Dự án tiến xa nhất</span></div><div class="stat"><b>${nf(L.reduce((a,b)=>a+b,0)/L.length)}</b><span>Kỹ năng trung bình, trên 4</span></div><div class="stat"><b>${rep}%</b><span>Báo cáo hoàn thiện trung bình</span></div>`;
+  $("#hsBadgeN").textContent=nW+" trên "+BADGES.length+" chặng";
+  const pts=BADGES.map((_,i)=> i<6 ? [90+i*164,95] : [910-(i-6)*164,285]);
+  let s=`<path d="M90 95 L910 95 C 990 95 990 285 910 285 L90 285" fill="none" stroke="#C9D4E5" stroke-width="10" stroke-linecap="round"/>`;
+  let lastWon=-1; won.forEach((w,i)=>{ if(w) lastWon=i; });
+  BADGES.forEach((b,i)=>{ const [x,y]=pts[i]; const words2=b.n.split(" "); const l1=words2.slice(0,2).join(" "), l2=words2.slice(2).join(" ");
+    s+=`<g class="st${won[i]?" won":""}${i===bdSel?" sel":""}" data-i="${i}" tabindex="0" role="button" aria-label="${b.n}${won[i]?", đã đạt":", chưa đạt"}"><circle cx="${x}" cy="${y}" r="32"/><text x="${x}" y="${y+7}" text-anchor="middle" font-size="20" font-weight="800" fill="${won[i]?"#1E3A9E":"#9AA9CC"}">${won[i]?"✓":i+1}</text>
+     <text x="${x}" y="${y+54}" text-anchor="middle" font-size="15" font-weight="700" fill="${won[i]?"#0F1B33":"#52607A"}">${esc(l1)}</text>${l2?`<text x="${x}" y="${y+72}" text-anchor="middle" font-size="15" font-weight="700" fill="${won[i]?"#0F1B33":"#52607A"}">${esc(l2)}</text>`:""}</g>`; });
+  $("#journey").innerHTML=s;
+  $$("#journey .st").forEach(g=>{ const f=()=>{ bdSel=+g.dataset.i; const b=BADGES[bdSel]; drawHoSo();
+      $("#badgeInfo").innerHTML=`<strong>${esc(b.n)}</strong>: ${won[bdSel]?'<span style="color:var(--green);font-weight:700">đã đạt.</span> ':""}${esc(b.h)} <a href="#${b.go}">Đi tới mục này</a>`; };
+    g.onclick=f; g.onkeydown=e=>{ if(e.key==="Enter"||e.key===" "){e.preventDefault();f();} }; });
+}
+/* sao lưu, khôi phục */
+function dumpAll(){ const o={app:"so-nghien-cuu-ai",v:1,at:new Date().toISOString(),data:{}}; try{ for(let i=0;i<localStorage.length;i++){ const k=localStorage.key(i); if(k.startsWith("sncai:")) o.data[k]=localStorage.getItem(k); } }catch(e){} return o; }
+$("#exDl").onclick=()=>dlFile("ho-so-nghien-cuu-"+new Date().toISOString().slice(0,10)+".json", JSON.stringify(dumpAll(),null,1), "application/json");
+$("#exCopy").onclick=()=>copyText(btoa(unescape(encodeURIComponent(JSON.stringify(dumpAll())))),"Đã sao chép mã hồ sơ. Hãy dán vào nơi an toàn");
+function restore(txt){ let o; try{ o=JSON.parse(txt); }catch(e){ try{ o=JSON.parse(decodeURIComponent(escape(atob(txt.trim())))); }catch(_){ return toast("Mã hoặc file không hợp lệ"); } }
+  if(!o||o.app!=="so-nghien-cuu-ai"||!o.data) return toast("Đây không phải hồ sơ của Sổ Nghiên Cứu AI");
+  try{ Object.keys(localStorage).filter(k=>k.startsWith("sncai:")).forEach(k=>localStorage.removeItem(k)); Object.entries(o.data).forEach(([k,v])=>localStorage.setItem(k,v)); }catch(e){ return toast("Trình duyệt không cho lưu dữ liệu"); }
+  toast("Đã khôi phục hồ sơ, đang tải lại"); setTimeout(()=>location.reload(),900); }
+$("#imGo").onclick=()=>{ const f=$("#imFile").files[0]; if(f){ const r=new FileReader(); r.onload=()=>restore(r.result); r.readAsText(f); } else if($("#imText").value.trim()) restore($("#imText").value); else toast("Hãy chọn file hoặc dán mã hồ sơ"); };
+
+route();
+</script>
+</body>
+</html>
